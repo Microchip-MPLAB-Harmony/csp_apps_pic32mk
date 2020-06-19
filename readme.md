@@ -30,10 +30,39 @@ To download or clone these application from Github, go to the [top level of the 
 
 The following applications are provided to demonstrate the typical or interesting usage models of one or more peripheral libraries.
 
-| App Name | Description|
+| Name | Description|
 |:---------|:-----------|
-|[]()||
+| [ADCHS Interrupt](apps/adchs/adchs_interrupt/readme.md) | This example application shows how to sample an analog input using the ADCHS peripheral and displays the converted samples on a serial terminal |
+| [ADCHS polling](apps/adchs/adchs_polled/readme.md) | This example application shows how to sample an analog input using the ADCHS peripheral and displays the converted samples on a serial terminal |
+| [CAN FD blocking](apps/can/can_fd_operation_blocking/readme.md) | This example application shows how to use the CAN module to transmit and receive CAN FD messages in polling mode |
+| [CAN FD interrupt](apps/can/can_fd_operation_interrupt_timestamp/readme.md) | This example application shows how to use the CAN module to transmit and receive CAN FD messages in interrupt mode |
+| [CAN blocking](apps/can/can_normal_operation_blocking/readme.md) | This example application shows how to use the CAN module to transmit and receive normal CAN messages in polling mode |
+| [CAN interrupt](apps/can/can_normal_operation_interrupt_timestamp/readme.md) | This example application shows how to use the CAN module to transmit and receive normal CAN messages in interrupt mode |
+| [Clock configuration](apps/clock/clock_config/readme.md) | This example application shows how to configure the clock system to run the device at maximum frequency. It also outputs a prescaled clock signal on a GPIO pin for measurement and verification |
+| [CORETIMER periodic interrupt](apps/coretimer/coretimer_periodic_timeout/readme.md) | This example application shows how to use the CoreTimer to generate periodic interrupts |
+| [DMAC memory transfer](apps/dmac/dmac_memory_transfer/readme.md) | This example application demonstrates how to use the DMAC peripheral to do a memory to memory transfer |
+| [EEPROM read write](apps/eeprom/eeprom_read_write/readme.md) | This example application demonstrates how to use the EEPROM peripheral library |
+| [GPIO interrupt](apps/gpio/gpio_led_on_off_interrupt/readme.md) | This example application demonstrate how to generate GPIO interrupt on switch press and release, and indicate the switch status using the LED |
+| [GPIO Polling](apps/gpio/gpio_led_on_off_polling/readme.md) | This example application demonstrate how to poll the switch input, and indicate the switch status using the LED |
+| [I2C EEPROM read write](apps/i2c/master/i2c_eeprom/readme.md) | This example application demonstrates how to use the I2C peripheral to write and read from the I2C serial EEPROM memory |
+| [I2C temperature sensor](apps/i2c/master/i2c_temp_sensor/readme.md) | This example application demonstrates how to use I2C peripheral to read temperature value from temperature sensor device |
+| [ICAP capture mode](apps/icap/icap_capture_mode/readme.md) | This example application shows how to use the ICAP peripheral to measure the pulse width of the input signal |
+| [MCPWM channels](apps/mcpwm/mcpwm_channels/readme.md) | This example demonstrates how to use the MCPWM peripheral to generate PWM signals |
+| [NVM flash read write](apps/nvm/flash_read_write/readme.md) | This example application demonstrates how to use the NVM to erase and program the internal Flash memory |
+| [OCMP compare mode](apps/ocmp/ocmp_compare_mode/readme.md) | This example application shows how to use the OCMP peripheral to generate an active low, active high, and toggle output on compare match |
+| [RTCC alarm interrupt](apps/rtcc/rtcc_alarm/readme.md) | This example application shows how to use the RTCC to configure the time and generate the alarm |
+| [SPI EEPROM write read](apps/spi/spi_eeprom_write_read/readme.md) | This example application demonstrates how to use the SPI peripheral to write and read from the SPI serial EEPROM memory |
+| [SPI blocking](apps/spi/spi_self_loopback_blocking/readme.md) | This example application demonstrates how to use the SPI peripheral to transmit and receive a block of data in a blocking manner |
+| [SPI interrupt](apps/spi/spi_self_loopback_interrupt/readme.md) | This example application demonstrates how to use the SPI peripheral to transmit and receive a block of data using interrupt |
+| [TMR periodic interrupt](apps/tmr/tmr_timer_mode/readme.md) | This example demonstrates how to use the TMR module in timer mode to generate periodic interrupt |
+| [TMR1 periodic interrupt](apps/tmr1/tmr1_timer_mode/readme.md) | This example demonstrates how to use the TMR1 module in timer mode to generate periodic interrupt |
+| [UART auto-baud](apps/uart/uart_autobaud_interrupt/readme.md) | This example application demonstrates how to use auto-baud feature of UART periphera |
+| [UART echo blocking](apps/uart/uart_echo_blocking/readme.md) | This example application demonstrates how to use the UART peripheral to transfer a block of data in a blocking manner |
+| [UART echo interrupt](apps/uart/uart_echo_interrupt/readme.md) | This example application demonstrates how to use the UART peripheral to transfer a block of data in a non-blocking manner |
+| [UART ring buffer](apps/uart/uart_ring_buffer_interrupt/readme.md) | This example application demonstrates how to use the UART peripheral in ring buffer mode |
+| [WDT timeout](apps/wdt/wdt_timeout/readme.md) | This example application shows how the watchdog timer resets by not feeding the watchdog on switch press |
 |||
+
 ____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_pic32mk/blob/master/mplab_harmony_license.md)
