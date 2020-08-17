@@ -43,13 +43,14 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up PIC32MK MCJ Curiosity Pro Board
 
-- Connect an oscilloscope to monitor the PORT pin RPC1 (Pin number #33 on J301 connector)
-- Connect the Debug USB port (J500) on the board to the computer using a micro USB cable
+- Connect an oscilloscope to monitor the PORT pin RPB11 (Pin #8 on J503/EXT3 connector)
+- Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ### Setting up PIC32MK MCM Curiosity Pro Board
 
-- Connect an oscilloscope to monitor the PORT pin RPB11 (Pin #8 on J503/EXT3 connector)
-- Connect the Debug USB port on the board to the computer using a micro USB cable
+- Connect an oscilloscope to monitor the PORT pin RPC1 (Pin number #1 on J301 connector)
+- Connect the Debug USB port (J500) on the board to the computer using a micro USB cable
+
 
 ## Running the Application
 
@@ -61,7 +62,7 @@ Refer to the following table for clock output pin and LED name for different boa
 
 | Board      | Clock output pin | LED Name |
 | ---------- | ---------------- |--------- |
-|  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)  | RPA0 (Pin number #4 on the J29 connector)  | LED1 |
-|  PIC32MK MCJ Curiosity Pro Board  | (Pin number #33 on J301 connector)  | LED2  |
-|  PIC32MK MCM Curiosity Pro Board  | (Pin #8 on J503/EXT3 connector)  | LED1  |
+|  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)  | RPA0 (Pin number #4 on the J29 connector)  | LED0 |
+|  PIC32MK MCJ Curiosity Pro Board  | (Pin #8 on J503/EXT3 connector)  | LED2  |
+|  PIC32MK MCM Curiosity Pro Board  | (Pin number #1 on J301 connector)  | LED1  |
 ||||
