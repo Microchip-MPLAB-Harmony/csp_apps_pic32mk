@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_spi2.c
+    plib_spi2_master.c
 
   Summary:
-    SPI2 Source File
+    SPI2 Master Source File
 
   Description:
     This file has implementation of all the interfaces provided for particular
@@ -39,7 +39,7 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "plib_spi2.h"
+#include "plib_spi2_master.h"
 
 // *****************************************************************************
 // *****************************************************************************
