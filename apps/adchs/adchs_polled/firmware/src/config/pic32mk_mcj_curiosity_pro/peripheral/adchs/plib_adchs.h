@@ -74,7 +74,6 @@ extern "C" {
 /*  The following data type definitions are used by the functions in this
     interface and should be considered part it.
 */
-#define CHANNEL_3 (3U)
 
 
 // *****************************************************************************
@@ -93,6 +92,7 @@ void ADCHS_ModulesDisable (ADCHS_MODULE_MASK modulesMask);
 
 void ADCHS_GlobalEdgeConversionStart(void);
 void ADCHS_GlobalLevelConversionStart(void);
+void ADCHS_GlobalLevelConversionStop(void);
 void ADCHS_ChannelConversionStart(ADCHS_CHANNEL_NUM channel);
 
 void ADCHS_ChannelResultInterruptEnable (ADCHS_CHANNEL_NUM channel);
@@ -104,6 +104,7 @@ bool ADCHS_ChannelResultIsReady(ADCHS_CHANNEL_NUM channel);
 uint16_t ADCHS_ChannelResultGet(ADCHS_CHANNEL_NUM channel);
 
 
+bool ADCHS_EOSStatusGet(void);
 
 // *****************************************************************************
 

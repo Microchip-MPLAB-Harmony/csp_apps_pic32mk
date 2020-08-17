@@ -55,9 +55,8 @@
 void ADCHS_Initialize()
 {
     ADCCON1bits.ON = 0;
-
     ADC3CFG = DEVADC3;
-    ADC3TIME = 0x3000001;
+    ADC3TIME = 0x3010001;
 
 
 
@@ -170,6 +169,11 @@ void ADCHS_GlobalLevelConversionStart(void)
     ADCCON3bits.GLSWTRG = 1;
 }
 
+void ADCHS_GlobalLevelConversionStop(void)
+{
+    ADCCON3bits.GLSWTRG = 0;
+}
+
 void ADCHS_ChannelConversionStart(ADCHS_CHANNEL_NUM channel)
 {
     ADCCON3bits.ADINSEL = channel;
@@ -200,5 +204,9 @@ uint16_t ADCHS_ChannelResultGet(ADCHS_CHANNEL_NUM channel)
 }
 
 
+bool ADCHS_EOSStatusGet(void)
+{
+    return (bool)(ADCCON2bits.EOSRDY);
+}
 
 
