@@ -61,37 +61,41 @@
 // *****************************************************************************
 // *****************************************************************************
 
+
 /*** Macros for APP_SLAVE_BUSY_PIN pin ***/
 #define APP_SLAVE_BUSY_PIN_Set()               (LATDSET = (1<<4))
 #define APP_SLAVE_BUSY_PIN_Clear()             (LATDCLR = (1<<4))
 #define APP_SLAVE_BUSY_PIN_Toggle()            (LATDINV= (1<<4))
-#define APP_SLAVE_BUSY_PIN_Get()               ((PORTD >> 4) & 0x1)
 #define APP_SLAVE_BUSY_PIN_OutputEnable()      (TRISDCLR = (1<<4))
 #define APP_SLAVE_BUSY_PIN_InputEnable()       (TRISDSET = (1<<4))
+#define APP_SLAVE_BUSY_PIN_Get()               ((PORTD >> 4) & 0x1)
 #define APP_SLAVE_BUSY_PIN_PIN                  GPIO_PIN_RD4
+
 /*** Macros for APP_SLAVE_CS pin ***/
 #define APP_SLAVE_CS_Set()               (LATCSET = (1<<0))
 #define APP_SLAVE_CS_Clear()             (LATCCLR = (1<<0))
 #define APP_SLAVE_CS_Toggle()            (LATCINV= (1<<0))
-#define APP_SLAVE_CS_Get()               ((PORTC >> 0) & 0x1)
 #define APP_SLAVE_CS_OutputEnable()      (TRISCCLR = (1<<0))
 #define APP_SLAVE_CS_InputEnable()       (TRISCSET = (1<<0))
+#define APP_SLAVE_CS_Get()               ((PORTC >> 0) & 0x1)
 #define APP_SLAVE_CS_PIN                  GPIO_PIN_RC0
+
 /*** Macros for SWITCH pin ***/
 #define SWITCH_Set()               (LATGSET = (1<<11))
 #define SWITCH_Clear()             (LATGCLR = (1<<11))
 #define SWITCH_Toggle()            (LATGINV= (1<<11))
-#define SWITCH_Get()               ((PORTG >> 11) & 0x1)
 #define SWITCH_OutputEnable()      (TRISGCLR = (1<<11))
 #define SWITCH_InputEnable()       (TRISGSET = (1<<11))
+#define SWITCH_Get()               ((PORTG >> 11) & 0x1)
 #define SWITCH_PIN                  GPIO_PIN_RG11
+
 /*** Macros for LED1 pin ***/
 #define LED1_Set()               (LATGSET = (1<<12))
 #define LED1_Clear()             (LATGCLR = (1<<12))
 #define LED1_Toggle()            (LATGINV= (1<<12))
-#define LED1_Get()               ((PORTG >> 12) & 0x1)
 #define LED1_OutputEnable()      (TRISGCLR = (1<<12))
 #define LED1_InputEnable()       (TRISGSET = (1<<12))
+#define LED1_Get()               ((PORTG >> 12) & 0x1)
 #define LED1_PIN                  GPIO_PIN_RG12
 
 
