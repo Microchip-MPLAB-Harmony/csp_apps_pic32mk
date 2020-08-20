@@ -17,7 +17,7 @@
 *******************************************************************************/
 
 /*******************************************************************************
-* Copyright (C) 2018-2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019-2020 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -46,8 +46,8 @@
 // Section: SPI6 Slave Implementation
 // *****************************************************************************
 // *****************************************************************************
-#define SPI6_BUSY_PIN					 GPIO_PIN_RG6
-#define SPI6_CS_PIN						 GPIO_PIN_RC0
+#define SPI6_BUSY_PIN                    GPIO_PIN_RG6
+#define SPI6_CS_PIN                      GPIO_PIN_RC0
 
 
 #define SPI6_READ_BUFFER_SIZE            256
@@ -66,16 +66,16 @@ SPI_SLAVE_OBJECT spi6Obj;
 #define SPI6_CON_ENHBUF                     (1 << _SPI6CON_ENHBUF_POSITION)
 #define SPI6_CON_STXISEL                    (3 << _SPI6CON_STXISEL_POSITION)
 #define SPI6_CON_SRXISEL                    (1 << _SPI6CON_SRXISEL_POSITION)
-                             
-#define SPI6_ENABLE_RX_INT() 				IEC7SET = 0x10
-#define SPI6_CLEAR_RX_INT_FLAG()			IFS7CLR = 0x10
 
-#define SPI6_DISABLE_TX_INT()				IEC7CLR = 0x20                
-#define SPI6_ENABLE_TX_INT() 				IEC7SET = 0x20
-#define SPI6_CLEAR_TX_INT_FLAG()			IFS7CLR = 0x20
+#define SPI6_ENABLE_RX_INT()                IEC7SET = 0x10
+#define SPI6_CLEAR_RX_INT_FLAG()            IFS7CLR = 0x10
 
-#define SPI6_ENABLE_ERR_INT() 				IEC7SET = 0x8
-#define SPI6_CLEAR_ERR_INT_FLAG()			IEC7CLR = 0x8
+#define SPI6_DISABLE_TX_INT()               IEC7CLR = 0x20
+#define SPI6_ENABLE_TX_INT()                IEC7SET = 0x20
+#define SPI6_CLEAR_TX_INT_FLAG()            IFS7CLR = 0x20
+
+#define SPI6_ENABLE_ERR_INT()               IEC7SET = 0x8
+#define SPI6_CLEAR_ERR_INT_FLAG()           IEC7CLR = 0x8
 
 /* Forward declarations */
 static void SPI6_CS_Handler(GPIO_PIN pin, uintptr_t context);
@@ -88,51 +88,51 @@ void SPI6_Initialize ( void )
     IEC7CLR = 0x20;
 
     /* STOP and Reset the SPI */
-    SPI6CON = 0;    
+    SPI6CON = 0;
 
     /* Clear SPI6 Interrupt flags */
     IFS7CLR = 0x8;
     IFS7CLR = 0x10;
     IFS7CLR = 0x20;
-    
+
     /* CLear the receiver overflow error flag */
     SPI6STATCLR = _SPI6STAT_SPIROV_MASK;
 
-    /*	
-	SRXISEL = 1 (Receive buffer is not empty)
-	STXISEL = 3 (Transmit buffer is not full)
+    /*
+    SRXISEL = 1 (Receive buffer is not empty)
+    STXISEL = 3 (Transmit buffer is not full)
     MSTEN = 0
     CKP = 0
     CKE = 1
     MODE<32,16> = 0
-    ENHBUF = 1    
+    ENHBUF = 1
     */
-	
-    SPI6CONSET = (SPI6_CON_ENHBUF | SPI6_CON_MODE_32_MODE_16 | SPI6_CON_CKE | SPI6_CON_CKP | SPI6_CON_STXISEL | SPI6_CON_SRXISEL);   
-	
-	/* Enable generation of interrupt on receiver overflow */
-	SPI6CON2SET = _SPI6CON2_SPIROVEN_MASK;
 
-	spi6Obj.rdInIndex = 0;
+    SPI6CONSET = (SPI6_CON_ENHBUF | SPI6_CON_MODE_32_MODE_16 | SPI6_CON_CKE | SPI6_CON_CKP | SPI6_CON_STXISEL | SPI6_CON_SRXISEL);
+
+    /* Enable generation of interrupt on receiver overflow */
+    SPI6CON2SET = _SPI6CON2_SPIROVEN_MASK;
+
+    spi6Obj.rdInIndex = 0;
     spi6Obj.wrOutIndex = 0;
     spi6Obj.nWrBytes = 0;
     spi6Obj.errorStatus = SPI_SLAVE_ERROR_NONE;
     spi6Obj.callback = NULL ;
-    spi6Obj.transferIsBusy = false ;	
-	spi6Obj.csInterruptPending = false;
-	spi6Obj.rxInterruptActive = false;
-	
+    spi6Obj.transferIsBusy = false ;
+    spi6Obj.csInterruptPending = false;
+    spi6Obj.rxInterruptActive = false;
+
     /* Set the Busy Pin to ready state */
     GPIO_PinWrite((GPIO_PIN)SPI6_BUSY_PIN, 0);
-	
-	/* Register callback and enable notifications on Chip Select logic level change */
-	GPIO_PinInterruptCallbackRegister(SPI6_CS_PIN, SPI6_CS_Handler, (uintptr_t)NULL);
+
+    /* Register callback and enable notifications on Chip Select logic level change */
+    GPIO_PinInterruptCallbackRegister(SPI6_CS_PIN, SPI6_CS_Handler, (uintptr_t)NULL);
     GPIO_PinInterruptEnable(SPI6_CS_PIN);
-	
-	/* Enable SPI6 RX and Error Interrupts. TX interrupt will be enabled when a SPI write is submitted. */
+
+    /* Enable SPI6 RX and Error Interrupts. TX interrupt will be enabled when a SPI write is submitted. */
     SPI6_ENABLE_RX_INT();
-	SPI6_ENABLE_ERR_INT();
-    
+    SPI6_ENABLE_ERR_INT();
+
     /* Enable SPI6 */
     SPI6CONSET = _SPI6CON_ON_MASK;
 }
@@ -141,21 +141,21 @@ void SPI6_Initialize ( void )
 size_t SPI6_Read(void* pRdBuffer, size_t size)
 {
     size_t rdSize = size;
-	uint32_t rdInIndex = spi6Obj.rdInIndex;    
+    uint32_t rdInIndex = spi6Obj.rdInIndex;
 
     if (rdSize > rdInIndex)
     {
         rdSize = rdInIndex;
     }
 
-    memcpy(pRdBuffer, SPI6_ReadBuffer, rdSize);    
+    memcpy(pRdBuffer, SPI6_ReadBuffer, rdSize);
 
     return rdSize;
 }
 
 /* For 16-bit/32-bit mode, the "size" must be specified in terms of 16-bit/32-bit words */
 size_t SPI6_Write(void* pWrBuffer, size_t size )
-{    
+{
     size_t wrSize = size;
 
     SPI6_DISABLE_TX_INT();
@@ -168,9 +168,9 @@ size_t SPI6_Write(void* pWrBuffer, size_t size )
     memcpy(SPI6_WriteBuffer, pWrBuffer, wrSize);
 
     spi6Obj.nWrBytes = wrSize;
-    spi6Obj.wrOutIndex = 0;	
+    spi6Obj.wrOutIndex = 0;
 
-	/* Fill up the FIFO as long as there are empty elements */
+    /* Fill up the FIFO as long as there are empty elements */
     while ((!(SPI6STAT & _SPI6STAT_SPITBF_MASK)) && (spi6Obj.wrOutIndex < spi6Obj.nWrBytes))
     {
         SPI6BUF = SPI6_WriteBuffer[spi6Obj.wrOutIndex++];
@@ -230,82 +230,82 @@ SPI_SLAVE_ERROR SPI6_ErrorGet(void)
 
 static void SPI6_CS_Handler(GPIO_PIN pin, uintptr_t context)
 {
-	bool activeState = 0;
-	
+    bool activeState = 0;
+
     if (GPIO_PinRead((GPIO_PIN)SPI6_CS_PIN) == activeState)
-	{
-		/* CS is asserted */
-		spi6Obj.transferIsBusy = true;
-		
-		/* Drive busy line to active state */
+    {
+        /* CS is asserted */
+        spi6Obj.transferIsBusy = true;
+
+        /* Drive busy line to active state */
         GPIO_PinWrite((GPIO_PIN)SPI6_BUSY_PIN, 1);
-	}
-	else
-	{
-		/* Give application callback only if RX interrupt is not preempted and RX interrupt is not pending to be serviced */
-		
-		if ((spi6Obj.rxInterruptActive == false) && ((IFS7 & _IFS7_SPI6RXIF_MASK) == 0))
-		{
-			/* CS is de-asserted */
-			spi6Obj.transferIsBusy = false;
+    }
+    else
+    {
+        /* Give application callback only if RX interrupt is not preempted and RX interrupt is not pending to be serviced */
 
-			spi6Obj.wrOutIndex = 0;
-			spi6Obj.nWrBytes = 0;
+        if ((spi6Obj.rxInterruptActive == false) && ((IFS7 & _IFS7_SPI6RXIF_MASK) == 0))
+        {
+            /* CS is de-asserted */
+            spi6Obj.transferIsBusy = false;
 
-			if(spi6Obj.callback != NULL)
-			{
-				spi6Obj.callback(spi6Obj.context);
-			}
-			
-			/* Clear the read index. Application must read out the data by calling SPI6_Read API in the callback */
-			spi6Obj.rdInIndex = 0;
-		}
-		else
-		{
-			/* If CS interrupt is serviced by either preempting the RX interrupt or RX interrupt is pending to be serviced, 
-			 * then delegate the responsibility of giving application callback to the RX interrupt handler */
-			 
-			spi6Obj.csInterruptPending = true;
-		}
-	}
+            spi6Obj.wrOutIndex = 0;
+            spi6Obj.nWrBytes = 0;
+
+            if(spi6Obj.callback != NULL)
+            {
+                spi6Obj.callback(spi6Obj.context);
+            }
+
+            /* Clear the read index. Application must read out the data by calling SPI6_Read API in the callback */
+            spi6Obj.rdInIndex = 0;
+        }
+        else
+        {
+            /* If CS interrupt is serviced by either preempting the RX interrupt or RX interrupt is pending to be serviced,
+             * then delegate the responsibility of giving application callback to the RX interrupt handler */
+
+            spi6Obj.csInterruptPending = true;
+        }
+    }
 }
 
 void SPI6_ERR_InterruptHandler (void)
 {
-	spi6Obj.errorStatus = (SPI6STAT & _SPI6STAT_SPIROV_MASK);
-	
-	/* Clear the receive overflow flag */
-	SPI6STATCLR = _SPI6STAT_SPIROV_MASK;
-		
-	SPI6_CLEAR_ERR_INT_FLAG();
+    spi6Obj.errorStatus = (SPI6STAT & _SPI6STAT_SPIROV_MASK);
+
+    /* Clear the receive overflow flag */
+    SPI6STATCLR = _SPI6STAT_SPIROV_MASK;
+
+    SPI6_CLEAR_ERR_INT_FLAG();
 }
 
 void SPI6_TX_InterruptHandler (void)
 {
-	/* Fill up the FIFO as long as there are empty elements */
-	while ((!(SPI6STAT & _SPI6STAT_SPITBF_MASK)) && (spi6Obj.wrOutIndex < spi6Obj.nWrBytes))
-	{
-		SPI6BUF = SPI6_WriteBuffer[spi6Obj.wrOutIndex++];
-	}
-	
-	/* Clear the transmit interrupt flag */
+    /* Fill up the FIFO as long as there are empty elements */
+    while ((!(SPI6STAT & _SPI6STAT_SPITBF_MASK)) && (spi6Obj.wrOutIndex < spi6Obj.nWrBytes))
+    {
+        SPI6BUF = SPI6_WriteBuffer[spi6Obj.wrOutIndex++];
+    }
+
+    /* Clear the transmit interrupt flag */
     SPI6_CLEAR_TX_INT_FLAG();
-		
-	if (spi6Obj.wrOutIndex == spi6Obj.nWrBytes)
-	{
-		/* Nothing to transmit. Disable transmit interrupt. The last byte sent by the master will be shifted out automatically*/
-		SPI6_DISABLE_TX_INT();
-	}			       
+
+    if (spi6Obj.wrOutIndex == spi6Obj.nWrBytes)
+    {
+        /* Nothing to transmit. Disable transmit interrupt. The last byte sent by the master will be shifted out automatically*/
+        SPI6_DISABLE_TX_INT();
+    }
 }
 
 void SPI6_RX_InterruptHandler (void)
 {
-	uint32_t receivedData = 0;
-	
-	spi6Obj.rxInterruptActive = true;
-				
-	while (!(SPI6STAT & _SPI6STAT_SPIRBE_MASK))
-    {        
+    uint32_t receivedData = 0;
+
+    spi6Obj.rxInterruptActive = true;
+
+    while (!(SPI6STAT & _SPI6STAT_SPIRBE_MASK))
+    {
         /* Receive buffer is not empty. Read the received data. */
         receivedData = SPI6BUF;
 
@@ -314,19 +314,19 @@ void SPI6_RX_InterruptHandler (void)
             SPI6_ReadBuffer[spi6Obj.rdInIndex++] = receivedData;
         }
     }
-	    
+
     /* Clear the receive interrupt flag */
     SPI6_CLEAR_RX_INT_FLAG();
-	
-	spi6Obj.rxInterruptActive = false;
-	
-	/* Check if CS interrupt occured before the RX interrupt and that CS interrupt delegated the responsibility to give 
-	 * application callback to the RX interrupt */
-	 
-	if (spi6Obj.csInterruptPending == true)
-	{	
-		spi6Obj.csInterruptPending = false;		
-		spi6Obj.transferIsBusy = false;
+
+    spi6Obj.rxInterruptActive = false;
+
+    /* Check if CS interrupt occured before the RX interrupt and that CS interrupt delegated the responsibility to give
+     * application callback to the RX interrupt */
+
+    if (spi6Obj.csInterruptPending == true)
+    {
+        spi6Obj.csInterruptPending = false;
+        spi6Obj.transferIsBusy = false;
 
         spi6Obj.wrOutIndex = 0;
         spi6Obj.nWrBytes = 0;
@@ -335,9 +335,9 @@ void SPI6_RX_InterruptHandler (void)
         {
             spi6Obj.callback(spi6Obj.context);
         }
-		
-		/* Clear the read index. Application must read out the data by calling SPI6_Read API in the callback */
-		spi6Obj.rdInIndex = 0;
-	}
+
+        /* Clear the read index. Application must read out the data by calling SPI6_Read API in the callback */
+        spi6Obj.rdInIndex = 0;
+    }
 }
 
