@@ -64,12 +64,12 @@ void SPI6_TX_InterruptHandler( void );
 
 
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
-void __ISR(_SPI6_RX_VECTOR, ipl1AUTO) SPI6_RX_Handler (void)
+void __ISR(_SPI6_RX_VECTOR, ipl1SRS) SPI6_RX_Handler (void)
 {
     SPI6_RX_InterruptHandler();
 }
 
-void __ISR(_SPI6_TX_VECTOR, ipl1AUTO) SPI6_TX_Handler (void)
+void __ISR(_SPI6_TX_VECTOR, ipl1SRS) SPI6_TX_Handler (void)
 {
     SPI6_TX_InterruptHandler();
 }
