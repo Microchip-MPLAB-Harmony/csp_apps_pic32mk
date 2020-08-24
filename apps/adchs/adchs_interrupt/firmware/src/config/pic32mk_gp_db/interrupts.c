@@ -63,7 +63,7 @@ void ADC_DATA3_InterruptHandler( void );
 
 
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
-void __ISR(_ADC_DATA3_VECTOR, ipl1AUTO) ADC_DATA3_Handler (void)
+void __ISR(_ADC_DATA3_VECTOR, ipl1SOFT) ADC_DATA3_Handler (void)
 {
     ADC_DATA3_InterruptHandler();
 }
