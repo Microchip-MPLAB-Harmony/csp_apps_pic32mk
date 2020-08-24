@@ -73,9 +73,9 @@ The following table shows the target hardware for the application projects.
 
 Refer the table below for details of switch and LED:
 
-| Board      | LED Name |
-| ---------- |--------- |
-|  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)  | LED0 |
-|  PIC32MK MCJ Curiosity Pro Board  | LED2 |
-|  PIC32MK MCM Curiosity Pro Board  | LED1  |
+| Board      | Switch Name | LED Name |
+| ---------- |--------- |--------- |
+|  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)  |S1|  LED1 |
+|  PIC32MK MCJ Curiosity Pro Board  | SW200 | LED2 |
+|  PIC32MK MCM Curiosity Pro Board  | SW1 | LED1  |
 ||||
