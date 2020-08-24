@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_spi6.c
+    plib_spi6_master.c
 
   Summary:
-    SPI6 Source File
+    SPI6 Master Source File
 
   Description:
     This file has implementation of all the interfaces provided for particular
@@ -39,7 +39,7 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "plib_spi6.h"
+#include "plib_spi6_master.h"
 
 // *****************************************************************************
 // *****************************************************************************
