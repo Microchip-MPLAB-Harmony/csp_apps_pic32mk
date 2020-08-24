@@ -41,7 +41,7 @@ The following table shows the target hardware for the application projects.
 
 1. Open the Terminal application (Ex.:Tera term) on the computer
 2. Connect to the "USB to UART" COM port and configure the serial settings as follows:
-    - Baud : 115200
+    - Baud : Any
     - Data : 8 Bits
     - Parity : None
     - Stop : 1 Bit
