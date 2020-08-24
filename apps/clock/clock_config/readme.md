@@ -61,7 +61,7 @@ Refer to the following table for clock output pin and LED name for different boa
 
 | Board      | Clock output pin | LED Name |
 | ---------- | ---------------- |--------- |
-|  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)  | RPA0 (Pin number #4 on the J29 connector)  | LED0 |
+|  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)  | RPA0 (Pin number #4 on the J29 connector)  | LED1 |
 |  PIC32MK MCJ Curiosity Pro Board  | (Pin number #33 on J301 connector)  | LED2  |
 |  PIC32MK MCM Curiosity Pro Board  | (Pin #8 on J503/EXT3 connector)  | LED1  |
 ||||
