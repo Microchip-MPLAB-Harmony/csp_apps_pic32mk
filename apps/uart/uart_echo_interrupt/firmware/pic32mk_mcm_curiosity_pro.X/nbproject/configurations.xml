@@ -69,14 +69,6 @@
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f1" displayName="stdio" projectFiles="true">
-            <logicalFolder name="f1" displayName="clk" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f2" displayName="evic" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f3" displayName="gpio" projectFiles="true">
-            </logicalFolder>
-            <logicalFolder name="f4" displayName="uart" projectFiles="true">
-            </logicalFolder>
             <itemPath>../src/config/pic32mk_mcm_curiosity_pro/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/initialization.c</itemPath>
