@@ -1,0 +1,77 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32mk_conf_mcm_gpio_led_on_off_polling",
+		"version": "3.0.1",
+		"displayName": "GPIO Polling Example for PIC32MK Family",
+		"projectName": "gpio_led_on_off_polling_pic32mk_mcm_curiosity_pro",
+		"shortDescription": "This example application demonstrate how to poll the switch input, and indicate the switch status using the LED.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MK-MC_DFP",
+			"semverRange": "^1.5.115"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MK1024MCM100",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "PIC32MK MCM Curiosity Pro Board"
+			],
+			[
+				"Harmony", "Peripherals", "GPIO"
+			],
+			[
+				"Peripherals", "GPIO"
+			]
+		],
+		"peripherals": [
+			"GPIO"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"PIC32MK1024MCM100",
+			"PIC32MK Family",
+			"GPIO",
+			"PORT",
+			"PIO",
+			"I/O",
+			"Pin"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

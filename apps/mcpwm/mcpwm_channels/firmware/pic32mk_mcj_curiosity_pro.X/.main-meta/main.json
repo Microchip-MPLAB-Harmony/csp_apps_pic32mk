@@ -1,0 +1,76 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32mk_conf_mcj_mcpwm_channels",
+		"version": "3.0.1",
+		"displayName": "MCPWM channels Example for PIC32MK Family",
+		"projectName": "mcpwm_channels_pic32mk_mcj_curiosity_pro",
+		"shortDescription": "This example demonstrates how to use the MCPWM peripheral to generate PWM signals.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.40.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.40.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MK-MC_DFP",
+			"semverRange": "^1.4.94"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.5.1"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MK0512MCJ064",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "### Setting up PIC32MK MCJ Curiosity Pro Board"
+			],
+			[
+				"Harmony", "Peripherals", "MCPWM"
+			],
+			[
+				"Peripherals", "MCPWM"
+			]
+		],
+		"peripherals": [
+			"MCPWM"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"PIC32MK0512MCJ064",
+			"PIC32MK Family",
+			"MCPWM",
+			"PWM",
+			"Motor Control",
+			"Timer"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
