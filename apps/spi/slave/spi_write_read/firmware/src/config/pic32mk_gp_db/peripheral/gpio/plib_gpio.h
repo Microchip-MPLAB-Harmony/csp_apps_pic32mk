@@ -71,17 +71,6 @@
 #define GPIO_RG6_Get()               ((PORTG >> 6) & 0x1)
 #define GPIO_RG6_PIN                  GPIO_PIN_RG6
 
-/*** Macros for GPIO_RC0 pin ***/
-#define GPIO_RC0_Set()               (LATCSET = (1<<0))
-#define GPIO_RC0_Clear()             (LATCCLR = (1<<0))
-#define GPIO_RC0_Toggle()            (LATCINV= (1<<0))
-#define GPIO_RC0_OutputEnable()      (TRISCCLR = (1<<0))
-#define GPIO_RC0_InputEnable()       (TRISCSET = (1<<0))
-#define GPIO_RC0_Get()               ((PORTC >> 0) & 0x1)
-#define GPIO_RC0_PIN                  GPIO_PIN_RC0
-#define GPIO_RC0_InterruptEnable()   (CNENCSET = (1<<0))
-#define GPIO_RC0_InterruptDisable()  (CNENCCLR = (1<<0))
-
 
 // *****************************************************************************
 /* GPIO Port

@@ -66,6 +66,7 @@ SPI_SLAVE_OBJECT spi6Obj;
 #define SPI6_CON_ENHBUF                     (1 << _SPI6CON_ENHBUF_POSITION)
 #define SPI6_CON_STXISEL                    (3 << _SPI6CON_STXISEL_POSITION)
 #define SPI6_CON_SRXISEL                    (1 << _SPI6CON_SRXISEL_POSITION)
+#define SPI6_CON_SSEN                       (1 << _SPI6CON_SSEN_POSITION)
 
 #define SPI6_ENABLE_RX_INT()                IEC7SET = 0x10
 #define SPI6_CLEAR_RX_INT_FLAG()            IFS7CLR = 0x10
@@ -75,7 +76,7 @@ SPI_SLAVE_OBJECT spi6Obj;
 #define SPI6_CLEAR_TX_INT_FLAG()            IFS7CLR = 0x20
 
 #define SPI6_ENABLE_ERR_INT()               IEC7SET = 0x8
-#define SPI6_CLEAR_ERR_INT_FLAG()           IEC7CLR = 0x8
+#define SPI6_CLEAR_ERR_INT_FLAG()           IFS7CLR = 0x8
 
 /* Forward declarations */
 static void SPI6_CS_Handler(GPIO_PIN pin, uintptr_t context);
@@ -108,7 +109,7 @@ void SPI6_Initialize ( void )
     ENHBUF = 1
     */
 
-    SPI6CONSET = (SPI6_CON_ENHBUF | SPI6_CON_MODE_32_MODE_16 | SPI6_CON_CKE | SPI6_CON_CKP | SPI6_CON_STXISEL | SPI6_CON_SRXISEL);
+    SPI6CONSET = (SPI6_CON_ENHBUF | SPI6_CON_MODE_32_MODE_16 | SPI6_CON_CKE | SPI6_CON_CKP | SPI6_CON_SSEN | SPI6_CON_STXISEL | SPI6_CON_SRXISEL);
 
     /* Enable generation of interrupt on receiver overflow */
     SPI6CON2SET = _SPI6CON2_SPIROVEN_MASK;
@@ -270,7 +271,7 @@ static void SPI6_CS_Handler(GPIO_PIN pin, uintptr_t context)
     }
 }
 
-void SPI6_ERR_InterruptHandler (void)
+void SPI6_FAULT_InterruptHandler (void)
 {
     spi6Obj.errorStatus = (SPI6STAT & _SPI6STAT_SPIROV_MASK);
 
