@@ -9,16 +9,16 @@
                        displayName="pic32mk_mcj_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f4" displayName="tmr" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/tmr/plib_tmr_common.h</itemPath>
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/tmr/plib_tmr2.h</itemPath>
             </logicalFolder>
@@ -26,6 +26,7 @@
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/definitions.h</itemPath>
           <itemPath>../src/config/pic32mk_mcj_curiosity_pro/device.h</itemPath>
+          <itemPath>../src/config/pic32mk_mcj_curiosity_pro/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -34,11 +35,19 @@
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mcj_curiosity_pro/harmony.prj</itemPath>
-      <itemPath>../../../../../../mhc/../csp_apps_pic32mk/apps/tmr/tmr_timer_mode/firmware/src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.xml</itemPath>
+      <itemPath>../../../../../../csp_apps_pic32mk/apps/tmr/tmr_timer_mode/firmware/src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.xml</itemPath>
+      <itemPath>../src/config/pic32mk_mcj_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="config" projectFiles="true">
+        <logicalFolder name="f1"
+                       displayName="pic32mk_mcj_curiosity_pro"
+                       projectFiles="true">
+          <itemPath>../src/config/pic32mk_mcj_curiosity_pro/p32MK0512MCJ064.ld</itemPath>
+        </logicalFolder>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
@@ -48,16 +57,16 @@
                        displayName="pic32mk_mcj_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/evic/plib_evic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/gpio/plib_gpio.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f4" displayName="tmr" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/tmr/plib_tmr2.c</itemPath>
             </logicalFolder>
           </logicalFolder>
@@ -85,11 +94,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.40</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MK-MC_DFP" vendor="Microchip" version="1.4.94"/>
+        <pack name="PIC32MK-MC_DFP" vendor="Microchip" version="1.5.115"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -110,6 +119,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -380,6 +390,7 @@
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -393,6 +404,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d07ffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -408,11 +420,9 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="programoptionsedbg.eraseb4program" value="true"/>
         <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+                  value="toolpack.updateoptions.specifictoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="1.1.166"/>
       </pkob4hybrid>
     </conf>
   </confs>
