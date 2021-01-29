@@ -9,16 +9,16 @@
                        displayName="pic32mk_mcm_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/clk/plib_clk.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/evic/plib_evic.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/gpio/plib_gpio.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="i2c" projectFiles="true">
+            <logicalFolder name="f4" displayName="i2c" projectFiles="true">
               <logicalFolder name="f1" displayName="master" projectFiles="true">
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/master/plib_i2c4_master.h</itemPath>
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/master/plib_i2c_master_common.h</itemPath>
@@ -28,6 +28,7 @@
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/definitions.h</itemPath>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/device.h</itemPath>
+          <itemPath>../src/config/pic32mk_mcm_curiosity_pro/interrupts.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -36,7 +37,8 @@
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony.prj</itemPath>
-      <itemPath>../../../../../../../mhc/../csp_apps_pic32mk/apps/i2c/master/i2c_eeprom/firmware/src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.xml</itemPath>
+      <itemPath>../../../../../../../csp_apps_pic32mk/apps/i2c/master/i2c_eeprom/firmware/src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.xml</itemPath>
+      <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -57,16 +59,16 @@
                        displayName="pic32mk_mcm_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f2" displayName="clk" projectFiles="true">
+            <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/clk/plib_clk.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f4" displayName="evic" projectFiles="true">
+            <logicalFolder name="f2" displayName="evic" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/evic/plib_evic.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f3" displayName="gpio" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/gpio/plib_gpio.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="f1" displayName="i2c" projectFiles="true">
+            <logicalFolder name="f4" displayName="i2c" projectFiles="true">
               <logicalFolder name="f1" displayName="master" projectFiles="true">
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/master/plib_i2c4_master.c</itemPath>
               </logicalFolder>
@@ -96,7 +98,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.41</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -121,6 +123,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -418,6 +421,7 @@
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -431,6 +435,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d0fffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -446,7 +451,6 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="programoptionsedbg.eraseb4program" value="true"/>
         <property key="toolpack.updateoptions"
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
