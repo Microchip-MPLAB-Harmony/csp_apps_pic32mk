@@ -91,11 +91,6 @@
 #pragma config FPLLICLK =   PLL_FRC
 #pragma config FPLLMULT =   MUL_60
 #pragma config FPLLODIV =   DIV_4
-#pragma config DSBOREN =    ON
-#pragma config DSWDTPS =    DSPS32
-#pragma config DSWDTOSC =   LPRC
-#pragma config DSWDTEN =    OFF
-#pragma config FDSEN =      ON
 #pragma config BORSEL =     HIGH
 #pragma config UPLLEN =     OFF
 
@@ -186,6 +181,7 @@ static void STDIO_BufferModeSet(void)
 
 void SYS_Initialize ( void* data )
 {
+
     /* Start out with interrupts disabled before configuring any modules */
     __builtin_disable_interrupts();
 
