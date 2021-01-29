@@ -40,10 +40,10 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113)
 
-- Connect an oscilloscope to monitor the DAC1 (RC10) pin
+- Connect an oscilloscope to monitor the DAC1 (RC10) pin (pin 16 of J601)
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
 
 1. Build and Program the application using its IDE
-2. Observe a sine wave of 5 KHz frequency on DAC1 output pin
+2. Observe a sine wave of 1 KHz frequency on DAC1 output pin

@@ -21,7 +21,7 @@
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -157,7 +157,7 @@ static void DMAC_ChannelSetAddresses( DMAC_CHANNEL channel, const void *srcAddr,
     }
     else
     {
-        /*For KSEG0 and KSEG1, The translation is done by KVA_TO_PA */
+        /* For KSEG0 and KSEG1, The translation is done by KVA_TO_PA */
         destAddress = ConvertToPhysicalAddress(destAddress);
     }
 
@@ -237,7 +237,7 @@ void DMAC_Initialize( void )
     DMACONSET = _DMACON_ON_MASK;
 
     /* Initialize the available channel objects */
-    chanObj             =   (DMAC_CHANNEL_OBJECT *)&gDMAChannelObj[0];
+    chanObj = (DMAC_CHANNEL_OBJECT *)&gDMAChannelObj[0];
 
     for(chanIndex = 0; chanIndex < 8; chanIndex++)
     {
@@ -410,22 +410,6 @@ void DMAC_ChannelPatternMatchDisable(DMAC_CHANNEL channel)
     eventConRegs = (volatile uint32_t *)(_DMAC_BASE_ADDRESS + 0x60 + (channel * 0xC0) + 0x10)+1;
     *(volatile uint32_t *)(eventConRegs) = _DCH0ECON_PATEN_MASK;
 }
-
-void DMAC_ChannelPatternIgnoreSetup(DMAC_CHANNEL channel, uint8_t patternIgnoreByte)
-{
-    volatile __DCH0CONbits_t * controlRegs;
-    controlRegs = (volatile __DCH0CONbits_t *)(_DMAC_BASE_ADDRESS + 0x60 + (channel * 0xC0) + 0x0);
-    controlRegs->CHPIGN = patternIgnoreByte;
-
-    controlRegs->CHPIGNEN = 1; // Enable pattern ignore
-}
-
-void DMAC_ChannelPatternIgnoreDisable(DMAC_CHANNEL channel)
-{
-    volatile uint32_t * controlRegs;
-    controlRegs = (volatile uint32_t *)(_DMAC_BASE_ADDRESS + 0x60 + (channel * 0xC0) + 0x0)+1;
-    *(volatile uint32_t *)(controlRegs) = _DCH0CON_CHPIGNEN_MASK;
-}
 // *****************************************************************************
 /* Function:
    void DMAC_ChannelDisable (DMAC_CHANNEL channel)
@@ -483,7 +467,7 @@ bool DMAC_ChannelIsBusy (DMAC_CHANNEL channel)
 
 // *****************************************************************************
 /* Function:
-   void DMAC_ChannelCRCEnable( DMAC_CHANNEL channel, DMAC_CRC_SETUP CRCSetup )
+   void DMAC_ChannelCRCSetup( DMAC_CHANNEL channel, DMAC_CRC_SETUP CRCSetup )
 
   Summary:
     DMA Channel CRC setup and enable function
@@ -512,7 +496,7 @@ bool DMAC_ChannelIsBusy (DMAC_CHANNEL channel)
     void
 
 */
-void DMAC_ChannelCRCEnable( DMAC_CHANNEL channel, DMAC_CRC_SETUP CRCSetup )
+void DMAC_ChannelCRCSetup( DMAC_CHANNEL channel, DMAC_CRC_SETUP CRCSetup )
 {
     uint32_t mask = 0;
 
@@ -576,9 +560,9 @@ void DMAC_CRCDisable( void )
 
   Description:
     Reads the generated DMA CRC value. It performs crc reverse and final xor
-    opeartion based on setup paramters during DMAC_ChannelCRCEnable()
+    opeartion based on setup paramters during DMAC_ChannelCRCSetup()
 
-    Note: Once Read is done, DMAC_ChannelCRCEnable() has to be called
+    Note: Once Read is done, DMAC_ChannelCRCSetup() has to be called
     again to setup the seed before performing DMA transfer for CRC generation.
 
   Parameters:
@@ -633,7 +617,7 @@ void DMA0_InterruptHandler (void)
 
     /* Check whether the active DMA channel event has occurred */
 
-    if((true == DCH0INTbits.CHSHIF) || (true == DCH0INTbits.CHDHIF))/* irq due to half complete */
+    if((DCH0INTbits.CHSHIF == true) || (DCH0INTbits.CHDHIF == true))/* irq due to half complete */
     {
         /* Do not clear the flag here, it should be cleared with block transfer complete flag*/
 
@@ -641,7 +625,7 @@ void DMA0_InterruptHandler (void)
         chanObj->errorInfo = DMAC_ERROR_NONE;
         dmaEvent = DMAC_TRANSFER_EVENT_HALF_COMPLETE;
     }
-    if(true == DCH0INTbits.CHTAIF) /* irq due to transfer abort */
+    if(DCH0INTbits.CHTAIF == true) /* irq due to transfer abort */
     {
         /* Channel is by default disabled on Transfer Abortion */
         /* Clear the Abort transfer complete flag */
@@ -651,7 +635,7 @@ void DMA0_InterruptHandler (void)
         chanObj->errorInfo = DMAC_ERROR_NONE;
         dmaEvent = DMAC_TRANSFER_EVENT_ERROR;
     }
-    if(true == DCH0INTbits.CHBCIF) /* irq due to transfer complete */
+    if(DCH0INTbits.CHBCIF == true) /* irq due to transfer complete */
     {
         /* Channel is by default disabled on completion of a block transfer */
         /* Clear the Block transfer complete, half empty and half full interrupt flag */
@@ -661,7 +645,7 @@ void DMA0_InterruptHandler (void)
         chanObj->errorInfo = DMAC_ERROR_NONE;
         dmaEvent = DMAC_TRANSFER_EVENT_COMPLETE;
     }
-    if(true == DCH0INTbits.CHERIF) /* irq due to address error */
+    if(DCH0INTbits.CHERIF == true) /* irq due to address error */
     {
         /* Clear the address error flag */
         DCH0INTCLR = _DCH0INT_CHERIF_MASK;
@@ -676,7 +660,7 @@ void DMA0_InterruptHandler (void)
     /* Clear the interrupt flag and call event handler */
     IFS2CLR = 0x100;
 
-    if((NULL != chanObj->pEventCallBack) && (DMAC_TRANSFER_EVENT_NONE != dmaEvent))
+    if((chanObj->pEventCallBack != NULL) && (dmaEvent != DMAC_TRANSFER_EVENT_NONE))
     {
         chanObj->pEventCallBack(dmaEvent, chanObj->hClientArg);
     }

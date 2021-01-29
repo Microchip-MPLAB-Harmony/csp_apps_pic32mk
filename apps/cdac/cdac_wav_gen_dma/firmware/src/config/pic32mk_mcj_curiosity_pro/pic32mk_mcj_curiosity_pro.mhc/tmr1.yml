@@ -4,6 +4,13 @@ attributes: {id: tmr1}
 children:
 - type: Symbols
   children:
+  - type: Integer
+    attributes: {id: TIMER1_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: tmr1, value: '60000000'}
   - type: Long
     attributes: {id: TIMER1_PERIOD}
     children:
