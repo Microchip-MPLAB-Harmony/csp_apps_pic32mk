@@ -4,15 +4,15 @@
 
 
 project: cdac_wav_gen
-creation_date: 2020-12-28T16:41:38.783+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2021-02-04T22:55:25.280+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: IDE            # [IDE|Standalone|Headless]
-mhc_version: unknown
+mhc_version: v3.7.0-tc.2
 mplabx_version: v5.45        # if MPLAB X plugin only
 plugin_version: v3.6.2        # if MPLAB X plugin only
-compiler: XC32 (2.00)
+compiler: XC32 (2.50)
 
 modules:
     - {name: "csp", version: "unknown"}
-    - {name: "dev_packs", version: "unknown"}
+    - {name: "dev_packs", version: "v3.9.0-rc.1"}
 
