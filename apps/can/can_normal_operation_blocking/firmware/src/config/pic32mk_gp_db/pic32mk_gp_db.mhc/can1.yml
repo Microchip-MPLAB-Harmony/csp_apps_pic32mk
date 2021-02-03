@@ -1,0 +1,71 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: can1}
+children:
+- type: Symbols
+  children:
+  - type: String
+    attributes: {id: CALCULATED_ERRORRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '0.000'}
+  - type: Integer
+    attributes: {id: CALCULATED_NOMINAL_BITRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '500'}
+  - type: Integer
+    attributes: {id: CAN_CORE_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '60000000'}
+  - type: Integer
+    attributes: {id: PHASE1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '7'}
+  - type: Integer
+    attributes: {id: PHASE2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '3'}
+  - type: Integer
+    attributes: {id: PROPAG}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '1'}
+  - type: Integer
+    attributes: {id: SJW}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '3'}
+  - type: String
+    attributes: {id: TIME_QUANTA_PERIOD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '166.667'}
+  - type: Integer
+    attributes: {id: TOTAL_TIME_QUANTA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '12'}
+- type: ElementPosition
+  attributes: {x: '340', y: '20', id: can1}
