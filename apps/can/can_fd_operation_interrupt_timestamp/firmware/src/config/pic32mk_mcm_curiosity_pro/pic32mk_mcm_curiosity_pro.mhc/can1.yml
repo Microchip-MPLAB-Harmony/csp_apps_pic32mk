@@ -1,0 +1,216 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: can1}
+children:
+- type: Symbols
+  children:
+  - type: Integer
+    attributes: {id: CALCULATED_DATA_BITRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '2006'}
+  - type: String
+    attributes: {id: CALCULATED_DATA_ERRORRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '0.312'}
+  - type: Integer
+    attributes: {id: CALCULATED_NOMINAL_BITRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '501'}
+  - type: String
+    attributes: {id: CALCULATED_NOMINAL_ERRORRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '0.312'}
+  - type: Integer
+    attributes: {id: CAN_CORE_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '80250000'}
+  - type: Comment
+    attributes: {id: CAN_CORE_CLOCK_INVALID_DATA_BITRAT_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: Warning!!! CAN1 Clock Frequency is too high for required
+            Data Bit Timing}
+  - type: Boolean
+    attributes: {id: CAN_INTERRUPT_MODE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: CAN_TIMESTAMP_ENABLE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: CAN_TIMESTAMP_EOF}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Integer
+    attributes: {id: CAN_TIMESTAMP_PRESCALER}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: CAN_TIMESTAMP_TSRES}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Comment
+    attributes: {id: CAN_TIME_QUANTA_INVALID_DATA_BITRATE_COMMENT}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: Warning!!! Number of Time Quanta is too high for required
+            Data Bit Timing}
+  - type: Integer
+    attributes: {id: DATA_BITRATE}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '2000'}
+  - type: String
+    attributes: {id: DATA_TIME_QUANTA_PERIOD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '24.922'}
+  - type: Integer
+    attributes: {id: DBT_BRP}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: Integer
+    attributes: {id: DBT_SJW}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '5'}
+  - type: Integer
+    attributes: {id: DBT_TOTAL_TIME_QUANTA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '20'}
+  - type: Integer
+    attributes: {id: DBT_TSEG1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '14'}
+  - type: Integer
+    attributes: {id: DBT_TSEG2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '5'}
+  - type: String
+    attributes: {id: FIFO_OFFSET}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '0xc'}
+  - type: String
+    attributes: {id: FILTER_OBJ_MASK_OFFSET}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '0x8'}
+  - type: String
+    attributes: {id: FILTER_OFFSET}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '0x4'}
+  - type: Integer
+    attributes: {id: NBT_BRP}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '7'}
+  - type: Integer
+    attributes: {id: NBT_SJW}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '5'}
+  - type: Integer
+    attributes: {id: NBT_TOTAL_TIME_QUANTA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '20'}
+  - type: Integer
+    attributes: {id: NBT_TSEG1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '14'}
+  - type: Integer
+    attributes: {id: NBT_TSEG2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '5'}
+  - type: String
+    attributes: {id: NOMINAL_TIME_QUANTA_PERIOD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can1, value: '99.689'}
+- type: ElementPosition
+  attributes: {x: '30', y: '60', id: can1}

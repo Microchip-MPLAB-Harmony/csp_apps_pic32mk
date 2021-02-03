@@ -93,6 +93,7 @@ static CAN_OBJ can1Obj;
 static CAN_RX_MSG can1RxMsg[CAN_NUM_OF_FIFO][CAN_FIFO_MESSAGE_BUFFER_MAX];
 static CAN_CALLBACK_OBJ can1CallbackObj[CAN_NUM_OF_FIFO + 1];
 static CAN_CALLBACK_OBJ can1ErrorCallbackObj;
+static uint32_t can1MsgIndex[CAN_NUM_OF_FIFO];
 static uint8_t __attribute__((coherent, aligned(16))) can_message_buffer[CAN_MESSAGE_RAM_CONFIG_SIZE];
 static const uint8_t dlcToLength[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 20, 24, 32, 48, 64};
 
@@ -358,13 +359,27 @@ bool CAN1_MessageReceive(uint32_t *id, uint8_t *length, uint8_t *data, uint32_t 
 {
     bool status = false;
     uint8_t msgIndex = 0;
+    uint8_t fifoSize = 0;
 
     if ((fifoNum > CAN_NUM_OF_FIFO) || (id == NULL))
     {
         return status;
     }
 
-    msgIndex = (uint8_t)((*(volatile uint32_t *)(&CFD1FIFOSTA1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)) & _CFD1FIFOSTA1_FIFOCI_MASK) >> 8);
+    fifoSize = (*(volatile uint32_t *)(&CFD1FIFOCON1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)) & _CFD1FIFOCON1_FSIZE_MASK) >> _CFD1FIFOCON1_FSIZE_POSITION;
+    for (msgIndex = 0; msgIndex <= fifoSize; msgIndex++)
+    {
+        if ((can1MsgIndex[fifoNum-1] & (1UL << (msgIndex & 0x1F))) == 0)
+        {
+            can1MsgIndex[fifoNum-1] |= (1UL << (msgIndex & 0x1F));
+            break;
+        }
+    }
+    if(msgIndex > fifoSize)
+    {
+        /* FIFO is full */
+        return false;
+    }
     can1RxMsg[fifoNum-1][msgIndex].id = id;
     can1RxMsg[fifoNum-1][msgIndex].buffer = data;
     can1RxMsg[fifoNum-1][msgIndex].size = length;
@@ -914,53 +929,61 @@ void CAN1_InterruptHandler(void)
             fifoNum = (uint8_t)CFD1VEC & _CFD1VEC_ICODE_MASK;
             if (fifoNum <= CAN_NUM_OF_FIFO)
             {
-                *(volatile uint32_t *)(&CFD1FIFOCON1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)) &= ~_CFD1FIFOCON1_TFNRFNIE_MASK;
-                IFS5CLR = _IFS5_CAN1IF_MASK;
                 fifoSize = (*(volatile uint32_t *)(&CFD1FIFOCON1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)) & _CFD1FIFOCON1_FSIZE_MASK) >> _CFD1FIFOCON1_FSIZE_POSITION;
                 for (msgIndex = 0; msgIndex <= fifoSize; msgIndex++)
                 {
-                    /* Get a pointer to RX message buffer */
-                    rxMessage = (CAN_RX_MSG_OBJECT *)PA_TO_KVA1(*(volatile uint32_t *)(&CFD1FIFOUA1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)));
-
-                    if (can1RxMsg[fifoNum-1][msgIndex].buffer != NULL)
+                    if ((can1MsgIndex[fifoNum-1] & (1 << (msgIndex & 0x1F))) == (1 << (msgIndex & 0x1F)))
                     {
-                        /* Check if it's a extended message type */
-                        if (rxMessage->r1 & CAN_MSG_IDE_MASK)
-                        {
-                            *can1RxMsg[fifoNum-1][msgIndex].id = (((rxMessage->r0 & CAN_MSG_RX_EXT_SID_MASK) << 18) | ((rxMessage->r0 & CAN_MSG_RX_EXT_EID_MASK) >> 11)) & CAN_MSG_EID_MASK;
-                        }
-                        else
-                        {
-                            *can1RxMsg[fifoNum-1][msgIndex].id = rxMessage->r0 & CAN_MSG_SID_MASK;
-                        }
-
-                        if ((rxMessage->r1 & CAN_MSG_RTR_MASK) && ((rxMessage->r1 & CAN_MSG_FDF_MASK) == 0))
-                        {
-                            *can1RxMsg[fifoNum-1][msgIndex].msgAttr = CAN_MSG_RX_REMOTE_FRAME;
-                        }
-                        else
-                        {
-                            *can1RxMsg[fifoNum-1][msgIndex].msgAttr = CAN_MSG_RX_DATA_FRAME;
-                        }
-
-                        *can1RxMsg[fifoNum-1][msgIndex].size = dlcToLength[(rxMessage->r1 & CAN_MSG_DLC_MASK)];
-
-                        if (can1RxMsg[fifoNum-1][msgIndex].timestamp != NULL)
-                        {
-                            *can1RxMsg[fifoNum-1][msgIndex].timestamp =  (rxMessage->data[3] << 24) | (rxMessage->data[2] << 16) | (rxMessage->data[1] << 8) | rxMessage->data[0];
-                        }
-
-                        /* Copy the data into the payload */
-                        while (count < *can1RxMsg[fifoNum-1][msgIndex].size)
-                        {
-                            *can1RxMsg[fifoNum-1][msgIndex].buffer++ = rxMessage->data[dataIndex + count++];
-                        }
+                        can1MsgIndex[fifoNum-1] &= ~(1 << (msgIndex & 0x1F));
+                        break;
                     }
-                    /* Message processing is done, update the message buffer pointer. */
-                    *(volatile uint32_t *)(&CFD1FIFOCON1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)) |= _CFD1FIFOCON1_UINC_MASK;
+                }
+                /* Get a pointer to RX message buffer */
+                rxMessage = (CAN_RX_MSG_OBJECT *)PA_TO_KVA1(*(volatile uint32_t *)(&CFD1FIFOUA1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)));
+
+                /* Check if it's a extended message type */
+                if (rxMessage->r1 & CAN_MSG_IDE_MASK)
+                {
+                    *can1RxMsg[fifoNum-1][msgIndex].id = (((rxMessage->r0 & CAN_MSG_RX_EXT_SID_MASK) << 18) | ((rxMessage->r0 & CAN_MSG_RX_EXT_EID_MASK) >> 11)) & CAN_MSG_EID_MASK;
+                }
+                else
+                {
+                    *can1RxMsg[fifoNum-1][msgIndex].id = rxMessage->r0 & CAN_MSG_SID_MASK;
+                }
+
+                if ((rxMessage->r1 & CAN_MSG_RTR_MASK) && ((rxMessage->r1 & CAN_MSG_FDF_MASK) == 0))
+                {
+                    *can1RxMsg[fifoNum-1][msgIndex].msgAttr = CAN_MSG_RX_REMOTE_FRAME;
+                }
+                else
+                {
+                    *can1RxMsg[fifoNum-1][msgIndex].msgAttr = CAN_MSG_RX_DATA_FRAME;
+                }
+
+                *can1RxMsg[fifoNum-1][msgIndex].size = dlcToLength[(rxMessage->r1 & CAN_MSG_DLC_MASK)];
+
+                if (can1RxMsg[fifoNum-1][msgIndex].timestamp != NULL)
+                {
+                    *can1RxMsg[fifoNum-1][msgIndex].timestamp =  (rxMessage->data[3] << 24) | (rxMessage->data[2] << 16) | (rxMessage->data[1] << 8) | rxMessage->data[0];
+                }
+
+                /* Copy the data into the payload */
+                while (count < *can1RxMsg[fifoNum-1][msgIndex].size)
+                {
+                    *can1RxMsg[fifoNum-1][msgIndex].buffer++ = rxMessage->data[dataIndex + count++];
+                }
+
+                /* Message processing is done, update the message buffer pointer. */
+                *(volatile uint32_t *)(&CFD1FIFOCON1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)) |= _CFD1FIFOCON1_UINC_MASK;
+
+                if (((*(volatile uint32_t *)(&CFD1FIFOSTA1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)) & _CFD1FIFOSTA1_TFNRFNIF_MASK) != _CFD1FIFOSTA1_TFNRFNIF_MASK) ||
+                    (can1MsgIndex[fifoNum-1] == 0))
+                {
+                    *(volatile uint32_t *)(&CFD1FIFOCON1 + ((fifoNum - 1) * CAN_FIFO_OFFSET)) &= ~_CFD1FIFOCON1_TFNRFNIE_MASK;
                 }
             }
-            CFD1INT &= ~_CFD1INT_RXIE_MASK;
+            IFS5CLR = _IFS5_CAN1IF_MASK;
+
             if (can1CallbackObj[fifoNum].callback != NULL)
             {
                 can1CallbackObj[fifoNum].callback(can1CallbackObj[fifoNum].context);
@@ -981,7 +1004,7 @@ void CAN1_InterruptHandler(void)
                 }
             }
             IFS5CLR = _IFS5_CAN1IF_MASK;
-            CFD1INT &= ~_CFD1INT_TXIE_MASK;
+
             if (can1CallbackObj[fifoNum].callback != NULL)
             {
                 can1CallbackObj[fifoNum].callback(can1CallbackObj[fifoNum].context);
