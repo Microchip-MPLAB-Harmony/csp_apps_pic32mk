@@ -43,6 +43,8 @@ The following applications are provided to demonstrate the typical or interestin
 | [CAN FD interrupt](apps/can/can_fd_operation_interrupt_timestamp/readme.md) | This example application shows how to use the CAN module to transmit and receive CAN FD messages in interrupt mode |
 | [CAN blocking](apps/can/can_normal_operation_blocking/readme.md) | This example application shows how to use the CAN module to transmit and receive normal CAN messages in polling mode |
 | [CAN interrupt](apps/can/can_normal_operation_interrupt_timestamp/readme.md) | This example application shows how to use the CAN module to transmit and receive normal CAN messages in interrupt mode |
+| [DAC waveform generation](apps/cdac/cdac_wav_gen/readme.md) | This example application shows how to use the CDAC to generate a 5 KHz sinusoidal waveform |
+| [DAC waveform generation with DMA](apps/cdac/cdac_wav_gen_dma/readme.md) | This example application shows how to use the CDAC with the DMA to generate a 5 KHz sinusoidal waveform without CPU intervention |
 | [Clock configuration](apps/clock/clock_config/readme.md) | This example application shows how to configure the clock system to run the device at maximum frequency. It also outputs a prescaled clock signal on a GPIO pin for measurement and verification |
 | [CORETIMER periodic interrupt](apps/coretimer/coretimer_periodic_timeout/readme.md) | This example application shows how to use the CoreTimer to generate periodic interrupts |
 | [DMAC memory transfer](apps/dmac/dmac_memory_transfer/readme.md) | This example application demonstrates how to use the DMAC peripheral to do a memory to memory transfer |
