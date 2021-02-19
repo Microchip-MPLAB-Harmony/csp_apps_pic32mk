@@ -1,11 +1,11 @@
 files:
-- generatedChecksum: C2B88D9215301ECE3DC36E4B82F2791C
+- generatedChecksum: 99DB74296DF9943C474F4F03A700C790
   logicalPath: config\pic32mk_mcm_curiosity_pro
   name: exceptions.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C2B88D9215301ECE3DC36E4B82F2791C
+  userChecksum: 99DB74296DF9943C474F4F03A700C790
 - generatedChecksum: B4F17DAE17C70211E1ACDF4232AD3541
   logicalPath: config\pic32mk_mcm_curiosity_pro
   name: initialization.c
@@ -27,13 +27,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: BB9E87011FF90110F83443E52A871FBD
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\can
-  name: plib_can1.c
-  physicalPath: peripheral\can
+- generatedChecksum: 0CB2D9F17CE7194CB73F1842BE843E56
+  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\canfd
+  name: plib_canfd1.c
+  physicalPath: peripheral\canfd
   security: NON_SECURE
   type: SOURCE
-  userChecksum: BB9E87011FF90110F83443E52A871FBD
+  userChecksum: 0CB2D9F17CE7194CB73F1842BE843E56
 - generatedChecksum: 2359DC0E429ACE7D94D8CA993040B940
   logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\clk
   name: plib_clk.c
@@ -69,13 +69,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: AEAD678D52A900BF13F45EFDA811BC10
-- generatedChecksum: 361ACB67AF97C08DA34F14271D7535FF
+- generatedChecksum: B8843551DBAEE9755D624E852C6DA447
   logicalPath: config\pic32mk_mcm_curiosity_pro
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 361ACB67AF97C08DA34F14271D7535FF
+  userChecksum: B8843551DBAEE9755D624E852C6DA447
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
   logicalPath: config\pic32mk_mcm_curiosity_pro
   name: device.h
@@ -90,20 +90,20 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4CF4A86296482D5331331BA301C20BB2
-- generatedChecksum: 9E86C3DCFD654EBF090F882EAB3211FB
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\can
-  name: plib_can1.h
-  physicalPath: peripheral\can
+- generatedChecksum: AAA04F4A3D0A6CC5F84D6B07B027B8C7
+  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\canfd
+  name: plib_canfd1.h
+  physicalPath: peripheral\canfd
   security: NON_SECURE
   type: HEADER
-  userChecksum: 9E86C3DCFD654EBF090F882EAB3211FB
-- generatedChecksum: ACBA614A998B36CC8DED010B9734A994
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\can
-  name: plib_can_common.h
-  physicalPath: peripheral\can
+  userChecksum: AAA04F4A3D0A6CC5F84D6B07B027B8C7
+- generatedChecksum: AEFE39C8E52415FE642815364C699E0C
+  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\canfd
+  name: plib_canfd_common.h
+  physicalPath: peripheral\canfd
   security: NON_SECURE
   type: HEADER
-  userChecksum: ACBA614A998B36CC8DED010B9734A994
+  userChecksum: AEFE39C8E52415FE642815364C699E0C
 - generatedChecksum: 7066CC390335CF75126E2A50C46E3BDD
   logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\clk
   name: plib_clk.h
@@ -146,13 +146,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 2C8543317B3F067432097AB9BD3E8672
-- generatedChecksum: 51008F94CB120E2E6113CD8B5B91734A
+- generatedChecksum: 124DEAAE0F75B72DC018E0DDCE8AB35D
   logicalPath: config\pic32mk_mcm_curiosity_pro
   name: p32MK1024MCM100.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 51008F94CB120E2E6113CD8B5B91734A
+  userChecksum: 124DEAAE0F75B72DC018E0DDCE8AB35D
 format_version: v1.0
 libraries: []
 settings:
