@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.1.0",
 		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32mk_conf_mcj_cdac_wav_gen",
-		"version": "3.0.1",
+		"version": "3.1.0",
 		"displayName": "DAC waveform generation Example for PIC32MK Family",
 		"projectName": "cdac_wav_gen_pic32mk_mcj_curiosity_pro",
 		"shortDescription": "This example application shows how to use the CDAC to generate a 5 KHz sinusoidal waveform.",
@@ -39,13 +39,17 @@
 		"author": "Microchip",
 		"subcategories": [
 			[
-				"Development Kit", "PIC32MK MCJ Curiosity Pro Board"
+				"Development Kit",
+				"PIC32MK MCJ Curiosity Pro Board"
 			],
 			[
-				"Harmony", "Peripherals", "CDAC"
+				"Harmony",
+				"Peripherals",
+				"CDAC"
 			],
 			[
-				"Peripherals", "CDAC"
+				"Peripherals",
+				"CDAC"
 			]
 		],
 		"peripherals": [
