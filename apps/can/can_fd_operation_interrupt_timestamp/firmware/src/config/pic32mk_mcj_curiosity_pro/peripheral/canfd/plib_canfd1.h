@@ -1,19 +1,19 @@
 /*******************************************************************************
-  CAN Peripheral Library Interface Header File
+  CANFD Peripheral Library Interface Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_can1.h
+    plib_canfd1.h
 
   Summary:
-    CAN PLIB interface declarations.
+    CANFD PLIB interface declarations.
 
   Description:
-    The CAN plib provides a simple interface to manage the CAN modules on
+    The CANFD plib provides a simple interface to manage the CANFD modules on
     Microchip microcontrollers. This file defines the interface declarations
-    for the CAN plib.
+    for the CANFD plib.
 
   Remarks:
     None.
@@ -44,8 +44,8 @@
 *******************************************************************************/
 //DOM-IGNORE-END
 
-#ifndef PLIB_CAN1_H
-#define PLIB_CAN1_H
+#ifndef PLIB_CANFD1_H
+#define PLIB_CANFD1_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -59,7 +59,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include "device.h"
-#include "plib_can_common.h"
+#include "plib_canfd_common.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -73,25 +73,25 @@
 // *****************************************************************************
 // *****************************************************************************
 void CAN1_Initialize(void);
-bool CAN1_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, uint8_t fifoQueueNum, CAN_MODE mode, CAN_MSG_TX_ATTRIBUTE msgAttr);
-bool CAN1_MessageReceive(uint32_t *id, uint8_t *length, uint8_t *data, uint32_t *timestamp, uint8_t fifoNum, CAN_MSG_RX_ATTRIBUTE *msgAttr);
+bool CAN1_MessageTransmit(uint32_t id, uint8_t length, uint8_t* data, uint8_t fifoQueueNum, CANFD_MODE mode, CANFD_MSG_TX_ATTRIBUTE msgAttr);
+bool CAN1_MessageReceive(uint32_t *id, uint8_t *length, uint8_t *data, uint32_t *timestamp, uint8_t fifoNum, CANFD_MSG_RX_ATTRIBUTE *msgAttr);
 void CAN1_MessageAbort(uint8_t fifoQueueNum);
 void CAN1_MessageAcceptanceFilterSet(uint8_t filterNum, uint32_t id);
 uint32_t CAN1_MessageAcceptanceFilterGet(uint8_t filterNum);
 void CAN1_MessageAcceptanceFilterMaskSet(uint8_t acceptanceFilterMaskNum, uint32_t id);
 uint32_t CAN1_MessageAcceptanceFilterMaskGet(uint8_t acceptanceFilterMaskNum);
 bool CAN1_TransmitEventFIFOElementGet(uint32_t *id, uint32_t *sequence, uint32_t *timestamp);
-CAN_ERROR CAN1_ErrorGet(void);
+CANFD_ERROR CAN1_ErrorGet(void);
 void CAN1_ErrorCountGet(uint8_t *txErrorCount, uint8_t *rxErrorCount);
-bool CAN1_InterruptGet(uint8_t fifoQueueNum, CAN_FIFO_INTERRUPT_FLAG_MASK fifoInterruptFlagMask);
+bool CAN1_InterruptGet(uint8_t fifoQueueNum, CANFD_FIFO_INTERRUPT_FLAG_MASK fifoInterruptFlagMask);
 bool CAN1_TxFIFOQueueIsFull(uint8_t fifoQueueNum);
 bool CAN1_AutoRTRResponseSet(uint32_t id, uint8_t length, uint8_t* data, uint8_t fifoNum);
-void CAN1_CallbackRegister(CAN_CALLBACK callback, uintptr_t contextHandle, uint8_t fifoQueueNum);
-void CAN1_ErrorCallbackRegister(CAN_CALLBACK callback, uintptr_t contextHandle);
+void CAN1_CallbackRegister(CANFD_CALLBACK callback, uintptr_t contextHandle, uint8_t fifoQueueNum);
+void CAN1_ErrorCallbackRegister(CANFD_CALLBACK callback, uintptr_t contextHandle);
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }
 #endif
 // DOM-IGNORE-END
 
-#endif // PLIB_CAN1_H
+#endif // PLIB_CANFD1_H

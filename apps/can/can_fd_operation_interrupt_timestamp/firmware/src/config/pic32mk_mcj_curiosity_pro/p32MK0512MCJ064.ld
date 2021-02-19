@@ -1,6 +1,6 @@
 /*--------------------------------------------------------------------------
  * MPLAB XC Compiler -  PIC32MK0512MCJ064 linker script
- * Build date : Jan 12 2021
+ * Build date : Jan 26 2021
  * 
  * Copyright (c) 2021, Microchip Technology Inc. and its subsidiaries ("Microchip")
  * All rights reserved.

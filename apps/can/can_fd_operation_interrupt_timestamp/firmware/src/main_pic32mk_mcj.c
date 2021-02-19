@@ -78,7 +78,7 @@ static uint8_t rx_message[64];
 static uint32_t rx_messageID = 0;
 static uint8_t rx_messageLength = 0;
 static uint32_t timestamp = 0;
-static CAN_MSG_RX_ATTRIBUTE msgAttr = CAN_MSG_RX_DATA_FRAME;
+static CANFD_MSG_RX_ATTRIBUTE msgAttr = CANFD_MSG_RX_DATA_FRAME;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -109,9 +109,9 @@ void APP_CAN_Callback(uintptr_t context)
     /* Check CAN Status */
     status = CAN1_ErrorGet();
 
-    if ((status & (CAN_ERROR_TX_RX_WARNING_STATE | CAN_ERROR_RX_WARNING_STATE |
-                   CAN_ERROR_TX_WARNING_STATE | CAN_ERROR_RX_BUS_PASSIVE_STATE |
-                   CAN_ERROR_TX_BUS_PASSIVE_STATE | CAN_ERROR_TX_BUS_OFF_STATE)) == CAN_ERROR_NONE)
+    if ((status & (CANFD_ERROR_TX_RX_WARNING_STATE | CANFD_ERROR_RX_WARNING_STATE |
+                   CANFD_ERROR_TX_WARNING_STATE | CANFD_ERROR_RX_BUS_PASSIVE_STATE |
+                   CANFD_ERROR_TX_BUS_PASSIVE_STATE | CANFD_ERROR_TX_BUS_OFF_STATE)) == CANFD_ERROR_NONE)
     {
         switch ((APP_STATES)context)
         {
@@ -190,7 +190,7 @@ int main ( void )
                     state = APP_STATE_CAN_IDLE;
                     messageID = 0x45A;
                     messageLength = 64;
-                    if (CAN1_MessageTransmit(messageID, messageLength, message, 1, CAN_MODE_FD_WITH_BRS, CAN_MSG_TX_DATA_FRAME) == false)
+                    if (CAN1_MessageTransmit(messageID, messageLength, message, 1, CANFD_MODE_FD_WITH_BRS, CANFD_MSG_TX_DATA_FRAME) == false)
                     {
                         printf("CAN1_MessageTransmit request has failed\r\n");
                     }             
@@ -201,7 +201,7 @@ int main ( void )
                     state = APP_STATE_CAN_IDLE;
                     messageID = 0x469;
                     messageLength = 8;
-                    if (CAN1_MessageTransmit(messageID, messageLength, message, 1, CAN_MODE_NORMAL, CAN_MSG_TX_DATA_FRAME) == false)
+                    if (CAN1_MessageTransmit(messageID, messageLength, message, 1, CANFD_MODE_NORMAL, CANFD_MSG_TX_DATA_FRAME) == false)
                     {
                         printf("CAN1_MessageTransmit request has failed\r\n");
                     }             

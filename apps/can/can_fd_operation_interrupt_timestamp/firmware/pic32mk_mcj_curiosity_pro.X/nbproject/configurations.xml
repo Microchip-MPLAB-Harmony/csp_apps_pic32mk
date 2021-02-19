@@ -9,9 +9,9 @@
                        displayName="pic32mk_mcj_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f1" displayName="can" projectFiles="true">
-              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/can/plib_can_common.h</itemPath>
-              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/can/plib_can1.h</itemPath>
+            <logicalFolder name="f1" displayName="canfd" projectFiles="true">
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/canfd/plib_canfd_common.h</itemPath>
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/canfd/plib_canfd1.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/clk/plib_clk.h</itemPath>
@@ -37,6 +37,18 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="f1"
+                     displayName="pic32mk_mcj_curiosity_pro.mhc"
+                     projectFiles="true">
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/can1.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/stdio.yml</itemPath>
+        <itemPath>../src/config/pic32mk_mcj_curiosity_pro/pic32mk_mcj_curiosity_pro.mhc/uart1.yml</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mcj_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
@@ -59,8 +71,8 @@
                        displayName="pic32mk_mcj_curiosity_pro"
                        projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
-            <logicalFolder name="f1" displayName="can" projectFiles="true">
-              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/can/plib_can1.c</itemPath>
+            <logicalFolder name="f1" displayName="canfd" projectFiles="true">
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/canfd/plib_canfd1.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f2" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/clk/plib_clk.c</itemPath>
@@ -141,7 +153,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mcj_curiosity_pro;../src/packs/PIC32MK0512MCJ064_DFP"/>
+                  value="../src;../src/config/pic32mk_mcj_curiosity_pro;../src/packs/PIC32MK0512MCJ064_DFP;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -238,7 +250,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mcj_curiosity_pro;../src/packs/PIC32MK0512MCJ064_DFP"/>
+                  value="../src;../src/config/pic32mk_mcj_curiosity_pro;../src/packs/PIC32MK0512MCJ064_DFP;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
