@@ -78,7 +78,7 @@ int main ( void )
     uint8_t rx_messageLength = 0;
     uint8_t count = 0;
     uint8_t user_input = 0;
-    CAN_MSG_RX_ATTRIBUTE msgAttr = CAN_MSG_RX_DATA_FRAME;
+    CANFD_MSG_RX_ATTRIBUTE msgAttr = CANFD_MSG_RX_DATA_FRAME;
 
     /* Initialize all modules */
     SYS_Initialize ( NULL );
@@ -111,7 +111,7 @@ int main ( void )
                     printf(" Transmitting CAN FD Message:");
                     messageID = 0x45A;
                     messageLength = 64;
-                    if (CAN1_MessageTransmit(messageID, messageLength, message, 1, CAN_MODE_FD_WITH_BRS, CAN_MSG_TX_DATA_FRAME) == true)
+                    if (CAN1_MessageTransmit(messageID, messageLength, message, 1, CANFD_MODE_FD_WITH_BRS, CANFD_MSG_TX_DATA_FRAME) == true)
                     {
                         printf("Success \r\n");
                         LED_Toggle();
@@ -125,7 +125,7 @@ int main ( void )
                     printf(" Transmitting CAN Normal Message:");
                     messageID = 0x469;
                     messageLength = 8;
-                    if (CAN1_MessageTransmit(messageID, messageLength, message, 1, CAN_MODE_NORMAL, CAN_MSG_TX_DATA_FRAME) == true)
+                    if (CAN1_MessageTransmit(messageID, messageLength, message, 1, CANFD_MODE_NORMAL, CANFD_MSG_TX_DATA_FRAME) == true)
                     {
                         printf("Success \r\n");
                         LED_Toggle();
@@ -139,12 +139,12 @@ int main ( void )
                     printf(" Waiting for message: \r\n");
                     while (true)
                     {
-                        if (CAN1_InterruptGet(2, CAN_FIFO_INTERRUPT_TFNRFNIF_MASK))
+                        if (CAN1_InterruptGet(2, CANFD_FIFO_INTERRUPT_TFNRFNIF_MASK))
                         {
                             /* Check CAN Status */
                             status = CAN1_ErrorGet();
 
-                            if (status == CAN_ERROR_NONE)
+                            if (status == CANFD_ERROR_NONE)
                             {
                                 memset(rx_message, 0x00, sizeof(rx_message));
 
@@ -153,7 +153,7 @@ int main ( void )
                                 {
                                     printf(" New Message Received    \r\n");
                                     status = CAN1_ErrorGet();
-                                    if (status == CAN_ERROR_NONE)
+                                    if (status == CANFD_ERROR_NONE)
                                     {
                                         /* Print message to Console */
                                         uint8_t length = rx_messageLength;
