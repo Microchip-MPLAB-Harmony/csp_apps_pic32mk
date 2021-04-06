@@ -86,8 +86,8 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
     
-    UART6_ReadCallbackRegister( UART_ReadCallback, NULL );    
-    UART6_WriteCallbackRegister( UART_WriteCallback, NULL );    
+    UART6_ReadCallbackRegister( UART_ReadCallback, (uintptr_t) NULL );    
+    UART6_WriteCallbackRegister( UART_WriteCallback, (uintptr_t) NULL );    
        
     /* Start up auto-baud sensing feature */
     UART6_AutoBaudSet(true);
