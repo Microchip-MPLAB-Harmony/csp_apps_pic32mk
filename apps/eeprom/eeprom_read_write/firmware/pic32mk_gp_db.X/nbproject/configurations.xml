@@ -81,7 +81,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32MK-GP_DFP" vendor="Microchip" version="1.4.117"/>
+        <pack name="PIC32MK-GP_DFP" vendor="Microchip" version="1.5.130"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
