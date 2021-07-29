@@ -1,20 +1,20 @@
 files:
-- generatedChecksum: C2B88D9215301ECE3DC36E4B82F2791C
-  logicalPath: config\pic32mk_mcm_curiosity_pro
+- generatedChecksum: 99DB74296DF9943C474F4F03A700C790
+  logicalPath: config/pic32mk_mcm_curiosity_pro
   name: exceptions.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C2B88D9215301ECE3DC36E4B82F2791C
+  userChecksum: 99DB74296DF9943C474F4F03A700C790
 - generatedChecksum: E05E92F34BE79EB0F3E7F8B61073F0F4
-  logicalPath: config\pic32mk_mcm_curiosity_pro
+  logicalPath: config/pic32mk_mcm_curiosity_pro
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
   userChecksum: E05E92F34BE79EB0F3E7F8B61073F0F4
 - generatedChecksum: B2DE69B999803716C593EAB735A92589
-  logicalPath: config\pic32mk_mcm_curiosity_pro
+  logicalPath: config/pic32mk_mcm_curiosity_pro
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
@@ -23,108 +23,108 @@ files:
 - generatedChecksum: null
   logicalPath: ''
   name: main_pic32mz_ef_sk.c
-  physicalPath: ..\..
+  physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: 2B798B9AB8F932D0ADD623EB4E476BFB
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\clk
+- generatedChecksum: CF0124CE741C5287AC8F9F2A759BD200
+  logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/clk
   name: plib_clk.c
-  physicalPath: peripheral\clk
+  physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2B798B9AB8F932D0ADD623EB4E476BFB
+  userChecksum: CF0124CE741C5287AC8F9F2A759BD200
 - generatedChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\coretimer
+  logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/coretimer
   name: plib_coretimer.c
-  physicalPath: peripheral\coretimer
+  physicalPath: peripheral/coretimer
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2FEFEA0D4E94F5A5F3D76BAEC3D602E5
 - generatedChecksum: C15FD8762DC043D4EF781767CFE21B2C
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\evic
+  logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/evic
   name: plib_evic.c
-  physicalPath: peripheral\evic
+  physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
   userChecksum: C15FD8762DC043D4EF781767CFE21B2C
 - generatedChecksum: 8409C49ABCCF03AA37FD928ABB511454
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\gpio
+  logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/gpio
   name: plib_gpio.c
-  physicalPath: peripheral\gpio
+  physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
   userChecksum: 8409C49ABCCF03AA37FD928ABB511454
 - generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
-  logicalPath: config\pic32mk_mcm_curiosity_pro\stdio
+  logicalPath: config/pic32mk_mcm_curiosity_pro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7806B30ECAE0D18D08CD583D8775530D
 - generatedChecksum: 43F3630F36900CAC41477B9934230A1F
-  logicalPath: config\pic32mk_mcm_curiosity_pro
+  logicalPath: config/pic32mk_mcm_curiosity_pro
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 43F3630F36900CAC41477B9934230A1F
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
-  logicalPath: config\pic32mk_mcm_curiosity_pro
+  logicalPath: config/pic32mk_mcm_curiosity_pro
   name: device.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: E189C26B2269F8DE46033CCD0621958D
 - generatedChecksum: 4CF4A86296482D5331331BA301C20BB2
-  logicalPath: config\pic32mk_mcm_curiosity_pro
+  logicalPath: config/pic32mk_mcm_curiosity_pro
   name: interrupts.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 4CF4A86296482D5331331BA301C20BB2
 - generatedChecksum: 7066CC390335CF75126E2A50C46E3BDD
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\clk
+  logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/clk
   name: plib_clk.h
-  physicalPath: peripheral\clk
+  physicalPath: peripheral/clk
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
 - generatedChecksum: 07119F033620347F2C491F50E3F62AFC
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\coretimer
+  logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/coretimer
   name: plib_coretimer.h
-  physicalPath: peripheral\coretimer
+  physicalPath: peripheral/coretimer
   security: NON_SECURE
   type: HEADER
   userChecksum: 07119F033620347F2C491F50E3F62AFC
 - generatedChecksum: 4D592E1C42727324FE2F5EB681F6C5AA
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\evic
+  logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/evic
   name: plib_evic.h
-  physicalPath: peripheral\evic
+  physicalPath: peripheral/evic
   security: NON_SECURE
   type: HEADER
   userChecksum: 4D592E1C42727324FE2F5EB681F6C5AA
-- generatedChecksum: FD18FFEB3943B117AF996AAB0FEF8EF1
-  logicalPath: config\pic32mk_mcm_curiosity_pro\peripheral\gpio
+- generatedChecksum: 9712E0C106A80DF0E70B99565F8C2B24
+  logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/gpio
   name: plib_gpio.h
-  physicalPath: peripheral\gpio
+  physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: FD18FFEB3943B117AF996AAB0FEF8EF1
+  userChecksum: 9712E0C106A80DF0E70B99565F8C2B24
 - generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
-  logicalPath: config\pic32mk_mcm_curiosity_pro
+  logicalPath: config/pic32mk_mcm_curiosity_pro
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 2C8543317B3F067432097AB9BD3E8672
-- generatedChecksum: 51008F94CB120E2E6113CD8B5B91734A
-  logicalPath: config\pic32mk_mcm_curiosity_pro
+- generatedChecksum: D952D84078461ACADCCC56F030F63840
+  logicalPath: config/pic32mk_mcm_curiosity_pro
   name: p32MK1024MCM100.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 51008F94CB120E2E6113CD8B5B91734A
+  userChecksum: D952D84078461ACADCCC56F030F63840
 format_version: v1.0
 libraries: []
 settings:
@@ -133,7 +133,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_mcm_curiosity_pro;../src/packs/PIC32MK1024MCM100_DFP;
+  value: ../src;../src/config/pic32mk_mcm_curiosity_pro;
 - append: false
   category: C32
   delimiter: ''
@@ -163,7 +163,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_mcm_curiosity_pro;../src/packs/PIC32MK1024MCM100_DFP;
+  value: ../src;../src/config/pic32mk_mcm_curiosity_pro;
 - append: false
   category: C32CPP
   delimiter: ''
