@@ -13,6 +13,15 @@ children:
         attributes: {id: visible}
         children:
         - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: ADC0TIME__BCHEN}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
   - type: Long
     attributes: {id: ADC0TIME__SAMC}
     children:
@@ -33,6 +42,24 @@ children:
         - {type: Value, value: 'true'}
   - type: Boolean
     attributes: {id: ADCCSS1__CSS0}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: ADCDSTAT__RAFIEN0}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: ADCDSTAT__RBFIEN0}
     children:
     - type: Attributes
       children:
