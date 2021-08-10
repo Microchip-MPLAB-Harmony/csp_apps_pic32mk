@@ -40,7 +40,7 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)
 
-- Connect the AN1 pin RA0 (Pin 4 of the J29) to the Vcc (Pin 2 of the J29)
+- Connect the AN1 pin RA0 (Pin 4 of the J29) to analog input voltage
 - Connect the Debug USB port (J12) on the board to the computer using a micro USB cable
 - Connect the USB to UART port (J25) on the board to the computer using a micro USB cable
 

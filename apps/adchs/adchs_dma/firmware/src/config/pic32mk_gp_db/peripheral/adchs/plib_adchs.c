@@ -54,13 +54,12 @@
 /* Object to hold callback function and context for ADC DMA interrupt*/
 ADCHS_DMA_CALLBACK_OBJECT ADCHS_DMACallbackObj;
 
+
 void ADCHS_Initialize()
 {
     ADCCON1bits.ON = 0;
-    ADC0CFG = DEVADC0;
-    ADC0TIME = 0x3810001;
-
-
+ADC0CFG = DEVADC0;
+ADC0TIME = 0x3810001;
 
     ADCCON1 = 0x600002;
     ADCCON2 = 0x0;
@@ -87,9 +86,13 @@ void ADCHS_Initialize()
     ADCCSS1 = 0x0;
     ADCCSS2 = 0x0; 
 
-    ADCDSTAT = 0x81008100;
+ADCDSTAT = 0x81008100;
+
+
 
     IEC3SET = _IEC3_AD1FCBTIE_MASK;
+
+
 
     /* Turn ON ADC */
     ADCCON1bits.ON = 1;
@@ -100,6 +103,8 @@ void ADCHS_Initialize()
     ADCANCONbits.ANEN0 = 1;      // Enable the clock to analog bias
     while(!ADCANCONbits.WKRDY0); // Wait until ADC is ready
     ADCCON3bits.DIGEN0 = 1;      // Enable ADC
+
+
 
 }
 
@@ -238,6 +243,8 @@ void ADC_DMA_InterruptHandler(void)
       ADCHS_DMACallbackObj.callback_fn(dmaStatus, ADCHS_DMACallbackObj.context);
     }
 }
+
+
 
 
 bool ADCHS_EOSStatusGet(void)

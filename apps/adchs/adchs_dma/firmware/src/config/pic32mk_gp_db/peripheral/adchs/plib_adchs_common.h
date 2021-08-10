@@ -67,6 +67,10 @@ extern "C" {
 
 // DOM-IGNORE-END
 
+
+
+
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Data Types
@@ -136,6 +140,7 @@ typedef enum
     ADCHS_CH53 = 53U,
 }ADCHS_CHANNEL_NUM;
 
+
 typedef enum
 {
     ADCHS_DMA_STATUS_RAF0 = (1U << 0U),
@@ -160,6 +165,9 @@ typedef void (*ADCHS_CALLBACK)(ADCHS_CHANNEL_NUM channel, uintptr_t context);
 typedef void (*ADCHS_EOS_CALLBACK)(uintptr_t context);
 
 typedef void (*ADCHS_DMA_CALLBACK)(ADCHS_DMA_STATUS dmaStatus, uintptr_t context);
+
+
+
 // *****************************************************************************
 
 typedef struct
@@ -179,6 +187,8 @@ typedef struct
     ADCHS_DMA_CALLBACK callback_fn;
     uintptr_t context;
 }ADCHS_DMA_CALLBACK_OBJECT;
+
+
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility

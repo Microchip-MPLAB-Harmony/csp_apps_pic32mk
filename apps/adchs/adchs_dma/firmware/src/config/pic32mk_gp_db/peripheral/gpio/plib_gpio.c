@@ -60,19 +60,12 @@ void GPIO_Initialize ( void )
 
     /* PORTA Initialization */
     ANSELACLR = 0x8010; /* Digital Mode Enable */
-
     /* PORTB Initialization */
-
     /* PORTC Initialization */
-
     /* PORTD Initialization */
-
     /* PORTE Initialization */
-
     /* PORTF Initialization */
-
     /* PORTG Initialization */
-
 
     /* Unlock system for PPS configuration */
     SYSKEY = 0x00000000;

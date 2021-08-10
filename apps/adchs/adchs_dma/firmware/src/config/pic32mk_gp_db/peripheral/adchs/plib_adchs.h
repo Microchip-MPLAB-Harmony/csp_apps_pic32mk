@@ -110,6 +110,7 @@ void ADCHS_DMACallbackRegister(ADCHS_DMA_CALLBACK callback, uintptr_t context);
 
 bool ADCHS_EOSStatusGet(void);
 
+
 // *****************************************************************************
 
 // DOM-IGNORE-BEGIN
