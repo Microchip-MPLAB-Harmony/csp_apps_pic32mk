@@ -689,9 +689,6 @@ void UART6_FAULT_InterruptHandler (void)
 
 void UART6_RX_InterruptHandler (void)
 {
-    /* Clear UART6 RX Interrupt flag */
-    IFS5CLR = _IFS5_U6RXIF_MASK;
-
     /* Keep reading until there is a character availabe in the RX FIFO */
     while((U6STA & _U6STA_URXDA_MASK) == _U6STA_URXDA_MASK)
     {
@@ -704,6 +701,9 @@ void UART6_RX_InterruptHandler (void)
             /* UART RX buffer is full */
         }
     }
+
+    /* Clear UART6 RX Interrupt flag */
+    IFS5CLR = _IFS5_U6RXIF_MASK;
 }
 
 void UART6_TX_InterruptHandler (void)
@@ -713,9 +713,6 @@ void UART6_TX_InterruptHandler (void)
     /* Check if any data is pending for transmission */
     if (UART6_WritePendingBytesGet() > 0)
     {
-        /* Clear UART6TX Interrupt flag */
-        IFS5CLR = _IFS5_U6TXIF_MASK;
-
         /* Keep writing to the TX FIFO as long as there is space */
         while(!(U6STA & _U6STA_UTXBF_MASK))
         {
@@ -740,6 +737,10 @@ void UART6_TX_InterruptHandler (void)
                 break;
             }
         }
+
+        /* Clear UART6TX Interrupt flag */
+        IFS5CLR = _IFS5_U6TXIF_MASK;
+
     }
     else
     {
