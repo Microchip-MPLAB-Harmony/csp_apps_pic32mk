@@ -1,20 +1,20 @@
 files:
-- generatedChecksum: C2B88D9215301ECE3DC36E4B82F2791C
-  logicalPath: config\pic32mk_gp_db
+- generatedChecksum: 99DB74296DF9943C474F4F03A700C790
+  logicalPath: config/pic32mk_gp_db
   name: exceptions.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: C2B88D9215301ECE3DC36E4B82F2791C
-- generatedChecksum: F327B46ADC736A838BB4783607EF98F5
-  logicalPath: config\pic32mk_gp_db
+  userChecksum: 99DB74296DF9943C474F4F03A700C790
+- generatedChecksum: 56AF16AAAC28C93192A0CE29F7A739DF
+  logicalPath: config/pic32mk_gp_db
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F327B46ADC736A838BB4783607EF98F5
+  userChecksum: 56AF16AAAC28C93192A0CE29F7A739DF
 - generatedChecksum: 20F22B70C4B0B528FEFE85C97C72531F
-  logicalPath: config\pic32mk_gp_db
+  logicalPath: config/pic32mk_gp_db
   name: interrupts.c
   physicalPath: ''
   security: NON_SECURE
@@ -23,108 +23,108 @@ files:
 - generatedChecksum: null
   logicalPath: ''
   name: main.c
-  physicalPath: ..\..
+  physicalPath: ../..
   security: NON_SECURE
   type: SOURCE
   userChecksum: null
-- generatedChecksum: A41237D1BADB630A2296E675E0F605A8
-  logicalPath: config\pic32mk_gp_db\peripheral\clk
+- generatedChecksum: EA22B00D66EBA6BCA1F735BE6102F33F
+  logicalPath: config/pic32mk_gp_db/peripheral/clk
   name: plib_clk.c
-  physicalPath: peripheral\clk
+  physicalPath: peripheral/clk
   security: NON_SECURE
   type: SOURCE
-  userChecksum: A41237D1BADB630A2296E675E0F605A8
-- generatedChecksum: 1C64A0CC3068C1F1EB55F6817B1579A6
-  logicalPath: config\pic32mk_gp_db\peripheral\coretimer
+  userChecksum: EA22B00D66EBA6BCA1F735BE6102F33F
+- generatedChecksum: CDE489012C46160ED6A67092B2FFCE99
+  logicalPath: config/pic32mk_gp_db/peripheral/coretimer
   name: plib_coretimer.c
-  physicalPath: peripheral\coretimer
+  physicalPath: peripheral/coretimer
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 1C64A0CC3068C1F1EB55F6817B1579A6
+  userChecksum: CDE489012C46160ED6A67092B2FFCE99
 - generatedChecksum: E16382499DD4818E01A3355C3A07DA2D
-  logicalPath: config\pic32mk_gp_db\peripheral\evic
+  logicalPath: config/pic32mk_gp_db/peripheral/evic
   name: plib_evic.c
-  physicalPath: peripheral\evic
+  physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
   userChecksum: E16382499DD4818E01A3355C3A07DA2D
 - generatedChecksum: 92C02D3E07505850568B82786D8EC653
-  logicalPath: config\pic32mk_gp_db\peripheral\gpio
+  logicalPath: config/pic32mk_gp_db/peripheral/gpio
   name: plib_gpio.c
-  physicalPath: peripheral\gpio
+  physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
   userChecksum: 92C02D3E07505850568B82786D8EC653
 - generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
-  logicalPath: config\pic32mk_gp_db\stdio
+  logicalPath: config/pic32mk_gp_db/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7806B30ECAE0D18D08CD583D8775530D
 - generatedChecksum: 43F3630F36900CAC41477B9934230A1F
-  logicalPath: config\pic32mk_gp_db
+  logicalPath: config/pic32mk_gp_db
   name: definitions.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 43F3630F36900CAC41477B9934230A1F
 - generatedChecksum: E189C26B2269F8DE46033CCD0621958D
-  logicalPath: config\pic32mk_gp_db
+  logicalPath: config/pic32mk_gp_db
   name: device.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: E189C26B2269F8DE46033CCD0621958D
 - generatedChecksum: 4CF4A86296482D5331331BA301C20BB2
-  logicalPath: config\pic32mk_gp_db
+  logicalPath: config/pic32mk_gp_db
   name: interrupts.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 4CF4A86296482D5331331BA301C20BB2
 - generatedChecksum: 7066CC390335CF75126E2A50C46E3BDD
-  logicalPath: config\pic32mk_gp_db\peripheral\clk
+  logicalPath: config/pic32mk_gp_db/peripheral/clk
   name: plib_clk.h
-  physicalPath: peripheral\clk
+  physicalPath: peripheral/clk
   security: NON_SECURE
   type: HEADER
   userChecksum: 7066CC390335CF75126E2A50C46E3BDD
-- generatedChecksum: 1BE5C908B4605686C62FE904A8BE6642
-  logicalPath: config\pic32mk_gp_db\peripheral\coretimer
+- generatedChecksum: AE17876DC277E3F39E3AD74E7F77FE49
+  logicalPath: config/pic32mk_gp_db/peripheral/coretimer
   name: plib_coretimer.h
-  physicalPath: peripheral\coretimer
+  physicalPath: peripheral/coretimer
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1BE5C908B4605686C62FE904A8BE6642
+  userChecksum: AE17876DC277E3F39E3AD74E7F77FE49
 - generatedChecksum: F666CF132ECA91F43C2A25389BA2AC28
-  logicalPath: config\pic32mk_gp_db\peripheral\evic
+  logicalPath: config/pic32mk_gp_db/peripheral/evic
   name: plib_evic.h
-  physicalPath: peripheral\evic
+  physicalPath: peripheral/evic
   security: NON_SECURE
   type: HEADER
   userChecksum: F666CF132ECA91F43C2A25389BA2AC28
-- generatedChecksum: 2CFBCA0BBDFC7CE77CCF83110DF55DA9
-  logicalPath: config\pic32mk_gp_db\peripheral\gpio
+- generatedChecksum: 7E9D5F08A981FB6B88A6FF59B23B8174
+  logicalPath: config/pic32mk_gp_db/peripheral/gpio
   name: plib_gpio.h
-  physicalPath: peripheral\gpio
+  physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2CFBCA0BBDFC7CE77CCF83110DF55DA9
+  userChecksum: 7E9D5F08A981FB6B88A6FF59B23B8174
 - generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
-  logicalPath: config\pic32mk_gp_db
+  logicalPath: config/pic32mk_gp_db
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
   userChecksum: 2C8543317B3F067432097AB9BD3E8672
-- generatedChecksum: 2773C35D00AC364A265E124C19ECDFDD
-  logicalPath: config\pic32mk_gp_db
+- generatedChecksum: BC41C20C45D02ADFBD17AC9120F7A943
+  logicalPath: config/pic32mk_gp_db
   name: p32MK1024GPE100.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 2773C35D00AC364A265E124C19ECDFDD
+  userChecksum: BC41C20C45D02ADFBD17AC9120F7A943
 format_version: v1.0
 libraries: []
 settings:
@@ -133,7 +133,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_gp_db;../src/packs/PIC32MK1024GPE100_DFP;
+  value: ../src;../src/config/pic32mk_gp_db;
 - append: false
   category: C32
   delimiter: ''
@@ -163,7 +163,7 @@ settings:
   delimiter: ;
   key: extra-include-directories
   security: NON_SECURE
-  value: ../src;../src/config/pic32mk_gp_db;../src/packs/PIC32MK1024GPE100_DFP;
+  value: ../src;../src/config/pic32mk_gp_db;
 - append: false
   category: C32CPP
   delimiter: ''
