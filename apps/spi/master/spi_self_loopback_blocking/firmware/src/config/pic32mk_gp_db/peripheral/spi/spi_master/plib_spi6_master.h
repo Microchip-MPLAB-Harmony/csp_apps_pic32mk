@@ -65,6 +65,8 @@ bool SPI6_Read(void* pReceiveData, size_t rxSize);
 
 bool SPI6_TransferSetup (SPI_TRANSFER_SETUP *setup, uint32_t spiSourceClock);
 
+bool SPI6_IsTransmitterBusy (void);
+
 
 /* Provide C++ Compatibility */
 #ifdef __cplusplus

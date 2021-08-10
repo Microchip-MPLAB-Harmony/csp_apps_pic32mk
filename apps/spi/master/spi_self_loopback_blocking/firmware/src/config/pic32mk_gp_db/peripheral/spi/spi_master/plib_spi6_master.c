@@ -59,7 +59,7 @@
 
 void SPI6_Initialize ( void )
 {
-    uint32_t rdata;
+    uint32_t rdata = 0U;
 
     /* Disable SPI6 Interrupts */
     IEC7CLR = 0x8;
@@ -154,6 +154,11 @@ bool SPI6_Write(void* pTransmitData, size_t txSize)
 bool SPI6_Read(void* pReceiveData, size_t rxSize)
 {
     return(SPI6_WriteRead(NULL, 0, pReceiveData, rxSize));
+}
+
+bool SPI6_IsTransmitterBusy (void)
+{
+    return ((SPI6STAT & _SPI6STAT_SRMT_MASK) == 0)? true : false;
 }
 
 bool SPI6_WriteRead(void* pTransmitData, size_t txSize, void* pReceiveData, size_t rxSize)
