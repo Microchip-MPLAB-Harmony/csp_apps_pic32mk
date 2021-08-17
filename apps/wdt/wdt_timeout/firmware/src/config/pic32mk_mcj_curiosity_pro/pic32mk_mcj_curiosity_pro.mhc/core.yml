@@ -785,7 +785,16 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 1.024 s}
+        attributes: {id: core, value: 1000.0 ms}
+  - type: Integer
+    attributes: {id: WDT_CLOCK_FREQUENCY}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
   - type: Comment
     attributes: {id: WDT_CONFIG_COMMENT}
     children:
@@ -843,7 +852,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: 4.096 s}
+        attributes: {id: core, value: 4.0 s}
   - type: Boolean
     attributes: {id: WDT_USE}
     children:
