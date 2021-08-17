@@ -65,6 +65,8 @@ bool SPI2_Read(void* pReceiveData, size_t rxSize);
 
 bool SPI2_TransferSetup (SPI_TRANSFER_SETUP *setup, uint32_t spiSourceClock);
 
+bool SPI2_IsTransmitterBusy (void);
+
 bool SPI2_IsBusy(void);
 
 void SPI2_CallbackRegister(SPI_CALLBACK callback, uintptr_t context);
