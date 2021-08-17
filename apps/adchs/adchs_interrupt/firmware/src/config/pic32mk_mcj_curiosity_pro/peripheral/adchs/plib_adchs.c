@@ -54,13 +54,12 @@
 ADCHS_CALLBACK_OBJECT ADCHS_CallbackObj[53];
 
 
+
 void ADCHS_Initialize()
 {
     ADCCON1bits.ON = 0;
-    ADC3CFG = DEVADC3;
-    ADC3TIME = 0x3010001;
-
-
+ADC3CFG = DEVADC3;
+ADC3TIME = 0x3010001;
 
     ADCCON1 = 0x600000;
     ADCCON2 = 0x0;
@@ -87,13 +86,18 @@ void ADCHS_Initialize()
     ADCCSS1 = 0x0;
     ADCCSS2 = 0x0; 
 
-    /* Result interrupt enable */
-    ADCGIRQEN1 = 0x8;
-    ADCGIRQEN2 = 0x0;
 
-    /* Interrupt Enable */
-    IEC3SET = 0x2000;
-    IEC4SET = 0x0;
+
+
+/* Result interrupt enable */
+ADCGIRQEN1 = 0x8;
+ADCGIRQEN2 = 0x0;
+/* Interrupt Enable */
+IEC3SET = 0x2000;
+IEC4SET = 0x0;
+
+
+
     /* Turn ON ADC */
     ADCCON1bits.ON = 1;
     while(!ADCCON2bits.BGVRRDY); // Wait until the reference voltage is ready
@@ -103,6 +107,8 @@ void ADCHS_Initialize()
     ADCANCONbits.ANEN3 = 1;      // Enable the clock to analog bias
     while(!ADCANCONbits.WKRDY3); // Wait until ADC is ready
     ADCCON3bits.DIGEN3 = 1;      // Enable ADC
+
+
 
 }
 
@@ -217,6 +223,25 @@ void ADCHS_CallbackRegister(ADCHS_CHANNEL_NUM channel, ADCHS_CALLBACK callback, 
     ADCHS_CallbackObj[channel].callback_fn = callback;
     ADCHS_CallbackObj[channel].context = context;
 }
+
+void ADCHS_DMASampleCountBaseAddrSet(uint32_t baseAddr)
+{
+    ADCCNTB = baseAddr;
+}
+
+void ADCHS_DMAResultBaseAddrSet(uint32_t baseAddr)
+{
+    ADCDMAB = baseAddr;
+}
+
+
+ADCHS_DMA_STATUS ADCHS_DMAStatusGet(void)
+{
+    return ADCDSTAT & 0xBF003F;
+}
+
+
+
 
 bool ADCHS_EOSStatusGet(void)
 {
