@@ -1,0 +1,82 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32mk_adchs_interrupt",
+		"version": "3.1.0",
+		"displayName": "ADCHS DMA Example for PIC32MK Family",
+		"projectName": "adchs_dma_pic32mk_gp_db",
+		"shortDescription": "This example application shows how to sample an analog input using the ADCHS peripheral in DMA mode and displays the converted samples on a serial terminal",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MK-GP_DFP",
+			"semverRange": "^1.3.90"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.7.0"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MK1024GPE100",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit",
+				"PIC32MK GP Development Kit"
+			],
+			[
+				"Harmony",
+				"Peripherals",
+				"ADCHS"
+			],
+			[
+				"Peripherals",
+				"ADCHS",
+				"DMA",
+			]
+		],
+		"peripherals": [
+			"ADCHS"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"PIC32MK1024GPE100",
+			"PIC32MK Family",
+			"AC voltage",
+			"Analog to Digital Converter",
+			"ADC",
+			"High Speed ADC",
+			"Analog"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
