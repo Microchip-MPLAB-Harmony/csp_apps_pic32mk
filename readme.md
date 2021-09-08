@@ -37,6 +37,7 @@ The following applications are provided to demonstrate the typical or interestin
 
 | Name | Description |
 | ---- | ----------- |
+| [ADCHS DMA](apps/adchs/adchs_dma/readme.md) | This example application shows how to sample an analog input using the ADCHS peripheral in DMA mode and displays the converted samples on a serial terminal |
 | [ADCHS Interrupt](apps/adchs/adchs_interrupt/readme.md) | This example application shows how to sample an analog input using the ADCHS peripheral and displays the converted samples on a serial terminal |
 | [ADCHS polling](apps/adchs/adchs_polled/readme.md) | This example application shows how to sample an analog input using the ADCHS peripheral and displays the converted samples on a serial terminal |
 | [CAN FD blocking](apps/can/can_fd_operation_blocking/readme.md) | This example application shows how to use the CAN module to transmit and receive CAN FD messages in polling mode |
