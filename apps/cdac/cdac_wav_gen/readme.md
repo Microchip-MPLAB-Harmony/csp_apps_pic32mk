@@ -9,11 +9,11 @@ has_toc: false
 
 # DAC waveform generation
 
-This example application shows how to use the CDAC to generate a 5 KHz sinusoidal waveform.
+This example application shows how to use the CDAC to generate a 1 KHz sinusoidal waveform.
 
 ## Description
 
-The CDAC Peripheral library is used to generate a Sine wave. The TMR1 peripheral is configured to trigger CDAC every two microseconds. In this application, the number of DAC samples per cycle (0 to 360 degrees sine wave) is 100.
+The CDAC Peripheral library is used to generate a Sine wave. The TMR1 peripheral is configured to trigger CDAC every ten microseconds. In this application, the number of DAC samples per cycle (0 to 360 degrees sine wave) is 100.
 
 ## Downloading and building the application
 
