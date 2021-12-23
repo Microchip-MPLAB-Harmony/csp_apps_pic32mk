@@ -9,11 +9,11 @@ has_toc: false
 
 # DAC waveform generation with DMA
 
-This example application shows how to use the CDAC with the DMA to generate a 5 KHz sinusoidal waveform without CPU intervention.
+This example application shows how to use the CDAC with the DMA to generate a 1 KHz sinusoidal waveform without CPU intervention.
 
 ## Description
 
-The CDAC Peripheral library is used with DMA to generate a Sine wave. The TMR1 peripheral is configured to trigger DMA every two microseconds. DMA is used to setup in Auto mode to transfer sine wave samples from lookup table to the CDAC DATA register. In this application, the number of DAC samples per cycle (0 to 360 degrees sine wave) is 100.
+The CDAC Peripheral library is used with DMA to generate a Sine wave. The TMR1 peripheral is configured to trigger DMA every ten microseconds. DMA is used to setup in Auto mode to transfer sine wave samples from lookup table to the CDAC DATA register. In this application, the number of DAC samples per cycle (0 to 360 degrees sine wave) is 100.
 
 ## Downloading and building the application
 
