@@ -28,6 +28,7 @@ To build the application, refer to the following table and open the project usin
 | ----------------- | ---------------------------------------------- |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -38,6 +39,7 @@ The following table shows the target hardware for the application projects.
 |:---------|:---------:|
 | pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
 ### Setting up PIC32MK MCJ Curiosity Pro Board
@@ -51,18 +53,28 @@ The following table shows the target hardware for the application projects.
 
 ### Setting up PIC32MK MCM Curiosity Pro Board
 
-To run the application, following additional hardware are required:
+- To run the application, following additional hardware are required:
     - [EEPROM 3 click board](https://www.mikroe.com/eeprom-3-click)
 
-Connect micro USB cable to the 'USB Debug' connector on the board to the computer
-Connect the [EEPROM 3 click board](https://www.mikroe.com/eeprom-3-click) to J300
+- Connect micro USB cable to the 'USB Debug' connector on the board to the computer
+- Connect the [EEPROM 3 click board](https://www.mikroe.com/eeprom-3-click) to J300
+
+
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- To run the application, following additional hardware are required:
+    - [EEPROM 3 click board](https://www.mikroe.com/eeprom-3-click)
+
+- Connect micro USB cable to the 'USB Debug' connector on the board to the computer
+- Connect the [EEPROM 3 click board](https://www.mikroe.com/eeprom-3-click) to mikroBUS header
+
 
 ## Running the Application
 
 - Build and program the application using its IDE
--LED indicates the success or failure:
-  - LED is turned ON when the value read from the EEPROM matched with the written value
-  - LED is turned OFF when the value read from the EEPROM did not match with the written value
+  - LED indicates the success or failure:
+    - LED is turned ON when the value read from the EEPROM matched with the written value
+    - LED is turned OFF when the value read from the EEPROM did not match with the written value
 
 Following table provides LED names:
 
@@ -70,4 +82,5 @@ Following table provides LED names:
 | ---------- |--------- |
 |  PIC32MK MCJ Curiosity Pro Board  | LED2 |
 |  PIC32MK MCM Curiosity Pro Board  | LED1  |
-||||
+|  PIC32MK MCA Curiosity Pro Board  | LED1  |
+|||
