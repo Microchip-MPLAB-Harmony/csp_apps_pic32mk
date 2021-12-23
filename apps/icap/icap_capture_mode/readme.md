@@ -29,6 +29,7 @@ To build the application, refer to the following table and open the project usin
 | pic32mk_gp_db.X | MPLABX project for [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -40,6 +41,7 @@ The following table shows the target hardware for the application projects.
 | pic32mk_gp_db.X | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 | pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
 ### Setting up [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)
@@ -59,6 +61,11 @@ The following table shows the target hardware for the application projects.
 - Connect the Debug USB port (J500) on the board to the computer using a micro USB cable
 - Connect the USB to UART port (J400) on the board to the computer using a micro USB cable
 
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- Connect the IC1 pin RPA4 (Pin 1 of the J601) to the OC3 pin RPB0 (pin 11 of the J601)
+- Connect the Debug USB port on the board to the computer using a micro USB cable
+  
 ## Running the Application
 
 1. Open the Terminal application (Ex.:Tera term) on the computer
