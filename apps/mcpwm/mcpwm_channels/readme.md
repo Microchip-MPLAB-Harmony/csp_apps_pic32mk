@@ -27,6 +27,7 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -36,11 +37,17 @@ The following table shows the target hardware for the application projects.
 | Project Name| Board|
 |:---------|:---------:|
 | pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
 ### Setting up PIC32MK MCJ Curiosity Pro Board
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
+
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- Connect the Debug USB port on the board to the computer using a micro USB cable
+
 
 ## Running the Application
 
@@ -52,14 +59,13 @@ The following table shows the target hardware for the application projects.
 
 4. Refer to the table below for PWM channels oscilloscope connections:
 
-For PIC32MK MCJ Curiosity Pro Board :
 
-| PWM Channel | Pin |
-|------------ |---- |
-| PWM1H | RPB14 (Pin 7 of J501 ) |
-| PWM1L | RPB15 (Pin 8 of J501 ) |
-| PWM2H | RPB12 (Pin 7 of J502 ) |
-| PWM2L | RPB13 (Pin 8 of J502 ) |
-| PWM3H | RPB10 (Pin 7 of J503 ) |
-| PWM3L | RPB11 (Pin 8 of J503 ) |
+| PWM Channel | Pin For PIC32MK MCJ Curiosity Pro Board | Pin For PIC32MK MCA Curiosity Pro Board |
+|------------ |---------------- | ---------------- |
+| PWM1H | RPB14 (Pin 7 of J501 ) | RPB14 (Pin 19 of J601 ) | 
+| PWM1L | RPB15 (Pin 8 of J501 ) | RPB15 (Pin 21 of J601 ) 
+| PWM2H | RPB12 (Pin 7 of J502 ) | RPB12 (Pin 22 of J601 ) 
+| PWM2L | RPB13 (Pin 8 of J502 ) | RPB13 (Pin 23 of J601 ) 
+| PWM3H | RPB10 (Pin 7 of J503 ) | RPB10 (Pin 24 of J601 ) 
+| PWM3L | RPB11 (Pin 8 of J503 ) | RPB11 (Pin 25 of J601 ) | 
 |||

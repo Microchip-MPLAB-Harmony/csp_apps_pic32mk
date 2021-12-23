@@ -1,0 +1,347 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: mcpwm}
+children:
+- type: Symbols
+  children:
+  - type: String
+    attributes: {id: INTR_PWM_FAULT}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: INT_SOURCE_PWM1}
+  - type: Boolean
+    attributes: {id: MCPWM_CHANNEL1}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: MCPWM_CHANNEL2}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: MCPWM_CHANNEL3}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: Integer
+    attributes: {id: MCPWM_EVIC1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '1'}
+  - type: Comment
+    attributes: {id: MCPWM_FREQ_CH1}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '**** PWM Frequency is 20000.0 Hz ****'}
+  - type: Comment
+    attributes: {id: MCPWM_FREQ_CH2}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '**** PWM Frequency is 20000.0 Hz ****'}
+  - type: Comment
+    attributes: {id: MCPWM_FREQ_CH3}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '**** PWM Frequency is 20000.0 Hz ****'}
+  - type: Comment
+    attributes: {id: MCPWM_FREQ_CH4}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: text}
+        children:
+        - {type: Value, value: '**** PWM Frequency is 40000.0 Hz ****'}
+  - type: Hex
+    attributes: {id: MCPWM_IOCON1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '49152'}
+  - type: Hex
+    attributes: {id: MCPWM_IOCON2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '49152'}
+  - type: Hex
+    attributes: {id: MCPWM_IOCON3}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '49152'}
+  - type: Hex
+    attributes: {id: MCPWM_IOCON4}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '49152'}
+  - type: Integer
+    attributes: {id: MCPWM_PERIOD_CH1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '3000'}
+  - type: Integer
+    attributes: {id: MCPWM_PERIOD_CH2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '3000'}
+  - type: Integer
+    attributes: {id: MCPWM_PERIOD_CH3}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '3000'}
+  - type: Integer
+    attributes: {id: MCPWM_PERIOD_CH4}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '3000'}
+  - type: Float
+    attributes: {id: MCPWM_PRI_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '40000.0'}
+  - type: Hex
+    attributes: {id: MCPWM_PWMCON1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '525312'}
+  - type: Hex
+    attributes: {id: MCPWM_PWMCON2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '1024'}
+  - type: Hex
+    attributes: {id: MCPWM_PWMCON3}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '1024'}
+  - type: Integer
+    attributes: {id: PDC1__PDC}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2000'}
+  - type: Integer
+    attributes: {id: PDC2__PDC}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2000'}
+  - type: Integer
+    attributes: {id: PDC3__PDC}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2000'}
+  - type: Integer
+    attributes: {id: PDC4__PDC}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2000'}
+  - type: Integer
+    attributes: {id: PTPER__PTPER}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '3000'}
+  - type: KeyValueSet
+    attributes: {id: PWMCON1__ECAM}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: Boolean
+    attributes: {id: PWMCON1__PWMHIEN}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
+  - type: KeyValueSet
+    attributes: {id: PWMCON2__ECAM}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: KeyValueSet
+    attributes: {id: PWMCON3__ECAM}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: '1'}
+  - type: String
+    attributes: {id: PWM_CALLBACK_API}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_CallbackRegister}
+  - type: String
+    attributes: {id: PWM_GET_PERIOD_API}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_PrimaryPeriodGet}
+  - type: String
+    attributes: {id: PWM_OUTPUT_DISABLE_API}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_ChannelPinsOwnershipDisable}
+  - type: String
+    attributes: {id: PWM_OUTPUT_ENABLE_API}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_ChannelPinsOwnershipEnable}
+  - type: Hex
+    attributes: {id: PWM_PH_MASK}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: '7'}
+  - type: String
+    attributes: {id: PWM_PH_U}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_CH_1}
+  - type: String
+    attributes: {id: PWM_PH_V}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_CH_2}
+  - type: String
+    attributes: {id: PWM_PH_W}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_CH_3}
+  - type: String
+    attributes: {id: PWM_SET_DUTY_API}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_ChannelPrimaryDutySet}
+  - type: String
+    attributes: {id: PWM_START_API}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_Start}
+  - type: String
+    attributes: {id: PWM_STOP_API}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: mcpwm, value: MCPWM_Stop}
+  - type: Integer
+    attributes: {id: SDC1__SDC}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2000'}
+  - type: Integer
+    attributes: {id: SDC2__SDC}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2000'}
+  - type: Integer
+    attributes: {id: SDC3__SDC}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2000'}
+  - type: Integer
+    attributes: {id: SDC4__SDC}
+    children:
+    - type: Attributes
+      children:
+      - type: Integer
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2000'}
+- type: ElementPosition
+  attributes: {x: '340', y: '19', id: mcpwm}
