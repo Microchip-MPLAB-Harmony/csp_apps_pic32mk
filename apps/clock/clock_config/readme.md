@@ -29,6 +29,7 @@ To build the application, refer to the following table and open the project usin
 | pic32mk_gp_db.X | MPLABX project for [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -40,6 +41,7 @@ The following table shows the target hardware for the application projects.
 | pic32mk_gp_db.X | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 | pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
 ### Setting up [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)
@@ -57,6 +59,11 @@ The following table shows the target hardware for the application projects.
 - Connect an oscilloscope to monitor the PORT pin RPC1 (Pin number #1 on J301 connector)
 - Connect the Debug USB port (J500) on the board to the computer using a micro USB cable
 
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- Connect an oscilloscope to monitor the pin RPC8 (Pin 29 on J601 connector)
+- Connect the Debug USB port on the board to the computer using a micro USB cable
+
 
 ## Running the Application
 
@@ -71,4 +78,5 @@ Refer to the following table for clock output pin and LED name for different boa
 |  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)  | RPA0 (Pin number #4 on the J29 connector)  | LED0 |
 |  PIC32MK MCJ Curiosity Pro Board  | (Pin #8 on J503/EXT3 connector)  | LED2  |
 |  PIC32MK MCM Curiosity Pro Board  | (Pin number #1 on J301 connector)  | LED1  |
+|  PIC32MK MCA Curiosity Pro Board  | (Pin 29 on J601 connector)  | LED1  |
 ||||
