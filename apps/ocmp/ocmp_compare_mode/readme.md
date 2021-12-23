@@ -35,6 +35,7 @@ To build the application, refer to the following table and open the project usin
 | pic32mk_gp_db.X | MPLABX project for [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
 ## Setting up the hardware
@@ -46,6 +47,7 @@ The following table shows the target hardware for the application projects.
 | pic32mk_gp_db.X | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
 | pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
 | pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
 ### Setting up [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)
@@ -60,6 +62,10 @@ The following table shows the target hardware for the application projects.
 
 - Connect the Debug USB port (J500) on the board to the computer using a micro USB cable
 
+### Setting up PIC32MK MCA Curiosity Pro Board
+
+- Connect the Debug USB port on the board to the computer using a micro USB cable
+
 ## Running the Application
 
 1. Build and program the application project using its IDE
@@ -69,9 +75,9 @@ The following table shows the target hardware for the application projects.
 
 3. Refer the following table for pin details:
 
-    | OCMP output | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) pins |  PIC32MK MCJ Curiosity Pro Board pins | PIC32MK MCM Curiosity Pro Board pins |
-    |------------- | ---------- | --------------- | ----------------------- |
-    | OC1 output | RPA0 "Pin 4 of J29" | RPA0 "Pin 3 of J501"  | RPA0 "Pin 1 of J300"|
-    | OC2 output | RPA14 "Pin 5 of J31" | RPA1 "Pin 3 of J502" | RPA14 "Pin 11 of J302" |
-    | OC3 output | RPB0 "Pin 8 of J29" | RPB14 "Pin 7 of J501" | RPB0 "Pin 6 of J300" |
+    | OCMP output | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) pins |  PIC32MK MCJ Curiosity Pro Board pins | PIC32MK MCM Curiosity Pro Board pins | PIC32MK MCA Curiosity Pro Board pins |
+    |------------- | ---------- | --------------- | ----------------------- | ----------------------- |
+    | OC1 output | RPA0 "Pin 4 of J29" | RPA0 "Pin 3 of J501"  | RPA0 "Pin 1 of J300"| RPA11 "Pin 5 of J601" |
+    | OC2 output | RPA14 "Pin 5 of J31" | RPA1 "Pin 3 of J502" | RPA14 "Pin 11 of J302" | RPB1 "Pin 9 of J601" |
+    | OC3 output | RPB0 "Pin 8 of J29" | RPB14 "Pin 7 of J501" | RPB0 "Pin 6 of J300" | RPB0 "Pin 11 of J601" |
     ||||
