@@ -1,4 +1,4 @@
-<config configName="pic32mk_mcm_curiosity_pro" projectName="adchs_interrupt_pic32mk_mcm_curiosity_pro" configVersion="1.1" device="PIC32MK1024MCM100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.2.3">
+<config configName="pic32mk_mcm_curiosity_pro" projectName="adchs_interrupt_pic32mk_mcm_curiosity_pro" configVersion="1.1" device="PIC32MK1024MCM100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -27,7 +27,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2049,19 +2049,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart6" name="UART_BRGH_MODE_COMMENT"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart6&gt;
-  &lt;uart6 dnOrder=&quot;0&quot; id=&quot;UART_BRGH_MODE_COMMENT&quot;&gt;
-    &lt;Attributes dnOrder=&quot;0&quot;&gt;
-      &lt;String dnOrder=&quot;0&quot; id=&quot;text&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;***&amp;amp;#160;High&amp;amp;#160;Speed&amp;amp;#160;mode&amp;amp;#160;4x&amp;amp;#160;baud&amp;amp;#160;clock&amp;amp;#160;enabled&amp;amp;#160;(BRGH&amp;amp;#160;=&amp;amp;#160;1)&amp;amp;#160;***&lt;/Value&gt;
-      &lt;/String&gt;
-    &lt;/Attributes&gt;
-  &lt;/uart6&gt;
-&lt;/uart6&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="uart6" name="UART_CLOCK_FREQ"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;uart6&gt;
   &lt;uart6 dnOrder=&quot;0&quot; id=&quot;UART_CLOCK_FREQ&quot;&gt;
@@ -2141,7 +2128,7 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\p32MK1024MCM100.ld</file>
-         <hash>c40d7d6768220436b0b4d6673b6757643c1bba61dba569b249fa2a70cc1e5d8b</hash>
+         <hash>b46652056e467739d5175323438b1f76840ae27d34efd53f22d62ecac1c9b455</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\evic\plib_evic.h</file>
@@ -2149,19 +2136,19 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\adchs\plib_adchs_common.h</file>
-         <hash>dfd5bb4af4615d32fe97841f6356fe4f81c2db7fbe319a91ab645df0ff303f5e</hash>
+         <hash>93be23da5be28d5ed9a42714e3beb99b02268ed119c6d27754db21b5c786d09f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\gpio\plib_gpio.c</file>
-         <hash>ef58f21310c0c880de786d3c6414d457c3b9b263d337cfe01c254f4d583ecbe3</hash>
+         <hash>062bc134e255a3488bffca3ccd68ff448d18b7bf9280611b9a31963face6967b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\stdio\xc32_monitor.c</file>
-         <hash>9ea10007d52616bb7d6b4b2673547f3e6625b3c5ce5fa97e57c13f31d5d002dd</hash>
+         <hash>a85f324022ab237e1ed118d47890741097b4aae57d9a673c9d03b94a38586f21</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\evic\plib_evic.c</file>
-         <hash>b132ac30fdd93a452be031e4ef6178de423fd0e75cde4e81875af709e2eb1562</hash>
+         <hash>dfd4408e44e5b043dcf3f70eae0e8d91768e267dfb5d69751849c95326243887</hash>
       </entry>
       <entry>
          <file>..\src\main_pic32mk_mcm.c</file>
@@ -2169,11 +2156,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
-         <hash>b6c3fdc453360b84c4e9c6b07c05faea70079f319709f2c5a624671bba2120ad</hash>
+         <hash>3b6ef0f8e715834bf20fe41fb36e355100885daf4a93a4b3c1e717f7b06d6b2c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\adchs\plib_adchs.c</file>
-         <hash>fb05994089197dd26a7d83a8f368f6b30c73ad3fb573b32c9759c96c8f3339c7</hash>
+         <hash>3f2442547e0a83edc9de3667ebb62dd37143bc7a5650044b73e74e4796333ca5</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\tmr\plib_tmr3.h</file>
@@ -2185,7 +2172,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\adchs\plib_adchs.h</file>
-         <hash>4590ca86f224b3f0e9246cf571fea814647b201e7e1ddc255cf90f7554c87f88</hash>
+         <hash>f2b12690d16b961f17bb97b98a811a6f87b6c6aeac58cc4c1f01eefebf119c44</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\tmr\plib_tmr3.c</file>
@@ -2193,7 +2180,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\toolchain_specifics.h</file>
-         <hash>c86ea57caade552aa8a4e7853594d481930697fdf3549b89ba0f07604894e0e8</hash>
+         <hash>9dfc75809b6eb23cee342231de51f6b382f8f7eabf8a939539cf44c0da32acbc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\interrupts.h</file>
@@ -2213,7 +2200,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\uart\plib_uart6.h</file>
-         <hash>4e3a9323c32238ffe75241c238ee49b32c6a23ec6728b1f27a31ea71d4960f8b</hash>
+         <hash>7af71fa32c496dcdfe8e536121fd6d383e32ae17b865f46b077adf490983d19e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\definitions.h</file>
@@ -2237,7 +2224,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mcm_curiosity_pro\peripheral\uart\plib_uart6.c</file>
-         <hash>c04cc0c9b01b279cfb4a59c55d3118120e99e101746e4bb2e8f1f6cd617798f4</hash>
+         <hash>760a1c14dc264a7d4aebb2579789a4b7653c39e31e6ed7d748082fe65585ba0f</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
