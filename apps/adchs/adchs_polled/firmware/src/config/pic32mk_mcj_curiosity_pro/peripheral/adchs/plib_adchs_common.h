@@ -113,51 +113,21 @@ typedef enum
     ADCHS_CH17 = 17U,
     ADCHS_CH18 = 18U,
     ADCHS_CH19 = 19U,
-    ADCHS_CH20 = 20U,
-    ADCHS_CH21 = 21U,
-    ADCHS_CH22 = 22U,
-    ADCHS_CH23 = 23U,
     ADCHS_CH24 = 24U,
     ADCHS_CH25 = 25U,
     ADCHS_CH26 = 26U,
     ADCHS_CH27 = 27U,
-    ADCHS_CH33 = 33U,
-    ADCHS_CH34 = 34U,
-    ADCHS_CH35 = 35U,
-    ADCHS_CH36 = 36U,
-    ADCHS_CH37 = 37U,
-    ADCHS_CH38 = 38U,
-    ADCHS_CH39 = 39U,
     ADCHS_CH40 = 40U,
     ADCHS_CH41 = 41U,
-    ADCHS_CH45 = 45U,
     ADCHS_CH46 = 46U,
     ADCHS_CH47 = 47U,
     ADCHS_CH48 = 48U,
     ADCHS_CH49 = 49U,
     ADCHS_CH50 = 50U,
-    ADCHS_CH51 = 51U,
-    ADCHS_CH52 = 52U,
     ADCHS_CH53 = 53U,
 }ADCHS_CHANNEL_NUM;
 
 
-typedef enum
-{
-    ADCHS_DMA_STATUS_RAF0 = (1U << 0U),
-    ADCHS_DMA_STATUS_RAF1 = (1U << 1U),
-    ADCHS_DMA_STATUS_RAF2 = (1U << 2U),
-    ADCHS_DMA_STATUS_RAF3 = (1U << 3U),
-    ADCHS_DMA_STATUS_RAF4 = (1U << 4U),
-    ADCHS_DMA_STATUS_RAF5 = (1U << 5U),
-    ADCHS_DMA_STATUS_RBF0 = (1U << (16U + 0U)),
-    ADCHS_DMA_STATUS_RBF1 = (1U << (16U + 1U)),
-    ADCHS_DMA_STATUS_RBF2 = (1U << (16U + 2U)),
-    ADCHS_DMA_STATUS_RBF3 = (1U << (16U + 3U)),
-    ADCHS_DMA_STATUS_RBF4 = (1U << (16U + 4U)),
-    ADCHS_DMA_STATUS_RBF5 = (1U << (16U + 5U)),
-    ADCHS_DMA_STATUS_WROVERR = (1U << 23U)
-}ADCHS_DMA_STATUS;
 
 // *****************************************************************************
 
@@ -165,7 +135,6 @@ typedef void (*ADCHS_CALLBACK)(ADCHS_CHANNEL_NUM channel, uintptr_t context);
 
 typedef void (*ADCHS_EOS_CALLBACK)(uintptr_t context);
 
-typedef void (*ADCHS_DMA_CALLBACK)(ADCHS_DMA_STATUS dmaStatus, uintptr_t context);
 
 
 
@@ -183,11 +152,6 @@ typedef struct
     uintptr_t context;
 }ADCHS_EOS_CALLBACK_OBJECT;
 
-typedef struct
-{
-    ADCHS_DMA_CALLBACK callback_fn;
-    uintptr_t context;
-}ADCHS_DMA_CALLBACK_OBJECT;
 
 
 
