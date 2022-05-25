@@ -34,34 +34,34 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 0DBEBECC254FE17BC53B4D4CA5ADD6FB
-- generatedChecksum: DC456BD30134E9EAD63388D1600DEF1E
+- generatedChecksum: 1820B37857FEF87A64FC30A0BCE2E776
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: DC456BD30134E9EAD63388D1600DEF1E
-- generatedChecksum: A1398D5BB38EA2A33B56EFFD38C7BB66
+  userChecksum: 1820B37857FEF87A64FC30A0BCE2E776
+- generatedChecksum: 2514B5650BF14B386276BC0287A867EF
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: A1398D5BB38EA2A33B56EFFD38C7BB66
-- generatedChecksum: 757294F2BB1473E27B0114AFDEB7A6C8
+  userChecksum: 2514B5650BF14B386276BC0287A867EF
+- generatedChecksum: 6BD8B705A3C28EA9FE5A4B9011E3448D
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/mcpwm
   name: plib_mcpwm.c
   physicalPath: peripheral/mcpwm
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 757294F2BB1473E27B0114AFDEB7A6C8
-- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: 6BD8B705A3C28EA9FE5A4B9011E3448D
+- generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/pic32mk_mca_curiosity_pro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: 71352EF41F6688AD8408E42970B50B66
 - generatedChecksum: 765DB808515907D0834DE9706A46D4FF
   logicalPath: config/pic32mk_mca_curiosity_pro
   name: definitions.h
@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: B5377459A947965D398E898B7BECC090
-- generatedChecksum: 46847323BED430A7D02D3B4484887A26
+- generatedChecksum: 30332B29B77DD9EF4435B6FD72138FDF
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 46847323BED430A7D02D3B4484887A26
+  userChecksum: 30332B29B77DD9EF4435B6FD72138FDF
 - generatedChecksum: 12CBE2439F4C4DECD2B376033BBADA45
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/mcpwm
   name: plib_mcpwm.h
@@ -125,13 +125,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
-- generatedChecksum: F1A1EA465155CE2050076005C47E467B
+- generatedChecksum: AFEEF05303BA1755340AEA0C8E51A3C5
   logicalPath: config/pic32mk_mca_curiosity_pro
   name: p32MK0128MCA048.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: F1A1EA465155CE2050076005C47E467B
+  userChecksum: AFEEF05303BA1755340AEA0C8E51A3C5
 format_version: v1.0
 libraries: []
 settings:
