@@ -212,22 +212,6 @@ uint16_t ADCHS_ChannelResultGet(ADCHS_CHANNEL_NUM channel)
 }
 
 
-void ADCHS_DMASampleCountBaseAddrSet(uint32_t baseAddr)
-{
-    ADCCNTB = baseAddr;
-}
-
-void ADCHS_DMAResultBaseAddrSet(uint32_t baseAddr)
-{
-    ADCDMAB = baseAddr;
-}
-
-
-ADCHS_DMA_STATUS ADCHS_DMAStatusGet(void)
-{
-    return ADCDSTAT & 0xBF003F;
-}
-
 
 
 

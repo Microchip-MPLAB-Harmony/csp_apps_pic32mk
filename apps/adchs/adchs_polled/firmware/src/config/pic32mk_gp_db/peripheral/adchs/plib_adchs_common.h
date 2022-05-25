@@ -141,22 +141,6 @@ typedef enum
 }ADCHS_CHANNEL_NUM;
 
 
-typedef enum
-{
-    ADCHS_DMA_STATUS_RAF0 = (1U << 0U),
-    ADCHS_DMA_STATUS_RAF1 = (1U << 1U),
-    ADCHS_DMA_STATUS_RAF2 = (1U << 2U),
-    ADCHS_DMA_STATUS_RAF3 = (1U << 3U),
-    ADCHS_DMA_STATUS_RAF4 = (1U << 4U),
-    ADCHS_DMA_STATUS_RAF5 = (1U << 5U),
-    ADCHS_DMA_STATUS_RBF0 = (1U << (16U + 0U)),
-    ADCHS_DMA_STATUS_RBF1 = (1U << (16U + 1U)),
-    ADCHS_DMA_STATUS_RBF2 = (1U << (16U + 2U)),
-    ADCHS_DMA_STATUS_RBF3 = (1U << (16U + 3U)),
-    ADCHS_DMA_STATUS_RBF4 = (1U << (16U + 4U)),
-    ADCHS_DMA_STATUS_RBF5 = (1U << (16U + 5U)),
-    ADCHS_DMA_STATUS_WROVERR = (1U << 23U)
-}ADCHS_DMA_STATUS;
 
 // *****************************************************************************
 
@@ -164,7 +148,6 @@ typedef void (*ADCHS_CALLBACK)(ADCHS_CHANNEL_NUM channel, uintptr_t context);
 
 typedef void (*ADCHS_EOS_CALLBACK)(uintptr_t context);
 
-typedef void (*ADCHS_DMA_CALLBACK)(ADCHS_DMA_STATUS dmaStatus, uintptr_t context);
 
 
 
@@ -182,11 +165,6 @@ typedef struct
     uintptr_t context;
 }ADCHS_EOS_CALLBACK_OBJECT;
 
-typedef struct
-{
-    ADCHS_DMA_CALLBACK callback_fn;
-    uintptr_t context;
-}ADCHS_DMA_CALLBACK_OBJECT;
 
 
 

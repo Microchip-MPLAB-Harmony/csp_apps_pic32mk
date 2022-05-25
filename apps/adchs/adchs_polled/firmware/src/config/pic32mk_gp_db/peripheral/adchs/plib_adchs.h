@@ -87,8 +87,8 @@ extern "C" {
 
 void ADCHS_Initialize (void);
 
-void ADCHS_ModulesEnable (ADCHS_MODULE_MASK modulesMask);
-void ADCHS_ModulesDisable (ADCHS_MODULE_MASK modulesMask);
+void ADCHS_ModulesEnable (ADCHS_MODULE_MASK moduleMask);
+void ADCHS_ModulesDisable (ADCHS_MODULE_MASK moduleMask);
 
 void ADCHS_GlobalEdgeConversionStart(void);
 void ADCHS_GlobalLevelConversionStart(void);
@@ -103,9 +103,6 @@ void ADCHS_ChannelEarlyInterruptDisable (ADCHS_CHANNEL_NUM channel);
 bool ADCHS_ChannelResultIsReady(ADCHS_CHANNEL_NUM channel);
 uint16_t ADCHS_ChannelResultGet(ADCHS_CHANNEL_NUM channel);
 
-void ADCHS_DMASampleCountBaseAddrSet(uint32_t baseAddr);
-void ADCHS_DMAResultBaseAddrSet(uint32_t baseAddr);
-ADCHS_DMA_STATUS ADCHS_DMAStatusGet(void);
 
 
 bool ADCHS_EOSStatusGet(void);
