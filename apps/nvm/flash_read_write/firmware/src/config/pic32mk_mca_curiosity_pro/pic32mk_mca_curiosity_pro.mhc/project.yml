@@ -34,20 +34,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 309AC34DEB33CAC1FD40EE1448BF2517
-- generatedChecksum: B4D484C3EBFF7D6F68C22C87DD9D7504
+- generatedChecksum: 0621DDA1AF1F12FF3E2B746F98EFB97A
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: B4D484C3EBFF7D6F68C22C87DD9D7504
-- generatedChecksum: 70D3AEE1A753ECDFF77831E549EEEEB5
+  userChecksum: 0621DDA1AF1F12FF3E2B746F98EFB97A
+- generatedChecksum: 0B3C06B7BA2F0562EE774CB3AF2AC349
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 70D3AEE1A753ECDFF77831E549EEEEB5
+  userChecksum: 0B3C06B7BA2F0562EE774CB3AF2AC349
 - generatedChecksum: 7CD1EDDF64BB45965E2652000C1FBFF5
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/nvm
   name: plib_nvm.c
@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 7CD1EDDF64BB45965E2652000C1FBFF5
-- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
+- generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/pic32mk_mca_curiosity_pro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: 71352EF41F6688AD8408E42970B50B66
 - generatedChecksum: 60A4F6B165D223C8349FCA24650494B8
   logicalPath: config/pic32mk_mca_curiosity_pro
   name: definitions.h
@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: B5377459A947965D398E898B7BECC090
-- generatedChecksum: 1AF1CEF882101D07CF7E2DCD4AFA3CAC
+- generatedChecksum: E5698A26DEE4F0D6DCFBD59AA2F80175
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 1AF1CEF882101D07CF7E2DCD4AFA3CAC
+  userChecksum: E5698A26DEE4F0D6DCFBD59AA2F80175
 - generatedChecksum: FE62D54BA3CA7CF87CBA53D71D31DDD3
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/nvm
   name: plib_nvm.h
@@ -118,13 +118,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
-- generatedChecksum: F1A1EA465155CE2050076005C47E467B
+- generatedChecksum: AFEEF05303BA1755340AEA0C8E51A3C5
   logicalPath: config/pic32mk_mca_curiosity_pro
   name: p32MK0128MCA048.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: F1A1EA465155CE2050076005C47E467B
+  userChecksum: AFEEF05303BA1755340AEA0C8E51A3C5
 format_version: v1.0
 libraries: []
 settings:
