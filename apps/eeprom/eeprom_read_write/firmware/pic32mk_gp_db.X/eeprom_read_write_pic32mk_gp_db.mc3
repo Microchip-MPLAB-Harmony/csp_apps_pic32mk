@@ -1,4 +1,4 @@
-<config configName="pic32mk_gp_db" projectName="eeprom_read_write_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.2.4">
+<config configName="pic32mk_gp_db" projectName="eeprom_read_write_pic32mk_gp_db" configVersion="1.1" device="PIC32MK1024GPE100" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -15,7 +15,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2866,11 +2866,11 @@
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c</file>
-         <hash>1242c87e01d19021e562cfd3a92d05dfc44f257c1b159a3b92dc541b434346ce</hash>
+         <hash>14123d7a32fbd5e9dcf012d3dbb4fbe8cae11d84ca6013d33d79e10fc81fee06</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\p32MK1024GPE100.ld</file>
-         <hash>db501f83a4085da72f4f37374ab29b766e74ac8e1f2805c37307b9b3d5a15155</hash>
+         <hash>dc80ba3f4d685c9cfdfd61e3e4fd458211b17013eca88285e8e6894a8f2ebf8e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\initialization.c</file>
@@ -2898,7 +2898,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c</file>
-         <hash>899180a4ee78230d5dd1313d3217dda8ab9053b3c5aa53dd49514d93ecdaea14</hash>
+         <hash>416606fd8ab5510d5d2336a66c4afdb55bcc253d9995c7716f02159079da4f33</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\device.h</file>
@@ -2906,7 +2906,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\toolchain_specifics.h</file>
-         <hash>c86ea57caade552aa8a4e7853594d481930697fdf3549b89ba0f07604894e0e8</hash>
+         <hash>9dfc75809b6eb23cee342231de51f6b382f8f7eabf8a939539cf44c0da32acbc</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\eeprom\plib_eeprom.h</file>
@@ -2922,7 +2922,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
@@ -2934,7 +2934,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.h</file>
-         <hash>3f986bc0f25b124f37bf205c1d85d5b11eabed1939dbeb4295b81411bb04d8bf</hash>
+         <hash>1735eaeb823f87376b1f66510d433a90ca00c6e54fb9e1c3dd5044aab0600ab0</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
