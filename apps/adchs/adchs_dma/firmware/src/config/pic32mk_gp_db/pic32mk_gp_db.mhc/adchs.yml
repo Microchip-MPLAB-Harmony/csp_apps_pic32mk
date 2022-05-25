@@ -288,6 +288,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: adchs, value: '882.35297'}
+  - type: String
+    attributes: {id: ADCHS_DMA_STATUS_REG}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: ADCDSTAT}
   - type: Hex
     attributes: {id: ADCHS_IEC0}
     children:
@@ -470,6 +477,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: adchs, value: ADCHS_CH10}
+  - type: Boolean
+    attributes: {id: ADC_DMA_ENABLED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'true'}
   - type: Boolean
     attributes: {id: ADC_DMA_INT_ENABLED}
     children:
