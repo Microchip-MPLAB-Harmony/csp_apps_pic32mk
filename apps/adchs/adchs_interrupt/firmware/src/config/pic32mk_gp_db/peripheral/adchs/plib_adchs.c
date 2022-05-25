@@ -224,22 +224,6 @@ void ADCHS_CallbackRegister(ADCHS_CHANNEL_NUM channel, ADCHS_CALLBACK callback, 
     ADCHS_CallbackObj[channel].context = context;
 }
 
-void ADCHS_DMASampleCountBaseAddrSet(uint32_t baseAddr)
-{
-    ADCCNTB = baseAddr;
-}
-
-void ADCHS_DMAResultBaseAddrSet(uint32_t baseAddr)
-{
-    ADCDMAB = baseAddr;
-}
-
-
-ADCHS_DMA_STATUS ADCHS_DMAStatusGet(void)
-{
-    return ADCDSTAT & 0xBF003F;
-}
-
 
 
 
