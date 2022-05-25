@@ -34,27 +34,27 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C211D16F2EF222C36C99074FD1BDB173
-- generatedChecksum: 81BB0B01D9D02234598A91A92B0C8C7B
+- generatedChecksum: CE8FA8861128BCB5D3F744A14CFB2BDE
   logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 81BB0B01D9D02234598A91A92B0C8C7B
-- generatedChecksum: 514B4782F8FEFF9D5817EBCDB4C55B44
+  userChecksum: CE8FA8861128BCB5D3F744A14CFB2BDE
+- generatedChecksum: DF3CE075F5A5AB2C24AF8F41B1F42C72
   logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 514B4782F8FEFF9D5817EBCDB4C55B44
-- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: DF3CE075F5A5AB2C24AF8F41B1F42C72
+- generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/pic32mk_mcm_curiosity_pro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: 71352EF41F6688AD8408E42970B50B66
 - generatedChecksum: 360B57F4E6E8EF6B4BF89CD59C3B27E8
   logicalPath: config/pic32mk_mcm_curiosity_pro
   name: definitions.h
@@ -90,27 +90,27 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 4D592E1C42727324FE2F5EB681F6C5AA
-- generatedChecksum: A8FBEB2AF792B74C5A61E2264B97375D
+- generatedChecksum: 5E8D3C67B96B1A0DDD20EF74AE1B2A57
   logicalPath: config/pic32mk_mcm_curiosity_pro/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: A8FBEB2AF792B74C5A61E2264B97375D
-- generatedChecksum: 2C8543317B3F067432097AB9BD3E8672
+  userChecksum: 5E8D3C67B96B1A0DDD20EF74AE1B2A57
+- generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mk_mcm_curiosity_pro
   name: toolchain_specifics.h
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 2C8543317B3F067432097AB9BD3E8672
-- generatedChecksum: D952D84078461ACADCCC56F030F63840
+  userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
+- generatedChecksum: 076A5CDEAE185EDCB946BAC9F1AD03E5
   logicalPath: config/pic32mk_mcm_curiosity_pro
   name: p32MK1024MCM100.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: D952D84078461ACADCCC56F030F63840
+  userChecksum: 076A5CDEAE185EDCB946BAC9F1AD03E5
 format_version: v1.0
 libraries: []
 settings:
