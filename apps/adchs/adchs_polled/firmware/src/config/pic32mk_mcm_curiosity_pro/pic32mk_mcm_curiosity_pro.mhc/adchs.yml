@@ -91,6 +91,13 @@ children:
       - type: Dynamic
         attributes: {id: adchs, value: '0'}
   - type: Hex
+    attributes: {id: ADCHS_ADCDSTAT}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: '0'}
+  - type: Hex
     attributes: {id: ADCHS_ADCTIME0}
     children:
     - type: Values
@@ -225,6 +232,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: adchs, value: '1764.7059'}
+  - type: String
+    attributes: {id: ADCHS_DMA_STATUS_REG}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: ADCDSTAT}
   - type: Float
     attributes: {id: ADCHS_TADC0}
     children:
@@ -375,6 +389,20 @@ children:
       children:
       - type: Dynamic
         attributes: {id: adchs, value: ADCHS_CH10}
+  - type: Boolean
+    attributes: {id: ADC_DMA_ENABLED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
+  - type: Boolean
+    attributes: {id: ADC_DMA_INT_ENABLED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: adchs, value: 'false'}
   - type: String
     attributes: {id: ADC_GET_RESULT_API}
     children:
