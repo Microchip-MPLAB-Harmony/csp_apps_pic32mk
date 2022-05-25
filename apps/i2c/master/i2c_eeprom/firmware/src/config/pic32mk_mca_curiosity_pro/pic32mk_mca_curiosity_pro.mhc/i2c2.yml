@@ -25,5 +25,12 @@ children:
       children:
       - type: Dynamic
         attributes: {id: i2c2, value: '6'}
+  - type: Integer
+    attributes: {id: I2C_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: i2c2, value: '60000000'}
 - type: ElementPosition
   attributes: {x: '340', y: '20', id: i2c2}
