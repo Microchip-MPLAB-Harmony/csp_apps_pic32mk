@@ -34,20 +34,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 2AC817684022C643E7A7E621A0C9EE10
-- generatedChecksum: D76BE921761B4B30B30E87D0C9F11F3F
+- generatedChecksum: 73655D0141303A622897223776142085
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D76BE921761B4B30B30E87D0C9F11F3F
-- generatedChecksum: 1FEB6A05D91051B9D22DA60C6FFC3450
+  userChecksum: 73655D0141303A622897223776142085
+- generatedChecksum: 22B3AF1BC5F1CD39A587F93BEB6407F3
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 1FEB6A05D91051B9D22DA60C6FFC3450
+  userChecksum: 22B3AF1BC5F1CD39A587F93BEB6407F3
 - generatedChecksum: C9C37620CE917960D91196B2EF7D20EA
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/tmr
   name: plib_tmr2.c
@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: C9C37620CE917960D91196B2EF7D20EA
-- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
+- generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/pic32mk_mcj_curiosity_pro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: 71352EF41F6688AD8408E42970B50B66
 - generatedChecksum: 16C8FDD02014528C1306F203169B384C
   logicalPath: config/pic32mk_mcj_curiosity_pro
   name: definitions.h
@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 23F86588C83891551C404C1BA77F9655
-- generatedChecksum: 4CEE81D5BC19EB136FB2C4EE0AF4C897
+- generatedChecksum: EF0138E5248BFA30B1FAF2ABED84F966
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 4CEE81D5BC19EB136FB2C4EE0AF4C897
+  userChecksum: EF0138E5248BFA30B1FAF2ABED84F966
 - generatedChecksum: 951CB6B720EFCD3044875413BC7D7773
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/tmr
   name: plib_tmr2.h
@@ -125,13 +125,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
-- generatedChecksum: 4BD241A94AC776C7B963BF3833BD07DB
+- generatedChecksum: D8C84D56283D1E38192D28930F8D71D9
   logicalPath: config/pic32mk_mcj_curiosity_pro
   name: p32MK0512MCJ064.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 4BD241A94AC776C7B963BF3833BD07DB
+  userChecksum: D8C84D56283D1E38192D28930F8D71D9
 format_version: v1.0
 libraries: []
 settings:
