@@ -83,6 +83,8 @@ size_t UART6_WriteFreeBufferCountGet(void);
 
 size_t UART6_WriteBufferSizeGet(void);
 
+bool UART6_TransmitComplete(void);
+
 bool UART6_WriteNotificationEnable(bool isEnabled, bool isPersistent);
 
 void UART6_WriteThresholdSet(uint32_t nBytesThreshold);
