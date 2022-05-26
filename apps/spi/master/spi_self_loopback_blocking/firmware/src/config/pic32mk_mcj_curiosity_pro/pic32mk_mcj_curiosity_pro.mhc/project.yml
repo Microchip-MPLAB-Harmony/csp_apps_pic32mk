@@ -34,20 +34,20 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: D968B72E5456450BA262232578DAE14E
-- generatedChecksum: ED6722C1169FEA2DA1F15D907F42AA46
+- generatedChecksum: B78784342D92F137A0446EBC260A199D
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: ED6722C1169FEA2DA1F15D907F42AA46
-- generatedChecksum: 2C0CA11CB96DBAC80D4EEBFD4C909D55
+  userChecksum: B78784342D92F137A0446EBC260A199D
+- generatedChecksum: 7DAF6BABA7D9A0BCBC6766657081D1DF
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 2C0CA11CB96DBAC80D4EEBFD4C909D55
+  userChecksum: 7DAF6BABA7D9A0BCBC6766657081D1DF
 - generatedChecksum: 4E94C387D0F87DEDECE82156EAD04702
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/spi/spi_master
   name: plib_spi2_master.c
@@ -55,13 +55,13 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: 4E94C387D0F87DEDECE82156EAD04702
-- generatedChecksum: 7806B30ECAE0D18D08CD583D8775530D
+- generatedChecksum: 71352EF41F6688AD8408E42970B50B66
   logicalPath: config/pic32mk_mcj_curiosity_pro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 7806B30ECAE0D18D08CD583D8775530D
+  userChecksum: 71352EF41F6688AD8408E42970B50B66
 - generatedChecksum: 89C0CFD2F63F91A9711F34E19F6CD1B8
   logicalPath: config/pic32mk_mcj_curiosity_pro
   name: definitions.h
@@ -97,13 +97,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 23F86588C83891551C404C1BA77F9655
-- generatedChecksum: 89A6957553D05247C0A2C81B67274B64
+- generatedChecksum: 0F55C2A8EEA4FF8FC9C5D7A8747C90F8
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: 89A6957553D05247C0A2C81B67274B64
+  userChecksum: 0F55C2A8EEA4FF8FC9C5D7A8747C90F8
 - generatedChecksum: 86579BD2296BD0B25C7B6BD7167E9087
   logicalPath: config/pic32mk_mcj_curiosity_pro/peripheral/spi/spi_master
   name: plib_spi2_master.h
@@ -125,13 +125,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
-- generatedChecksum: 4BD241A94AC776C7B963BF3833BD07DB
+- generatedChecksum: D8C84D56283D1E38192D28930F8D71D9
   logicalPath: config/pic32mk_mcj_curiosity_pro
   name: p32MK0512MCJ064.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: 4BD241A94AC776C7B963BF3833BD07DB
+  userChecksum: D8C84D56283D1E38192D28930F8D71D9
 format_version: v1.0
 libraries: []
 settings:
