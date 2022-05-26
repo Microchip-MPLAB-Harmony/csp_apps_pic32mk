@@ -166,16 +166,35 @@ bool UART6_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
 {
     bool status = false;
     uint32_t baud;
-    int32_t brgValHigh = 0;
-    int32_t brgValLow = 0;
-    uint32_t brgVal = 0;
-    uint32_t uartMode;
+    uint8_t brgh = 1;
+    int32_t uxbrg = 0;
 
     if (setup != NULL)
     {
         baud = setup->baudRate;
 
-        if (baud == 0)
+        if ((baud == 0) || ((setup->dataWidth == UART_DATA_9_BIT) && (setup->parity != UART_PARITY_NONE)))
+        {
+            return status;
+        }
+
+        if(srcClkFreq == 0)
+        {
+            srcClkFreq = UART6_FrequencyGet();
+        }
+
+         /* Calculate BRG value */
+        if (brgh == 0)
+        {
+            uxbrg = (((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
+        }
+        else
+        {
+            uxbrg = (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
+        }
+
+        /* Check if the baud value can be set with low baud settings */
+        if((uxbrg < 0) || (uxbrg > UINT16_MAX))
         {
             return status;
         }
@@ -183,60 +202,22 @@ bool UART6_SerialSetup( UART_SERIAL_SETUP *setup, uint32_t srcClkFreq )
         /* Turn OFF UART6 */
         U6MODECLR = _U6MODE_ON_MASK;
 
-        if(srcClkFreq == 0)
-        {
-            srcClkFreq = UART6_FrequencyGet();
-        }
-
-        /* Calculate BRG value */
-        brgValLow = (((srcClkFreq >> 4) + (baud >> 1)) / baud ) - 1;
-        brgValHigh = (((srcClkFreq >> 2) + (baud >> 1)) / baud ) - 1;
-
-        /* Check if the baud value can be set with low baud settings */
-        if((brgValLow >= 0) && (brgValLow <= UINT16_MAX))
-        {
-            brgVal =  brgValLow;
-            U6MODECLR = _U6MODE_BRGH_MASK;
-        }
-        else if ((brgValHigh >= 0) && (brgValHigh <= UINT16_MAX))
-        {
-            brgVal = brgValHigh;
-            U6MODESET = _U6MODE_BRGH_MASK;
-        }
-        else
-        {
-            return status;
-        }
-
         if(setup->dataWidth == UART_DATA_9_BIT)
         {
-            if(setup->parity != UART_PARITY_NONE)
-            {
-               return status;
-            }
-            else
-            {
-               /* Configure UART6 mode */
-               uartMode = U6MODE;
-               uartMode &= ~_U6MODE_PDSEL_MASK;
-               U6MODE = uartMode | setup->dataWidth;
-            }
+            /* Configure UART6 mode */
+            U6MODE = (U6MODE & (~_U6MODE_PDSEL_MASK)) | setup->dataWidth;
         }
         else
         {
             /* Configure UART6 mode */
-            uartMode = U6MODE;
-            uartMode &= ~_U6MODE_PDSEL_MASK;
-            U6MODE = uartMode | setup->parity ;
+            U6MODE = (U6MODE & (~_U6MODE_PDSEL_MASK)) | setup->parity;
         }
 
         /* Configure UART6 mode */
-        uartMode = U6MODE;
-        uartMode &= ~_U6MODE_STSEL_MASK;
-        U6MODE = uartMode | setup->stopBits ;
+        U6MODE = (U6MODE & (~_U6MODE_STSEL_MASK)) | setup->stopBits;
 
         /* Configure UART6 Baud Rate */
-        U6BRG = brgVal;
+        U6BRG = uxbrg;
 
         if (UART6_IS_9BIT_MODE_ENABLED())
         {
@@ -618,6 +599,18 @@ size_t UART6_WriteBufferSizeGet(void)
     return (uart6Obj.wrBufferSize - 1);
 }
 
+bool UART6_TransmitComplete(void)
+{    
+    if((U6STA & _U6STA_TRMT_MASK))
+    {
+        return true;
+    }
+	else
+	{
+		return false;
+	}
+}
+
 bool UART6_WriteNotificationEnable(bool isEnabled, bool isPersistent)
 {
     bool previousStatus = uart6Obj.isWrNotificationEnabled;
@@ -689,6 +682,9 @@ void UART6_FAULT_InterruptHandler (void)
 
 void UART6_RX_InterruptHandler (void)
 {
+    /* Clear UART6 RX Interrupt flag */
+    IFS5CLR = _IFS5_U6RXIF_MASK;
+
     /* Keep reading until there is a character availabe in the RX FIFO */
     while((U6STA & _U6STA_URXDA_MASK) == _U6STA_URXDA_MASK)
     {
@@ -701,9 +697,6 @@ void UART6_RX_InterruptHandler (void)
             /* UART RX buffer is full */
         }
     }
-
-    /* Clear UART6 RX Interrupt flag */
-    IFS5CLR = _IFS5_U6RXIF_MASK;
 }
 
 void UART6_TX_InterruptHandler (void)
@@ -713,6 +706,9 @@ void UART6_TX_InterruptHandler (void)
     /* Check if any data is pending for transmission */
     if (UART6_WritePendingBytesGet() > 0)
     {
+        /* Clear UART6TX Interrupt flag */
+        IFS5CLR = _IFS5_U6TXIF_MASK;
+
         /* Keep writing to the TX FIFO as long as there is space */
         while(!(U6STA & _U6STA_UTXBF_MASK))
         {
@@ -737,10 +733,6 @@ void UART6_TX_InterruptHandler (void)
                 break;
             }
         }
-
-        /* Clear UART6TX Interrupt flag */
-        IFS5CLR = _IFS5_U6TXIF_MASK;
-
     }
     else
     {
