@@ -18,6 +18,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: uart2, value: '0'}
+  - type: Integer
+    attributes: {id: UART_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: uart2, value: '60000000'}
   - type: File
     attributes: {id: UART_HEADER}
     children:
