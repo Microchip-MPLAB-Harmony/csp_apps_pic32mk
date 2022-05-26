@@ -41,41 +41,41 @@ files:
   security: NON_SECURE
   type: SOURCE
   userChecksum: F8BB2BAA74068083A80E6E229BBCF3E3
-- generatedChecksum: ED6722C1169FEA2DA1F15D907F42AA46
+- generatedChecksum: B78784342D92F137A0446EBC260A199D
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/evic
   name: plib_evic.c
   physicalPath: peripheral/evic
   security: NON_SECURE
   type: SOURCE
-  userChecksum: ED6722C1169FEA2DA1F15D907F42AA46
-- generatedChecksum: F13192668E35956357830F85E7807B61
+  userChecksum: B78784342D92F137A0446EBC260A199D
+- generatedChecksum: 37EBB0D7FCC67BBBB4040C7D208A2DC8
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/gpio
   name: plib_gpio.c
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: F13192668E35956357830F85E7807B61
-- generatedChecksum: 0E74E8218E54427BDBAE8B4238D55E4C
+  userChecksum: 37EBB0D7FCC67BBBB4040C7D208A2DC8
+- generatedChecksum: 49972D3A9D6D45DD4286ED94213F05A2
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/uart
   name: plib_uart2.c
   physicalPath: peripheral/uart
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 0E74E8218E54427BDBAE8B4238D55E4C
-- generatedChecksum: D2B5BDC2F4578FDBBADED01931AF6259
+  userChecksum: 49972D3A9D6D45DD4286ED94213F05A2
+- generatedChecksum: 421E0E3D113AC4742E1A755A321D08DF
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/wdt
   name: plib_wdt.c
   physicalPath: peripheral/wdt
   security: NON_SECURE
   type: SOURCE
-  userChecksum: D2B5BDC2F4578FDBBADED01931AF6259
-- generatedChecksum: CD1794BE8A9148BA4C835E811CBD7164
+  userChecksum: 421E0E3D113AC4742E1A755A321D08DF
+- generatedChecksum: F8E5A602361062C584BFD545E44A2C6F
   logicalPath: config/pic32mk_mca_curiosity_pro/stdio
   name: xc32_monitor.c
   physicalPath: stdio
   security: NON_SECURE
   type: SOURCE
-  userChecksum: CD1794BE8A9148BA4C835E811CBD7164
+  userChecksum: F8E5A602361062C584BFD545E44A2C6F
 - generatedChecksum: D67902EF0C032A05DB4B325A1799F252
   logicalPath: config/pic32mk_mca_curiosity_pro
   name: definitions.h
@@ -118,13 +118,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: B5377459A947965D398E898B7BECC090
-- generatedChecksum: A9558B36DDFE7A804B763A1532EFB967
+- generatedChecksum: 14F32FDFD8F92F1631F87CE37B2CCC65
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/gpio
   name: plib_gpio.h
   physicalPath: peripheral/gpio
   security: NON_SECURE
   type: HEADER
-  userChecksum: A9558B36DDFE7A804B763A1532EFB967
+  userChecksum: 14F32FDFD8F92F1631F87CE37B2CCC65
 - generatedChecksum: 687F99E456839E29578ACB606A2A0083
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/uart
   name: plib_uart2.h
@@ -139,13 +139,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 67EEAF539A53B6B8FD7B600ACCB3F3CA
-- generatedChecksum: 52646F9F1734C5AA98A212549F6FE3E3
+- generatedChecksum: 2AD7259D0E303CE06622D0F1A6BBEC13
   logicalPath: config/pic32mk_mca_curiosity_pro/peripheral/wdt
   name: plib_wdt.h
   physicalPath: peripheral/wdt
   security: NON_SECURE
   type: HEADER
-  userChecksum: 52646F9F1734C5AA98A212549F6FE3E3
+  userChecksum: 2AD7259D0E303CE06622D0F1A6BBEC13
 - generatedChecksum: 7DC91D6D376C98802C9C2990432DE9B7
   logicalPath: config/pic32mk_mca_curiosity_pro
   name: toolchain_specifics.h
@@ -153,13 +153,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 7DC91D6D376C98802C9C2990432DE9B7
-- generatedChecksum: F1A1EA465155CE2050076005C47E467B
+- generatedChecksum: AFEEF05303BA1755340AEA0C8E51A3C5
   logicalPath: config/pic32mk_mca_curiosity_pro
   name: p32MK0128MCA048.ld
   physicalPath: ''
   security: NON_SECURE
   type: LINKER
-  userChecksum: F1A1EA465155CE2050076005C47E467B
+  userChecksum: AFEEF05303BA1755340AEA0C8E51A3C5
 format_version: v1.0
 libraries: []
 settings:
