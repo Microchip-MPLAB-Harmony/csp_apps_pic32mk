@@ -1,5 +1,12 @@
-<config configName="pic32mk_mca_curiosity_pro" projectName="rtcc_alarm_pic32mk_mca_curiosity_pro" configVersion="1.1" device="PIC32MK0128MCA048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
-   <usedPackages class="java.util.ArrayList"/>
+<config configName="pic32mk_mca_curiosity_pro" projectName="rtcc_alarm_pic32mk_mca_curiosity_pro" configVersion="1.1" device="PIC32MK0128MCA048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.4">
+   <usedPackages class="java.util.ArrayList">
+      <package packageName="csp" version="unknown" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="dev_packs" version="unknown" contentType="HARMONY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+   </usedPackages>
    <usedClasses class="java.util.TreeMap">
       <entry>
          <string>core</string>
@@ -23,7 +30,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.2-a"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
