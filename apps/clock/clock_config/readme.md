@@ -27,8 +27,8 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | pic32mk_gp_db.X | MPLABX project for [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
-| pic32mk_mcj_curiosity_pro.X | MPLABX project for PIC32MK MCJ Curiosity Pro Board |
-| pic32mk_mcm_curiosity_pro.X | MPLABX project for PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mcj_curiosity_pro.X | MPLABX project for [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
+| pic32mk_mcm_curiosity_pro.X | MPLABX project for [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
 | pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
 |||
 
@@ -39,8 +39,8 @@ The following table shows the target hardware for the application projects.
 | Project Name| Board|
 |:---------|:---------:|
 | pic32mk_gp_db.X | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) |
-| pic32mk_mcj_curiosity_pro.X | PIC32MK MCJ Curiosity Pro Board |
-| pic32mk_mcm_curiosity_pro.X | PIC32MK MCM Curiosity Pro Board |
+| pic32mk_mcj_curiosity_pro.X | [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
+| pic32mk_mcm_curiosity_pro.X | [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) |
 | pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
 |||
 
@@ -49,12 +49,12 @@ The following table shows the target hardware for the application projects.
 - Connect an oscilloscope to monitor the PORT pin RPA0 (Pin number #4 on the J29 connector)
 - Connect the Debug USB port (J12) on the board to the computer using a micro USB cable
 
-### Setting up PIC32MK MCJ Curiosity Pro Board
+### Setting up [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)
 
 - Connect an oscilloscope to monitor the PORT pin RPB11 (Pin #8 on J503/EXT3 connector)
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
-### Setting up PIC32MK MCM Curiosity Pro Board
+### Setting up [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A)
 
 - Connect an oscilloscope to monitor the PORT pin RPC1 (Pin number #1 on J301 connector)
 - Connect the Debug USB port (J500) on the board to the computer using a micro USB cable
@@ -76,7 +76,7 @@ Refer to the following table for clock output pin and LED name for different boa
 | Board      | Clock output pin | LED Name |
 | ---------- | ---------------- |--------- |
 |  [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106)  | RPA0 (Pin number #4 on the J29 connector)  | LED0 |
-|  PIC32MK MCJ Curiosity Pro Board  | (Pin #8 on J503/EXT3 connector)  | LED2  |
-|  PIC32MK MCM Curiosity Pro Board  | (Pin number #1 on J301 connector)  | LED1  |
+|  [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)  | (Pin #8 on J503/EXT3 connector)  | LED2  |
+|  [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A)  | (Pin number #1 on J301 connector)  | LED1  |
 |  PIC32MK MCA Curiosity Pro Board  | (Pin 29 on J601 connector)  | LED1  |
 ||||

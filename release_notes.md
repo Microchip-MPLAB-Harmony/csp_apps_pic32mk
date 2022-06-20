@@ -17,8 +17,8 @@ Following table provides number of peripheral library examples available for dif
 | Development Kits  | MPLAB X applications |
 |:-----------------:|:-------------------:|
 | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | 27 |
-| PIC32MK MCJ Curiosity Pro Board | 26 |
-| PIC32MK MCM Curiosity Pro Board | 24 |
+| [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | 26 |
+| [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) | 24 |
 
 ### New Features
 
@@ -59,8 +59,8 @@ Following table provides number of peripheral library examples available for dif
 | Development Kits  | MPLAB X applications |
 |:-----------------:|:-------------------:|
 | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | 26 |
-| PIC32MK MCJ Curiosity Pro Board | 26 |
-| PIC32MK MCM Curiosity Pro Board | 24 |
+| [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | 26 |
+| [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) | 24 |
 
 ### New Features
 
@@ -102,8 +102,8 @@ Following table provides number of peripheral library examples available for dif
 
 | Development Kits  | MPLAB X applications |
 |:-----------------:|:-------------------:|
-| PIC32MK MCJ Curiosity Pro Board | 24 |
-| PIC32MK MCM Curiosity Pro Board | 24 |
+| [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | 24 |
+| [PIC32MK MCM Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV31E34A) | 24 |
 | [PIC32MK GP Development Kit](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | 26 |
 
 ### New Features
