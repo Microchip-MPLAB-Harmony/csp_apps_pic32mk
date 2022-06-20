@@ -1,0 +1,79 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.csp_apps_pic32mk_conf_mca_icap_capture_mode",
+		"version": "3.2.0",
+		"displayName": "ICAP capture mode Example for PIC32MK Family",
+		"projectName": "icap_capture_mode_pic32mk_mca_curiosity_pro",
+		"shortDescription": "This example application shows how to use the ICAP peripheral to measure the pulse width of the input signal.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=6.0.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=4.1.0"
+			}
+		],
+		"dfp": {
+			"name": "PIC32MK-MC_DFP",
+			"semverRange": "^1.10.146"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.8.0"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "PIC32MK0128MCA048",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit",
+				"PIC32MK MCA Curiosity Pro Board"
+			],
+			[
+				"Harmony",
+				"Peripherals",
+				"ICAP"
+			],
+			[
+				"Peripherals",
+				"ICAP"
+			]
+		],
+		"peripherals": [
+			"ICAP"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"PIC32MK0128MCA048",
+			"PIC32MK Family",
+			"ICAP",
+			"Input Capture",
+			"Timer"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
