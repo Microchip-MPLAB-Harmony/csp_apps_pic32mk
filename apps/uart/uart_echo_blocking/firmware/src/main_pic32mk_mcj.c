@@ -52,13 +52,13 @@
 
 #define RX_BUFFER_SIZE 256
 
-char messageStart[] = "**** UART Line Echo Demo: Blocking Transfer without the interrupt ****\r\n\
+static char messageStart[] = "**** UART Line Echo Demo: Blocking Transfer without the interrupt ****\r\n\
 **** Type a line of characters and press the Enter key. **** \r\n\
 **** Entered line will be echoed back, and the LED is toggled. ****\r\n";
-char newline[] = "\r\n";
-char errorMessage[] = "\r\n**** UART error has occurred ****\r\n";
-char receiveBuffer[RX_BUFFER_SIZE] = {};
-char data = 0;
+static char newline[] = "\r\n";
+static char errorMessage[] = "\r\n**** UART error has occurred ****\r\n";
+static char receiveBuffer[RX_BUFFER_SIZE] = {};
+static char data = 0;
 
 // *****************************************************************************
 // *****************************************************************************
