@@ -60,14 +60,23 @@
 // *****************************************************************************
 
 
-void CHANGE_NOTICE_C_InterruptHandler( void );
-void SPI6_FAULT_InterruptHandler( void );
-void SPI6_RX_InterruptHandler( void );
-void SPI6_TX_InterruptHandler( void );
-
-
-
 /* All the handlers are defined here.  Each will call its PLIB-specific function. */
+// *****************************************************************************
+// *****************************************************************************
+// Section: System Interrupt Vector declarations
+// *****************************************************************************
+// *****************************************************************************
+void CHANGE_NOTICE_C_Handler (void);
+void SPI6_FAULT_Handler (void);
+void SPI6_RX_Handler (void);
+void SPI6_TX_Handler (void);
+
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: System Interrupt Vector definitions
+// *****************************************************************************
+// *****************************************************************************
 void __ISR(_CHANGE_NOTICE_C_VECTOR, ipl1SOFT) CHANGE_NOTICE_C_Handler (void)
 {
     CHANGE_NOTICE_C_InterruptHandler();
