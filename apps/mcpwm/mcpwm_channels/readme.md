@@ -27,7 +27,7 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
-| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |||
 
 ## Setting up the hardware
@@ -37,14 +37,14 @@ The following table shows the target hardware for the application projects.
 | Project Name| Board|
 |:---------|:---------:|
 | pic32mk_mcj_curiosity_pro.X | [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) |
-| pic32mk_mca_curiosity_pro.X | PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |||
 
 ### Setting up [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
-### Setting up PIC32MK MCA Curiosity Pro Board
+### Setting up [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A)
 
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
@@ -60,7 +60,7 @@ The following table shows the target hardware for the application projects.
 4. Refer to the table below for PWM channels oscilloscope connections:
 
 
-| PWM Channel | Pin For [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | Pin For PIC32MK MCA Curiosity Pro Board |
+| PWM Channel | Pin For [PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113) | Pin For [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |------------ |---------------- | ---------------- |
 | PWM1H | RPB14 (Pin 7 of J501 ) | RPB14 (Pin 19 of J601 ) | 
 | PWM1L | RPB15 (Pin 8 of J501 ) | RPB15 (Pin 21 of J601 ) 
