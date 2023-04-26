@@ -46,6 +46,7 @@
 
 #include <stddef.h>
 #include <stdint.h>
+#include <stdbool.h>
 #include "device.h"
 #include "plib_tmr_common.h"
 
@@ -76,7 +77,7 @@ void TMR3_Start(void);
 
 void TMR3_Stop(void);
 
-void TMR3_PeriodSet(uint16_t);
+void TMR3_PeriodSet(uint16_t period);
 
 uint16_t TMR3_PeriodGet(void);
 
@@ -84,6 +85,7 @@ uint16_t TMR3_CounterGet(void);
 
 uint32_t TMR3_FrequencyGet(void);
 
+bool TMR3_PeriodHasExpired(void);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
