@@ -57,6 +57,10 @@
 // *****************************************************************************
 // *****************************************************************************
 
+void UART6_FAULT_InterruptHandler( void );
+void UART6_RX_InterruptHandler( void );
+void UART6_TX_InterruptHandler( void );
+
 
 
 #endif // INTERRUPTS_H
