@@ -42,6 +42,9 @@
 //DOM-IGNORE-END
 
 #include "plib_gpio.h"
+#include "interrupts.h"
+#include "interrupts.h"
+
 
 
 
@@ -63,13 +66,26 @@ void GPIO_Initialize ( void )
     TRISACLR = 0x400U; /* Direction Control */
     /* PORTB Initialization */
     /* PORTC Initialization */
+    ANSELCCLR = 0x400U; /* Digital Mode Enable */
     /* PORTD Initialization */
 
+    /* Unlock system for PPS configuration */
+    SYSKEY = 0x00000000U;
+    SYSKEY = 0xAA996655U;
+    SYSKEY = 0x556699AAU;
+
+    CFGCONbits.IOLOCK = 0U;
 
     /* PPS Input Remapping */
+    U2RXR = 4;
 
     /* PPS Output Remapping */
+    RPC10R = 2;
 
+        /* Lock back the system after PPS configuration */
+    CFGCONbits.IOLOCK = 1U;
+
+    SYSKEY = 0x00000000U;
 
 }
 
