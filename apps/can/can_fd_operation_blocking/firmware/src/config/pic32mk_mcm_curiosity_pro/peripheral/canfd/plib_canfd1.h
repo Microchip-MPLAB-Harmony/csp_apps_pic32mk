@@ -67,6 +67,8 @@
 #endif
 // DOM-IGNORE-END
 
+#define CAN1_CLOCK_FREQUENCY    80250000U
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
@@ -86,6 +88,8 @@ void CAN1_ErrorCountGet(uint8_t *txErrorCount, uint8_t *rxErrorCount);
 bool CAN1_InterruptGet(uint8_t fifoQueueNum, CANFD_FIFO_INTERRUPT_FLAG_MASK fifoInterruptFlagMask);
 bool CAN1_TxFIFOQueueIsFull(uint8_t fifoQueueNum);
 bool CAN1_AutoRTRResponseSet(uint32_t id, uint8_t length, uint8_t* data, uint8_t fifoNum);
+bool CAN1_BitTimingCalculationGet(CAN_BIT_TIMING_SETUP *setup, CAN_BIT_TIMING *bitTiming);
+bool CAN1_BitTimingSet(CAN_BIT_TIMING *bitTiming);
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
     }
