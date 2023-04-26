@@ -234,8 +234,9 @@ typedef struct
     uint32_t r1;
 
     /* CANFD Rx message - RXMSGTS and Receive Buffer Data Bytes */
-    uint8_t data[];
+    uint8_t data[64];
 } CANFD_RX_MSG_OBJECT;
+
 
 // *****************************************************************************
 /* CANFD Trasmit Message Object
@@ -259,7 +260,7 @@ typedef struct
     uint32_t t1;
 
     /* CANFD Tx message - Transmit Buffer Data Bytes */
-    uint8_t data[];
+    uint8_t data[64];
 } CANFD_TX_MSG_OBJECT;
 
 // *****************************************************************************
@@ -284,8 +285,131 @@ typedef struct
     uint32_t te1;
 
     /* CANFD Tx Event FIFO - Transmit Message Time Stamp */
-    uint8_t timestamp[];
+    uint8_t timestamp[4];
 } CANFD_TX_EVENT_FIFO_ELEMENT;
+
+// *****************************************************************************
+/* CAN Nominal Bit Timing Parameters
+
+   Summary:
+    CAN Nominal Bit Timing Parameter structure.
+
+   Description:
+    This data structure defines Nominal Bit Timing Parameters.
+
+   Remarks:
+    None.
+*/
+typedef struct
+{
+    /* Nominal Time segment after sample point */
+    uint8_t nominalTimeSegment2;
+
+    /* Nominal Time segment before sample point */
+    uint8_t nominalTimeSegment1;
+
+    /* Nominal Baud Rate Prescaler */
+    uint8_t nominalPrescaler;
+
+    /* Nominal Syncronization Jump Width */
+    uint8_t nominalSJW;
+
+} CAN_NOMINAL_BIT_TIMING;
+
+// *****************************************************************************
+/* CAN Data Bit Timing Parameters
+
+   Summary:
+    CAN Data Bit Timing Parameter structure.
+
+   Description:
+    This data structure defines Data Bit Timing Parameters.
+
+   Remarks:
+    None.
+*/
+typedef struct
+{
+    /* Data Time segment after sample point */
+    uint8_t dataTimeSegment2;
+
+    /* Data Time segment before sample point */
+    uint8_t dataTimeSegment1;
+
+    /* Data Baud Rate Prescaler */
+    uint8_t dataPrescaler;
+
+    /* Data Syncronization Jump Width */
+    uint8_t dataSJW;
+
+} CAN_DATA_BIT_TIMING;
+
+// *****************************************************************************
+/* CAN Bit Timing Parameters
+
+   Summary:
+    CAN Bit Timing Parameter structure.
+
+   Description:
+    This data structure defines Bit Timing Parameters.
+
+   Remarks:
+    None.
+*/
+typedef struct
+{
+    /* Nominal bit timing set flag */
+    bool nominalBitTimingSet;
+
+    /* Nominal bit timing parameters */
+    CAN_NOMINAL_BIT_TIMING nominalBitTiming;
+
+    /* Data bit timing set flag */
+    bool dataBitTimingSet;
+
+    /* Data bit timing parameters */
+    CAN_DATA_BIT_TIMING dataBitTiming;
+} CAN_BIT_TIMING;
+
+// *****************************************************************************
+/* CAN Bit Timing Setup
+
+   Summary:
+    CAN Bit Timing Setup structure.
+
+   Description:
+    This data structure defines Bit Timing Setup parameters.
+
+   Remarks:
+    None.
+*/
+typedef struct
+{
+    /* Nominal bit timing set flag */
+    bool nominalBitTimingSet;
+
+    /* Nominal bit rate */
+    uint32_t nominalBitRate;
+
+    /* Nominal Sample Point */
+    float nominalSamplePoint;
+
+    /* Nominal Baud Rate Prescaler */
+    uint8_t nominalPrescaler;
+
+    /* Data bit timing set flag */
+    bool dataBitTimingSet;
+
+    /* Data bit rate */
+    uint32_t dataBitRate;
+
+    /* Data Sample Point */
+    float dataSamplePoint;
+
+    /* Data Baud Rate Prescaler */
+    uint8_t dataPrescaler;
+
+} CAN_BIT_TIMING_SETUP;
 
 // *****************************************************************************
 /* CANFD Callback Object
