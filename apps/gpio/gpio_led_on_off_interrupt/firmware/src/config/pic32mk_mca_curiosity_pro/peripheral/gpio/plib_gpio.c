@@ -42,13 +42,16 @@
 //DOM-IGNORE-END
 
 #include "plib_gpio.h"
+#include "interrupts.h"
+#include "interrupts.h"
+
 
 
 /* Array to store callback objects of each configured interrupt */
-GPIO_PIN_CALLBACK_OBJ portPinCbObj[1];
+static volatile GPIO_PIN_CALLBACK_OBJ portPinCbObj[1];
 
 /* Array to store number of interrupts in each PORT Channel + previous interrupt count */
-uint8_t portNumCb[4 + 1] = { 0, 1, 1, 1, 1, };
+static uint8_t portNumCb[4 + 1] = { 0, 1, 1, 1, 1, };
 
 /******************************************************************************
   Function:
@@ -281,7 +284,7 @@ void GPIO_PinIntEnable(GPIO_PIN pin, GPIO_INTERRUPT_STYLE style)
     uint32_t mask;
 
     port = (GPIO_PORT)(pin>>4U);
-    mask =  0x1U << (pin & 0xFU);
+    mask =  0x1UL << (pin & 0xFU);
 
     if (style == GPIO_INTERRUPT_ON_MISMATCH)
     {
@@ -302,6 +305,10 @@ void GPIO_PinIntEnable(GPIO_PIN pin, GPIO_INTERRUPT_STYLE style)
         *(volatile uint32_t *)(&CNENASET + (port * 0x40U)) = mask;
         *(volatile uint32_t *)(&CNNEASET + (port * 0x40U)) = mask;
     }
+    else
+    {
+        /* Nothing to process */
+    }
 }
 
 // *****************************************************************************
@@ -318,9 +325,9 @@ void GPIO_PinIntDisable(GPIO_PIN pin)
 {
     GPIO_PORT port;
     uint32_t mask;
-    
+
     port = (GPIO_PORT)(pin>>4U);
-    mask =  0x1U << (pin & 0xFU);
+    mask =  0x1UL << (pin & 0xFU);
 
     *(volatile uint32_t *)(&CNENACLR + (port * 0x40U)) = mask;
     *(volatile uint32_t *)(&CNNEACLR + (port * 0x40U)) = mask;
@@ -348,7 +355,7 @@ bool GPIO_PinInterruptCallbackRegister(
     uint8_t i;
     uint8_t portIndex;
 
-    portIndex = pin >> 4U;
+    portIndex = (uint8_t)(pin >> 4U);
 
     for(i = portNumCb[portIndex]; i < portNumCb[portIndex +1]; i++)
     {
@@ -377,13 +384,15 @@ bool GPIO_PinInterruptCallbackRegister(
     Interrupt Handler for change notice interrupt for channel A.
 
   Remarks:
-	It is an internal function called from ISR, user should not call it directly.
+    It is an internal function called from ISR, user should not call it directly.
 */
     
-void CHANGE_NOTICE_A_InterruptHandler(void)
+void __attribute__((used)) CHANGE_NOTICE_A_InterruptHandler(void)
 {
     uint8_t i;
     uint32_t status;
+    GPIO_PIN pin;
+    uintptr_t context;
 
     status  = CNSTATA;
     status &= CNENA;
@@ -394,9 +403,13 @@ void CHANGE_NOTICE_A_InterruptHandler(void)
     /* Check pending events and call callback if registered */
     for(i = 0; i < 1; i++)
     {
-        if((status & (1U << (portPinCbObj[i].pin & 0xFU))) && (portPinCbObj[i].callback != NULL))
+        pin = portPinCbObj[i].pin;
+
+        if((portPinCbObj[i].callback != NULL) && ((status & ((uint32_t)1U << (pin & 0xFU))) != 0U))
         {
-            portPinCbObj[i].callback (portPinCbObj[i].pin, portPinCbObj[i].context);
+            context = portPinCbObj[i].context;
+
+            portPinCbObj[i].callback (pin, context);
         }
     }
 }
