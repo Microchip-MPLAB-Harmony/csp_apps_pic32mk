@@ -51,6 +51,7 @@
 
 #include "device.h"
 #include "plib_tmr2.h"
+#include "interrupts.h"
 
 
 
@@ -109,5 +110,14 @@ uint16_t TMR2_CounterGet(void)
 uint32_t TMR2_FrequencyGet(void)
 {
     return (234375);
+}
+
+
+bool TMR2_PeriodHasExpired(void)
+{
+    bool status = (IFS0bits.T2IF != 0U);
+    IFS0CLR = _IFS0_T2IF_MASK;
+
+    return status;
 }
 
