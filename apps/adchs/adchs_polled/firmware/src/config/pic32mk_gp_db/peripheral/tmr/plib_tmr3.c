@@ -51,6 +51,7 @@
 
 #include "device.h"
 #include "plib_tmr3.h"
+#include "interrupts.h"
 
 
 
@@ -109,5 +110,14 @@ uint16_t TMR3_CounterGet(void)
 uint32_t TMR3_FrequencyGet(void)
 {
     return (234375);
+}
+
+
+bool TMR3_PeriodHasExpired(void)
+{
+    bool status = (IFS0bits.T3IF != 0U);
+    IFS0CLR = _IFS0_T3IF_MASK;
+
+    return status;
 }
 
