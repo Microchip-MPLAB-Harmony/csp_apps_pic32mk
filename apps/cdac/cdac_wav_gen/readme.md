@@ -27,7 +27,7 @@ To build the application, refer to the following table and open the project usin
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
 | pic32mk_mcj_curiosity_pro.X | MPLABX project for [[PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113) |
-| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A)|
 |||
 
 ## Setting up the hardware
@@ -36,8 +36,8 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| pic32mk_mcj_curiosity_pro.X | [[PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113) |
-| pic32mk_mca_curiosity_pro.X | MPLABX project for PIC32MK MCA Curiosity Pro Board |
+| pic32mk_mcj_curiosity_pro.X | MPLABX project for [[PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113) |
+| pic32mk_mca_curiosity_pro.X | MPLABX project for [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A) |
 |||
 
 ### Setting up [[PIC32MK MCJ Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/DT100113)](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DT100113)
@@ -45,7 +45,7 @@ The following table shows the target hardware for the application projects.
 - Connect an oscilloscope to monitor the DAC1 (RC10) pin (Pin 16 of J601)
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
-### Setting up PIC32MK MCA Curiosity Pro Board
+### Setting up [PIC32MK MCA Curiosity Pro Board](https://www.microchip.com/en-us/development-tool/EV15D86A)
 
 - Connect an oscilloscope to monitor the DAC1 (RA8) pin (Pin 16 of J601)
 - Connect the Debug USB port on the board to the computer using a micro USB cable
