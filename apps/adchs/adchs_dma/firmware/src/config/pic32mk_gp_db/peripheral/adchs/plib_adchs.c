@@ -41,6 +41,7 @@
 // DOM-IGNORE-END
 #include "device.h"
 #include "plib_adchs.h"
+#include "interrupts.h"
 
 #define ADCHS_CHANNEL_32  (32U)
 
@@ -52,41 +53,42 @@
 
 
 /* Object to hold callback function and context for ADC DMA interrupt*/
-ADCHS_DMA_CALLBACK_OBJECT ADCHS_DMACallbackObj;
+volatile static ADCHS_DMA_CALLBACK_OBJECT ADCHS_DMACallbackObj;
 
 
-void ADCHS_Initialize()
+void ADCHS_Initialize(void)
 {
     ADCCON1bits.ON = 0;
-ADC0CFG = DEVADC0;
-ADC0TIME = 0x3810001;
+    ADC0CFG = DEVADC0;
+    ADC0TIME = 0x3810001U;
 
-    ADCCON1 = 0x600002;
-    ADCCON2 = 0x0;
-    ADCCON3 = 0x1000000;
 
-    ADCTRGMODE = 0x0;
+    ADCCON1 = 0x600002U;
+    ADCCON2 = 0x0U;
+    ADCCON3 = 0x1000000U;
 
-    ADCTRG1 = 0x6; 
-    ADCTRG2 = 0x0; 
-    ADCTRG3 = 0x0; 
-    ADCTRG4 = 0x0; 
-    ADCTRG5 = 0x0; 
-    ADCTRG6 = 0x0; 
-    ADCTRG7 = 0x0; 
+    ADCTRGMODE = 0x0U;
 
-    ADCTRGSNS = 0x0;
+    ADCTRG1 = 0x6U; 
+    ADCTRG2 = 0x0U; 
+    ADCTRG3 = 0x0U; 
+    ADCTRG4 = 0x0U; 
+    ADCTRG5 = 0x0U; 
+    ADCTRG6 = 0x0U; 
+    ADCTRG7 = 0x0U; 
 
-    ADCIMCON1 = 0x0;
-    ADCIMCON2 = 0x0; 
-    ADCIMCON3 = 0x0; 
-    ADCIMCON4 = 0x0; 
+    ADCTRGSNS = 0x0U;
+
+    ADCIMCON1 = 0x0U;
+    ADCIMCON2 = 0x0U; 
+    ADCIMCON3 = 0x0U; 
+    ADCIMCON4 = 0x0U; 
 
     /* Input scan */
-    ADCCSS1 = 0x0;
-    ADCCSS2 = 0x0; 
+    ADCCSS1 = 0x0U;
+    ADCCSS2 = 0x0U; 
 
-ADCDSTAT = 0x81008100;
+ADCDSTAT = 0x81008100U;
 
 
 
@@ -96,12 +98,21 @@ ADCDSTAT = 0x81008100;
 
     /* Turn ON ADC */
     ADCCON1bits.ON = 1;
-    while(!ADCCON2bits.BGVRRDY); // Wait until the reference voltage is ready
-    while(ADCCON2bits.REFFLT); // Wait if there is a fault with the reference voltage
+    while(ADCCON2bits.BGVRRDY == 0U) // Wait until the reference voltage is ready
+    {
+        /* Nothing to do */
+    }
+    while(ADCCON2bits.REFFLT != 0U) // Wait if there is a fault with the reference voltage
+    {
+        /* Nothing to do */
+    }
 
     /* ADC 0 */
     ADCANCONbits.ANEN0 = 1;      // Enable the clock to analog bias
-    while(!ADCANCONbits.WKRDY0); // Wait until ADC is ready
+    while(ADCANCONbits.WKRDY0 == 0U) // Wait until ADC is ready
+    {
+        /* Nothing to do */
+    }
     ADCCON3bits.DIGEN0 = 1;      // Enable ADC
 
 
@@ -112,13 +123,13 @@ ADCDSTAT = 0x81008100;
 /* Enable ADCHS channels */
 void ADCHS_ModulesEnable (ADCHS_MODULE_MASK moduleMask)
 {
-    ADCCON3 |= (moduleMask << 16);
+    ADCCON3 |= ((uint32_t)moduleMask << 16);
 }
 
 /* Disable ADCHS channels */
 void ADCHS_ModulesDisable (ADCHS_MODULE_MASK moduleMask)
 {
-    ADCCON3 &= ~(moduleMask << 16);
+    ADCCON3 &= ~(((uint32_t)moduleMask << 16));
 }
 
 
@@ -126,11 +137,11 @@ void ADCHS_ChannelResultInterruptEnable (ADCHS_CHANNEL_NUM channel)
 {
     if (channel < ADCHS_CHANNEL_32)
     {
-        ADCGIRQEN1 |= 0x01 << channel;
+        ADCGIRQEN1 |= 0x01UL << channel;
     }
     else
     {
-        ADCGIRQEN2 |= 0x01 << (channel - 32);
+        ADCGIRQEN2 |= 0x01UL << (channel - 32U);
     }
 }
 
@@ -138,11 +149,11 @@ void ADCHS_ChannelResultInterruptDisable (ADCHS_CHANNEL_NUM channel)
 {
     if (channel < ADCHS_CHANNEL_32)
     {
-        ADCGIRQEN1 &= ~(0x01 << channel);
+        ADCGIRQEN1 &= ~(0x01UL << channel);
     }
     else
     {
-        ADCGIRQEN2 &= ~(0x01 << (channel - 32));
+        ADCGIRQEN2 &= ~(0x01UL << (channel - 32U));
     }
 }
 
@@ -150,11 +161,11 @@ void ADCHS_ChannelEarlyInterruptEnable (ADCHS_CHANNEL_NUM channel)
 {
     if (channel < ADCHS_CHANNEL_32)
     {
-        ADCEIEN1 |= (0x01 << channel);
+        ADCEIEN1 |= (0x01UL << channel);
     }
     else
     {
-        ADCEIEN2 |= (0x01 << (channel - 32));
+        ADCEIEN2 |= (0x01UL << (channel - 32U));
     }
 }
 
@@ -162,11 +173,11 @@ void ADCHS_ChannelEarlyInterruptDisable (ADCHS_CHANNEL_NUM channel)
 {
     if (channel < ADCHS_CHANNEL_32)
     {
-        ADCEIEN1 &= ~(0x01 << channel);
+        ADCEIEN1 &= ~(0x01UL << channel);
     }
     else
     {
-        ADCEIEN2 &= ~(0x01 << (channel - 32));
+        ADCEIEN2 &= ~(0x01UL << (channel - 32U));
     }
 }
 
@@ -187,7 +198,7 @@ void ADCHS_GlobalLevelConversionStop(void)
 
 void ADCHS_ChannelConversionStart(ADCHS_CHANNEL_NUM channel)
 {
-    ADCCON3bits.ADINSEL = channel;
+    ADCCON3bits.ADINSEL = (uint8_t)channel;
     ADCCON3bits.RQCNVRT = 1;
 }
 
@@ -198,11 +209,11 @@ bool ADCHS_ChannelResultIsReady(ADCHS_CHANNEL_NUM channel)
     bool status = false;
     if (channel < ADCHS_CHANNEL_32)
     {
-        status = (ADCDSTAT1 >> channel) & 0x01;
+        status = (((ADCDSTAT1 >> channel) & 0x01U) != 0U);
     }
     else
     {
-        status = (ADCDSTAT2 >> (channel - 32)) & 0x01;
+        status = (((ADCDSTAT2 >> (channel - 32U)) & 0x01U) != 0U);
     }
     return status;
 }
@@ -210,7 +221,7 @@ bool ADCHS_ChannelResultIsReady(ADCHS_CHANNEL_NUM channel)
 /* Read the conversion result */
 uint16_t ADCHS_ChannelResultGet(ADCHS_CHANNEL_NUM channel)
 {
-    return (uint16_t) (*((&ADCDATA0) + (channel << 2)));
+    return (uint16_t)(*((&ADCDATA0) + (channel << 2)));
 
 }
 
@@ -232,15 +243,16 @@ void ADCHS_DMACallbackRegister(ADCHS_DMA_CALLBACK callback, uintptr_t context)
     ADCHS_DMACallbackObj.context = context;
 }
 
-void ADC_DMA_InterruptHandler(void)
+void __attribute__((used)) ADC_DMA_InterruptHandler(void)
 {
-    ADCHS_DMA_STATUS dmaStatus = ADCDSTAT & 0xBF003F;
+    uint32_t dmaStatus = (ADCDSTAT & 0xBF003F);
 
     IFS3CLR = _IFS3_AD1FCBTIF_MASK;
 
     if (ADCHS_DMACallbackObj.callback_fn != NULL)
     {
-      ADCHS_DMACallbackObj.callback_fn(dmaStatus, ADCHS_DMACallbackObj.context);
+        uintptr_t context = ADCHS_DMACallbackObj.context;
+        ADCHS_DMACallbackObj.callback_fn((ADCHS_DMA_STATUS)dmaStatus, context);
     }
 }
 
