@@ -341,7 +341,8 @@ static void I2C4_MasterTransferSM(void)
             i2c4MasterObj.state = I2C_STATE_IDLE;
             IEC6CLR = _IEC6_I2C4MIE_MASK;
             IEC6CLR = _IEC6_I2C4BIE_MASK;
-            if (i2c4MasterObj.callback != NULL)
+
+            if ((i2c4MasterObj.callback != NULL) && (i2c4MasterObj.busScanInProgress == false))
             {
                 uintptr_t context = i2c4MasterObj.context;
 
@@ -468,6 +469,60 @@ bool I2C4_MasterWriteRead(uint16_t address, uint8_t* wdata, size_t wlength, uint
     }
 
     return statusWriteRead;
+}
+
+bool I2C4_MasterBusScan(uint16_t start_addr, uint16_t end_addr, void* pDevicesList, uint8_t* nDevicesFound)
+{
+    uint8_t* pDevList = (uint8_t*)pDevicesList;
+    uint8_t nDevFound = 0;
+
+    if (i2c4MasterObj.state != I2C_STATE_IDLE)
+    {
+        return false;
+    }
+
+    if ((pDevList == NULL) || (nDevicesFound == NULL))
+    {
+        return false;
+    }
+
+    i2c4MasterObj.busScanInProgress = true;
+
+    *nDevicesFound = 0;
+
+    for (uint16_t dev_addr = start_addr; dev_addr <= end_addr; dev_addr++)
+    {
+        while (I2C4_MasterWrite(dev_addr, NULL, 0) == false)
+        {
+
+        }
+
+        while (i2c4MasterObj.state != I2C_STATE_IDLE)
+        {
+            /* Wait for the transfer to complete */
+        }
+
+        if (i2c4MasterObj.error == I2C_ERROR_NONE)
+        {
+            /* No error and device responded with an ACK. Add the device to the list of found devices. */
+            if (dev_addr > 0x007FU)
+            {
+                ((uint16_t*)&pDevList)[nDevFound] = dev_addr;
+            }
+            else
+            {
+                pDevList[nDevFound] = dev_addr;
+            }
+
+            nDevFound += 1;
+        }
+    }
+
+    *nDevicesFound = nDevFound;
+
+    i2c4MasterObj.busScanInProgress = false;
+
+    return true;
 }
 
 

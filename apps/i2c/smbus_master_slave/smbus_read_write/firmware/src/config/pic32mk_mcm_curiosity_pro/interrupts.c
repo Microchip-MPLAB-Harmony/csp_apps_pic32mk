@@ -79,32 +79,32 @@ void I2C4_MASTER_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_I2C2_BUS_VECTOR, ipl1SRS) I2C2_BUS_Handler (void)
+void __attribute__((used)) __ISR(_I2C2_BUS_VECTOR, ipl1SRS) I2C2_BUS_Handler (void)
 {
     I2C2_BUS_InterruptHandler();
 }
 
-void __ISR(_I2C2_SLAVE_VECTOR, ipl1SRS) I2C2_SLAVE_Handler (void)
+void __attribute__((used)) __ISR(_I2C2_SLAVE_VECTOR, ipl1SRS) I2C2_SLAVE_Handler (void)
 {
     I2C2_SLAVE_InterruptHandler();
 }
 
-void __ISR(_I2C2_MASTER_VECTOR, ipl1SRS) I2C2_MASTER_Handler (void)
+void __attribute__((used)) __ISR(_I2C2_MASTER_VECTOR, ipl1SRS) I2C2_MASTER_Handler (void)
 {
     I2C2_MASTER_InterruptHandler();
 }
 
-void __ISR(_I2C4_BUS_VECTOR, ipl1SRS) I2C4_BUS_Handler (void)
+void __attribute__((used)) __ISR(_I2C4_BUS_VECTOR, ipl1SRS) I2C4_BUS_Handler (void)
 {
     I2C4_BUS_InterruptHandler();
 }
 
-void __ISR(_I2C4_SLAVE_VECTOR, ipl1SRS) I2C4_SLAVE_Handler (void)
+void __attribute__((used)) __ISR(_I2C4_SLAVE_VECTOR, ipl1SRS) I2C4_SLAVE_Handler (void)
 {
     I2C4_SLAVE_InterruptHandler();
 }
 
-void __ISR(_I2C4_MASTER_VECTOR, ipl1SRS) I2C4_MASTER_Handler (void)
+void __attribute__((used)) __ISR(_I2C4_MASTER_VECTOR, ipl1SRS) I2C4_MASTER_Handler (void)
 {
     I2C4_MASTER_InterruptHandler();
 }
