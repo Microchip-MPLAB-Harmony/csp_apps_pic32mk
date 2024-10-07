@@ -6,7 +6,7 @@
     Microchip Technology Inc.
 
   File Name:
-    plib_i2c4_master_slave_common.h
+    plib_i2c2_master_slave.h
 
   Summary:
     I2C PLIB Common Implementation file
@@ -48,14 +48,14 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#ifndef PLIB_I2C4_MASTER_SLAVE_COMMON_H
-#define PLIB_I2C4_MASTER_SLAVE_COMMON_H
+#ifndef PLIB_I2C2_MASTER_SLAVE_H
+#define PLIB_I2C2_MASTER_SLAVE_H
 
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
-#include "master/plib_i2c4_master.h"
-#include "slave/plib_i2c4_slave.h"
+#include "master/plib_i2c2_master.h"
+#include "slave/plib_i2c2_slave.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -65,7 +65,7 @@
 /* This section lists the other files that are included in this file.
 */
 
-void I2C4_Initialize(void);
+void I2C2_Initialize(void);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus // Provide C++ Compatibility
@@ -83,4 +83,4 @@ void I2C4_Initialize(void);
 #endif
 // DOM-IGNORE-END
 
-#endif /* PLIB_I2C4_MASTER_SLAVE_COMMON_H */
+#endif /* PLIB_I2C2_MASTER_SLAVE_H */

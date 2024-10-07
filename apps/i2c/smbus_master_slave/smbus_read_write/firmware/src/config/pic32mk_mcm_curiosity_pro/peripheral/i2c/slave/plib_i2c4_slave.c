@@ -49,9 +49,9 @@
 // *****************************************************************************
 #include "device.h"
 #include "plib_i2c4_slave.h"
-#include "interrupts.h"
 #include "peripheral/i2c/plib_i2c_smbus_common.h"
 
+#include "peripheral/i2c/slave/plib_i2c4_slave_local.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -142,7 +142,7 @@ static void I2C4_SlaveTransferSM(void)
             /* Received I2C address must be read out */
             i2c_addr = I2C4RCV;
             /* Update PEC calculation */
-            i2c4SlaveObj.pec = SMBUSCRC8Byte(i2c4SlaveObj.pec, i2c_addr);
+            i2c4SlaveObj.pec = SMBUSCRC8Byte(i2c4SlaveObj.pec, (uint8_t)i2c_addr);
 
             if (i2c4SlaveObj.callback != NULL)
             {
@@ -281,8 +281,8 @@ I2C_SLAVE_ERROR I2C4_SlaveErrorGet(void)
 uint8_t I2C4_SlaveCRCGet(void)
 {
     uint8_t pec = i2c4SlaveObj.pec;
-    
-    
+
+
     return pec;
 }
 

@@ -1,15 +1,15 @@
 /*******************************************************************************
   Inter-Integrated Circuit (I2C) Library
-  Source File
+  Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_i2c4_master_slave_common.c
+    plib_I2C2_slave_local.h
 
   Summary:
-    I2C PLIB Master Slave Common Implementation file
+    I2C SLAVE PLIB Local Implementation file
 
   Description:
     This file defines the interface to the I2C peripheral library.
@@ -47,44 +47,31 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "device.h"
-#include "plib_i2c4_master_slave_common.h"
 
-extern void I2C4_MasterBUS_InterruptHandler(void);
+#ifndef PLIB_I2C2_SLAVE_LOCAL_H
+#define PLIB_I2C2_SLAVE_LOCAL_H
 
-extern void I2C4_SlaveBUS_InterruptHandler(void);
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Global Data
-// *****************************************************************************
-// *****************************************************************************
-void I2C4_Initialize(void)
-{
-    /* Turn off the I2C module */
-    I2C4CONCLR = _I2C4CON_ON_MASK;
-    
-    I2C4_MasterInitialize();
-    
-    I2C4_SlaveInitialize();
-    
+void I2C2_SlaveBUS_InterruptHandler(void);
+void I2C2_SLAVE_InterruptHandler(void);
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
 
 
-    I2C4CONSET = _I2C4CON_SMEN_MASK;
-    
-    /* Turn on the I2C module */
-    I2C4CONSET = _I2C4CON_ON_MASK;
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
 }
+#endif
+// DOM-IGNORE-END
 
-void __attribute__((used)) I2C4_BUS_InterruptHandler(void)
-{
-    /* Clear the bus collision error status bit */
-    I2C4STATCLR = _I2C4STAT_BCL_MASK;
-
-    /* ACK the bus interrupt */
-    IFS6CLR = _IFS6_I2C4BIF_MASK;
-    
-    I2C4_MasterBUS_InterruptHandler();
-    
-    I2C4_SlaveBUS_InterruptHandler();
-}
+#endif /* PLIB_I2C2_SLAVE_LOCAL_H */

@@ -1,15 +1,15 @@
 /*******************************************************************************
   Inter-Integrated Circuit (I2C) Library
-  Header File
+  Source File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_i2c2_master_slave_common.h
+    plib_i2c4_master_slave.c
 
   Summary:
-    I2C PLIB Common Implementation file
+    I2C PLIB Master Slave Common Implementation file
 
   Description:
     This file defines the interface to the I2C peripheral library.
@@ -47,40 +47,43 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
-#ifndef PLIB_I2C2_MASTER_SLAVE_COMMON_H
-#define PLIB_I2C2_MASTER_SLAVE_COMMON_H
-
-#include <stdint.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include "master/plib_i2c2_master.h"
-#include "slave/plib_i2c2_slave.h"
+#include "device.h"
+#include "interrupts.h"
+#include "plib_i2c4_master_slave.h"
+#include "peripheral/i2c/master/plib_i2c4_master_local.h"
+#include "peripheral/i2c/slave/plib_i2c4_slave_local.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: Global Data
 // *****************************************************************************
 // *****************************************************************************
-/* This section lists the other files that are included in this file.
-*/
-
-void I2C2_Initialize(void);
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus // Provide C++ Compatibility
-
-    extern "C" {
-
-#endif
-// DOM-IGNORE-END
+void I2C4_Initialize(void)
+{
+    /* Turn off the I2C module */
+    I2C4CONCLR = _I2C4CON_ON_MASK;
+    
+    I2C4_MasterInitialize();
+    
+    I2C4_SlaveInitialize();
+    
 
 
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
+    I2C4CONSET = _I2C4CON_SMEN_MASK;
+    
+    /* Turn on the I2C module */
+    I2C4CONSET = _I2C4CON_ON_MASK;
 }
-#endif
-// DOM-IGNORE-END
 
-#endif /* PLIB_I2C2_MASTER_SLAVE_COMMON_H */
+void __attribute__((used)) I2C4_BUS_InterruptHandler(void)
+{
+    /* Clear the bus collision error status bit */
+    I2C4STATCLR = _I2C4STAT_BCL_MASK;
+
+    /* ACK the bus interrupt */
+    IFS6CLR = _IFS6_I2C4BIF_MASK;
+    
+    I2C4_MasterBUS_InterruptHandler();
+    
+    I2C4_SlaveBUS_InterruptHandler();
+}

@@ -48,8 +48,8 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
-#include "peripheral/i2c/plib_i2c2_master_slave_common.h"
-#include "peripheral/i2c/plib_i2c4_master_slave_common.h"
+#include "peripheral/i2c/plib_i2c2_master_slave.h"
+#include "peripheral/i2c/plib_i2c4_master_slave.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"

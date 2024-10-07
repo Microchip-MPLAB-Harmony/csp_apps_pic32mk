@@ -1,15 +1,15 @@
 /*******************************************************************************
   Inter-Integrated Circuit (I2C) Library
-  Source File
+  Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_i2c2_master_slave_common.c
+    plib_i2c4_master_slave.h
 
   Summary:
-    I2C PLIB Master Slave Common Implementation file
+    I2C PLIB Common Implementation file
 
   Description:
     This file defines the interface to the I2C peripheral library.
@@ -47,44 +47,40 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "device.h"
-#include "plib_i2c2_master_slave_common.h"
 
-extern void I2C2_MasterBUS_InterruptHandler(void);
+#ifndef PLIB_I2C4_MASTER_SLAVE_H
+#define PLIB_I2C4_MASTER_SLAVE_H
 
-extern void I2C2_SlaveBUS_InterruptHandler(void);
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include "master/plib_i2c4_master.h"
+#include "slave/plib_i2c4_slave.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Global Data
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-void I2C2_Initialize(void)
-{
-    /* Turn off the I2C module */
-    I2C2CONCLR = _I2C2CON_ON_MASK;
-    
-    I2C2_MasterInitialize();
-    
-    I2C2_SlaveInitialize();
-    
+/* This section lists the other files that are included in this file.
+*/
+
+void I2C4_Initialize(void);
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
 
 
-    I2C2CONSET = _I2C2CON_SMEN_MASK;
-    
-    /* Turn on the I2C module */
-    I2C2CONSET = _I2C2CON_ON_MASK;
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
 }
+#endif
+// DOM-IGNORE-END
 
-void __attribute__((used)) I2C2_BUS_InterruptHandler(void)
-{
-    /* Clear the bus collision error status bit */
-    I2C2STATCLR = _I2C2STAT_BCL_MASK;
-
-    /* ACK the bus interrupt */
-    IFS1CLR = _IFS1_I2C2BIF_MASK;
-    
-    I2C2_MasterBUS_InterruptHandler();
-    
-    I2C2_SlaveBUS_InterruptHandler();
-}
+#endif /* PLIB_I2C4_MASTER_SLAVE_H */

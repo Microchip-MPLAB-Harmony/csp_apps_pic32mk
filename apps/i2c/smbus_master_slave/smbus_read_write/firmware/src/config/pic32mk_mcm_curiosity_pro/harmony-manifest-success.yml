@@ -4,7 +4,7 @@
 
 
 project: smbus_read_write
-creation_date: 2024-09-23T10:54:53.314+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-10-07T10:06:42.906+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -14,7 +14,7 @@ harmony_version: v1.5.2
 compiler: XC32 4.45
 
 modules:
-    - {name: "csp", version: "jenkin_build_fix"}
+
 
 packs:
     - {name: "PIC32MK-MC_DFP", version: "1.11.151"}

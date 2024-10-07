@@ -23,15 +23,19 @@
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/master/plib_i2c4_master.h</itemPath>
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/master/plib_i2c_master_common.h</itemPath>
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/master/plib_i2c2_master.h</itemPath>
+                <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/master/plib_i2c4_master_local.h</itemPath>
+                <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/master/plib_i2c2_master_local.h</itemPath>
               </logicalFolder>
               <logicalFolder name="slave" displayName="slave" projectFiles="true">
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/slave/plib_i2c_slave_common.h</itemPath>
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/slave/plib_i2c4_slave.h</itemPath>
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/slave/plib_i2c2_slave.h</itemPath>
+                <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/slave/plib_i2c2_slave_local.h</itemPath>
+                <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/slave/plib_i2c4_slave_local.h</itemPath>
               </logicalFolder>
-              <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c2_master_slave_common.h</itemPath>
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c_smbus_common.h</itemPath>
-              <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c4_master_slave_common.h</itemPath>
+              <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c4_master_slave.h</itemPath>
+              <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c2_master_slave.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <itemPath>../src/config/pic32mk_mcm_curiosity_pro/interrupts.h</itemPath>
@@ -85,8 +89,8 @@
                 <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/slave/plib_i2c4_slave.c</itemPath>
               </logicalFolder>
               <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c_smbus_common.c</itemPath>
-              <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c2_master_slave_common.c</itemPath>
-              <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c4_master_slave_common.c</itemPath>
+              <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c4_master_slave.c</itemPath>
+              <itemPath>../src/config/pic32mk_mcm_curiosity_pro/peripheral/i2c/plib_i2c2_master_slave.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">

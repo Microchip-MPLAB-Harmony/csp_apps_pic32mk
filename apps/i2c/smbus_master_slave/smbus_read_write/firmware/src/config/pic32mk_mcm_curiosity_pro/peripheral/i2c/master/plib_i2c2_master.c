@@ -50,10 +50,10 @@
 
 #include "device.h"
 #include "plib_i2c2_master.h"
-#include "interrupts.h"
 #include <string.h>
 #include "peripheral/i2c/plib_i2c_smbus_common.h"
 
+#include "peripheral/i2c/master/plib_i2c2_master_local.h"
 
 // *****************************************************************************
 // *****************************************************************************
@@ -67,10 +67,10 @@ volatile static I2C_OBJ i2c2MasterObj;
 
 /* <cmd> <blocklen n> <data 1> ... <data n> <pec>*/
 /* Total 1 + 1 + 255 + 1 = 258 bytes*/
-volatile static uint8_t i2c2SMBUSWrBuffer[258];
+static uint8_t i2c2SMBUSWrBuffer[258];
 /* <blocklen n> <data 1> ... <data n> <pec>*/
 /* Total 1 + 255 + 1 = 257 bytes*/
-volatile static uint8_t i2c2SMBUSRdBuffer[257];
+static uint8_t i2c2SMBUSRdBuffer[257];
 
 void I2C2_MasterInitialize(void)
 {
@@ -98,6 +98,7 @@ void I2C2_MasterInitialize(void)
 static void I2C2_MasterTransferSM(void)
 {
     uint8_t tempVar = 0;
+    bool isScanInProgress = false;
     IFS1CLR = _IFS1_I2C2MIF_MASK;
 
     switch (i2c2MasterObj.state)
@@ -342,7 +343,9 @@ static void I2C2_MasterTransferSM(void)
             IEC1CLR = _IEC1_I2C2MIE_MASK;
             IEC1CLR = _IEC1_I2C2BIE_MASK;
 
-            if ((i2c2MasterObj.callback != NULL) && (i2c2MasterObj.busScanInProgress == false))
+            isScanInProgress = i2c2MasterObj.busScanInProgress;
+
+            if ((i2c2MasterObj.callback != NULL) && (isScanInProgress == false))
             {
                 uintptr_t context = i2c2MasterObj.context;
 
@@ -481,7 +484,7 @@ bool I2C2_MasterBusScan(uint16_t start_addr, uint16_t end_addr, void* pDevicesLi
         return false;
     }
 
-    if ((pDevList == NULL) || (nDevicesFound == NULL))
+    if ((pDevicesList == NULL) || (nDevicesFound == NULL))
     {
         return false;
     }
@@ -507,11 +510,11 @@ bool I2C2_MasterBusScan(uint16_t start_addr, uint16_t end_addr, void* pDevicesLi
             /* No error and device responded with an ACK. Add the device to the list of found devices. */
             if (dev_addr > 0x007FU)
             {
-                ((uint16_t*)&pDevList)[nDevFound] = dev_addr;
+                ((uint16_t*)&pDevicesList)[nDevFound] = dev_addr;
             }
             else
             {
-                pDevList[nDevFound] = dev_addr;
+                pDevList[nDevFound] = (uint8_t)dev_addr;
             }
 
             nDevFound += 1;
@@ -539,7 +542,7 @@ bool I2C2_MasterSMBUSSendByte(uint8_t address, void* pWrdata, bool enPEC)
         i2c2SMBUSWrBuffer[xferLen++] = *((uint8_t*)pWrdata);
         if (enPEC)
         {
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Byte(crc, *((uint8_t*)pWrdata));
 
             i2c2SMBUSWrBuffer[xferLen++] = crc;
@@ -570,7 +573,7 @@ bool I2C2_MasterSMBUSWriteByte(uint8_t address, uint8_t cmd, void* pWrdata, bool
         i2c2SMBUSWrBuffer[xferLen++] = *((uint8_t*)pWrdata);
         if (enPEC)
         {
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Buffer(crc, (uint8_t*)i2c2SMBUSWrBuffer, xferLen);
 
             i2c2SMBUSWrBuffer[xferLen++] = crc;
@@ -603,7 +606,7 @@ bool I2C2_MasterSMBUSWriteWord(uint8_t address, uint8_t cmd, void* pWrdata, bool
         i2c2SMBUSWrBuffer[xferLen++] = wrData[1];
         if (enPEC)
         {
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Buffer(crc, (uint8_t*)i2c2SMBUSWrBuffer, xferLen);
 
             i2c2SMBUSWrBuffer[xferLen++] = crc;
@@ -631,14 +634,14 @@ bool I2C2_MasterSMBUSWriteBlock(uint8_t address, uint8_t cmd, void* pWrdata, uin
     {
         /* <slave_add> <cmd> <wr_block_sz n> <data1> <data2> .. <datan> <pec_from_master>*/
         i2c2SMBUSWrBuffer[xferLen++] = cmd;
-        i2c2SMBUSWrBuffer[xferLen++] = nWrBytes;
+        i2c2SMBUSWrBuffer[xferLen++] = (uint8_t)nWrBytes;
 
-        memcpy((void*)&i2c2SMBUSWrBuffer[xferLen], (const void*)pWrdata, nWrBytes);
+        (void)memcpy((void*)&i2c2SMBUSWrBuffer[xferLen], (const void*)pWrdata, nWrBytes);
         xferLen += nWrBytes;
 
         if (enPEC)
         {
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Buffer(crc, (uint8_t*)i2c2SMBUSWrBuffer, xferLen);
 
             i2c2SMBUSWrBuffer[xferLen++] = crc;
@@ -668,12 +671,12 @@ bool I2C2_MasterSMBUSReceiveByte(uint8_t address, bool enPEC)
         if (enPEC)
         {
             /*PEC will be sent by slave and will be calculated over all the bytes in this transfer. Here master only calculates the CRC on the bytes it is transmitting. */
-            crc = SMBUSCRC8Byte(crc, ((address << 1) | 1));
+            crc = SMBUSCRC8Byte(crc, ((address << 1U) | 1U));
 
             i2c2MasterObj.pec = crc;
         }
 
-        status = I2C2_MasterXferSetup(address, NULL, 0, (uint8_t*)i2c2SMBUSRdBuffer, enPEC == true? 2 : 1, false, false, enPEC == true? true : false);
+        status = I2C2_MasterXferSetup(address, NULL, 0, (uint8_t*)i2c2SMBUSRdBuffer, enPEC == true? 2U : 1U, false, false, enPEC == true? true : false);
 
         if (status == true)
         {
@@ -698,14 +701,14 @@ bool I2C2_MasterSMBUSReadByte(uint8_t address, uint8_t cmd, bool enPEC)
         if (enPEC)
         {
             /*PEC will be sent by slave and will be calculated over all the bytes in this transfer. Here master only calculates the CRC on the bytes it is transmitting. */
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Buffer(crc, (uint8_t*)i2c2SMBUSWrBuffer, xferLen);
-            crc = SMBUSCRC8Byte(crc, ((address << 1) | 1));
+            crc = SMBUSCRC8Byte(crc, ((address << 1U) | 1U));
 
             i2c2MasterObj.pec = crc;
         }
 
-        status = I2C2_MasterXferSetup(address, (uint8_t*)i2c2SMBUSWrBuffer, xferLen, (uint8_t*)i2c2SMBUSRdBuffer, enPEC == true? 2 : 1, false, false, enPEC == true? true : false);
+        status = I2C2_MasterXferSetup(address, (uint8_t*)i2c2SMBUSWrBuffer, xferLen, (uint8_t*)i2c2SMBUSRdBuffer, enPEC == true? 2U : 1U, false, false, enPEC == true? true : false);
 
         if (status == true)
         {
@@ -730,14 +733,14 @@ bool I2C2_MasterSMBUSReadWord(uint8_t address, uint8_t cmd, bool enPEC)
         if (enPEC)
         {
             /*PEC will be sent by slave and will be calculated over all the bytes in this transfer. Here master only calculates the CRC on the bytes it is transmitting. */
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Buffer(crc, (uint8_t*)i2c2SMBUSWrBuffer, xferLen);
-            crc = SMBUSCRC8Byte(crc, ((address << 1) | 1));
+            crc = SMBUSCRC8Byte(crc, ((address << 1U) | 1U));
 
             i2c2MasterObj.pec = crc;
         }
 
-        status = I2C2_MasterXferSetup(address, (uint8_t*)i2c2SMBUSWrBuffer, 1, (uint8_t*)i2c2SMBUSRdBuffer, enPEC == true? 3 : 2, false, false, enPEC == true? true : false);
+        status = I2C2_MasterXferSetup(address, (uint8_t*)i2c2SMBUSWrBuffer, 1, (uint8_t*)i2c2SMBUSRdBuffer, enPEC == true? 3U : 2U, false, false, enPEC == true? true : false);
 
         if (status == true)
         {
@@ -764,14 +767,14 @@ bool I2C2_MasterSMBUSProcessCall(uint8_t address, uint8_t cmd, void* pWrdata, bo
         if (enPEC)
         {
             /*PEC will be sent by slave and will be calculated over all the bytes in this transfer. Here master only calculates the CRC on the bytes it is transmitting. */
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Buffer(crc, (uint8_t*)i2c2SMBUSWrBuffer, xferLen);
-            crc = SMBUSCRC8Byte(crc, ((address << 1) | 1));
+            crc = SMBUSCRC8Byte(crc, ((address << 1U) | 1U));
 
             i2c2MasterObj.pec = crc;
         }
 
-        status = I2C2_MasterXferSetup(address, (uint8_t*)i2c2SMBUSWrBuffer, xferLen, (uint8_t*)i2c2SMBUSRdBuffer, enPEC == true? 3 : 2, false, false, enPEC == true? true : false);
+        status = I2C2_MasterXferSetup(address, (uint8_t*)i2c2SMBUSWrBuffer, xferLen, (uint8_t*)i2c2SMBUSRdBuffer, enPEC == true? 3U : 2U, false, false, enPEC == true? true : false);
 
         if (status == true)
         {
@@ -796,9 +799,9 @@ bool I2C2_MasterSMBUSReadBlock(uint8_t address, uint8_t cmd, bool enPEC)
         if (enPEC)
         {
             /*PEC will be sent by slave and will be calculated over all the bytes in this transfer. Here master only calculates the CRC on the bytes it is transmitting. */
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Buffer(crc, (uint8_t*)i2c2SMBUSWrBuffer, xferLen);
-            crc = SMBUSCRC8Byte(crc, ((address << 1) | 1));
+            crc = SMBUSCRC8Byte(crc, ((address << 1U) | 1U));
 
             i2c2MasterObj.pec = crc;
         }
@@ -824,16 +827,16 @@ bool I2C2_MasterSMBUSWriteReadBlock(uint8_t address, uint8_t cmd, void* pWrdata,
     {
         /* <slave_add> <cmd> <wr_block_sz n> <data1> <data2> .. <datan> <slave_add> <rd_block_sz n> <data1> <data1> .. <datan><pec_from_slave>*/
         i2c2SMBUSWrBuffer[xferLen++] = cmd;
-        i2c2SMBUSWrBuffer[xferLen++] = nWrBytes;
-        memcpy((void*)&i2c2SMBUSWrBuffer[xferLen], (const void*)pWrdata, nWrBytes);
+        i2c2SMBUSWrBuffer[xferLen++] = (uint8_t)nWrBytes;
+        (void)memcpy((void*)&i2c2SMBUSWrBuffer[xferLen], (const void*)pWrdata, nWrBytes);
         xferLen += nWrBytes;
 
         if (enPEC)
         {
             /*PEC will be sent by slave and will be calculated over all the bytes in this transfer. Here master only calculates the CRC on the bytes it is transmitting. */
-            crc = SMBUSCRC8Byte(crc, (address << 1));
+            crc = SMBUSCRC8Byte(crc, (address << 1U));
             crc = SMBUSCRC8Buffer(crc, (uint8_t*)i2c2SMBUSWrBuffer, xferLen);
-            crc = SMBUSCRC8Byte(crc, ((address << 1) | 1));
+            crc = SMBUSCRC8Byte(crc, ((address << 1U) | 1U));
 
             i2c2MasterObj.pec = crc;
         }
@@ -858,10 +861,11 @@ uint32_t I2C2_MasterSMBUSBufferRead(void* pBuffer)
 {
     uint32_t i;
     uint32_t numBytesAvailable = i2c2MasterObj.readCount;
+    volatile uint8_t* pSMBRdBuffer = i2c2SMBUSRdBuffer;
 
     for (i = 0; i < numBytesAvailable; i++)
     {
-        ((uint8_t*)pBuffer)[i] = i2c2SMBUSRdBuffer[i];
+        ((uint8_t*)pBuffer)[i] = pSMBRdBuffer[i];
     }
 
     return numBytesAvailable;
@@ -870,9 +874,10 @@ uint32_t I2C2_MasterSMBUSBufferRead(void* pBuffer)
 /* Must be called to check if the PEC sent by target matches with the PEC calculated by host */
 bool I2C2_MasterSMBUSIsPECMatch(void)
 {
-    uint8_t lastRcvdByteIndex = i2c2MasterObj.readCount - 1;
+    uint8_t lastRcvdByteIndex = (uint8_t)(i2c2MasterObj.readCount - 1U);
+    volatile uint8_t* pSMBRdBuffer = i2c2SMBUSRdBuffer;
 
-    uint8_t rcvdPEC = i2c2SMBUSRdBuffer[lastRcvdByteIndex];
+    uint8_t rcvdPEC = pSMBRdBuffer[lastRcvdByteIndex];
 
     return i2c2MasterObj.pec == rcvdPEC;
 }
@@ -911,7 +916,7 @@ bool I2C2_MasterTransferSetup(I2C_TRANSFER_SETUP* setup, uint32_t srcClkFreq )
     {
         srcClkFreq = 60000000UL;
     }
-
+    
     fBaudValue = (((float)srcClkFreq / 2.0f) * ((1.0f / (float)i2cClkSpeed) - 0.000000130f)) - 1.0f;
     baudValue = (uint32_t)fBaudValue;
 
