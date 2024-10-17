@@ -48,9 +48,9 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include "interrupts.h"
 #include "definitions.h"
+
 
 
 // *****************************************************************************
@@ -75,12 +75,12 @@ void SPI6_TX_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_SPI6_RX_VECTOR, ipl1SOFT) SPI6_RX_Handler (void)
+void __attribute__((used)) __ISR(_SPI6_RX_VECTOR, ipl1SOFT) SPI6_RX_Handler (void)
 {
     SPI6_RX_InterruptHandler();
 }
 
-void __ISR(_SPI6_TX_VECTOR, ipl1SOFT) SPI6_TX_Handler (void)
+void __attribute__((used)) __ISR(_SPI6_TX_VECTOR, ipl1SOFT) SPI6_TX_Handler (void)
 {
     SPI6_TX_InterruptHandler();
 }
