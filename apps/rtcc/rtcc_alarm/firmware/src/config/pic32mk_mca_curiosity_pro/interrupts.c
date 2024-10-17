@@ -48,9 +48,9 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include "interrupts.h"
 #include "definitions.h"
+
 
 
 // *****************************************************************************
@@ -74,7 +74,7 @@ void RTCC_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_RTCC_VECTOR, ipl1SRS) RTCC_Handler (void)
+void __attribute__((used)) __ISR(_RTCC_VECTOR, ipl1SRS) RTCC_Handler (void)
 {
     RTCC_InterruptHandler();
 }
