@@ -1,26 +1,25 @@
 /*******************************************************************************
- System Interrupts File
+  Inter-Integrated Circuit (I2C) Library
+  Header File
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    interrupt.c
+    plib_i2c_smbus_common.h
 
   Summary:
-    Interrupt vectors mapping
+    I2C SMBUS PLIB Common Implementation file
 
   Description:
-    This file maps all the interrupt vectors to their corresponding
-    implementations. If a particular module interrupt is used, then its ISR
-    definition can be found in corresponding PLIB source file. If a module
-    interrupt is not used, then its ISR implementation is mapped to dummy
-    handler.
- *******************************************************************************/
+    This file defines the interface to the I2C peripheral library.
+    This library provides access to and control of the associated peripheral
+    instance.
 
+*******************************************************************************/
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018-2019 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -40,7 +39,7 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
+*******************************************************************************/
 // DOM-IGNORE-END
 
 // *****************************************************************************
@@ -48,46 +47,39 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include "interrupts.h"
-#include "definitions.h"
 
+#ifndef PLIB_I2C_SMBUS_COMMON_H
+#define PLIB_I2C_SMBUS_COMMON_H
 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Interrupt Vector Functions
-// *****************************************************************************
-// *****************************************************************************
-
-
-/* All the handlers are defined here.  Each will call its PLIB-specific function. */
-// *****************************************************************************
-// *****************************************************************************
-// Section: System Interrupt Vector declarations
-// *****************************************************************************
-// *****************************************************************************
-void I2C4_BUS_Handler (void);
-void I2C4_MASTER_Handler (void);
-
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: System Interrupt Vector definitions
+// Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-void __attribute__((used)) __ISR(_I2C4_BUS_VECTOR, ipl1SRS) I2C4_BUS_Handler (void)
-{
-    I2C4_BUS_InterruptHandler();
-}
-
-void __attribute__((used)) __ISR(_I2C4_MASTER_VECTOR, ipl1SRS) I2C4_MASTER_Handler (void)
-{
-    I2C4_MASTER_InterruptHandler();
-}
-
-
-
-
-/*******************************************************************************
- End of File
+/* This section lists the other files that are included in this file.
 */
+
+uint8_t SMBUSCRC8Byte(uint8_t initCRC, uint8_t data);
+uint8_t SMBUSCRC8Buffer(uint8_t initCRC, void* pData, uint32_t size);
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
+
+
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+}
+#endif
+// DOM-IGNORE-END
+
+#endif /* PLIB_I2C_SMBUS_COMMON_H */

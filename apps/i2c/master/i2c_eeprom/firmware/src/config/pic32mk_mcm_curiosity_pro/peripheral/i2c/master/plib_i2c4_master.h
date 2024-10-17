@@ -52,6 +52,7 @@
 /* This section lists the other files that are included in this file.
 */
 
+
 #include "plib_i2c_master_common.h"
 
 // DOM-IGNORE-BEGIN
@@ -102,6 +103,7 @@
   Remarks:
     Stops the I2C if it was already running and reinitializes it.
 */
+
 
 void I2C4_Initialize(void);
 
@@ -245,6 +247,7 @@ bool I2C4_Read(uint16_t address, uint8_t* rdata, size_t rlength);
     None.
 */
 bool I2C4_Write(uint16_t address, uint8_t* wdata, size_t wlength);
+
 
 
 // *****************************************************************************
@@ -453,7 +456,6 @@ I2C_ERROR I2C4_ErrorGet(void);
   Remarks:
     None.
 */
-
 void I2C4_CallbackRegister(I2C_CALLBACK callback, uintptr_t contextHandle);
 
 // *****************************************************************************
@@ -465,7 +467,7 @@ void I2C4_CallbackRegister(I2C_CALLBACK callback, uintptr_t contextHandle);
 
    Precondition:
     I2C4_Initialize must have been called for the associated I2C instance.
-	The transfer status should not be busy.
+    The transfer status should not be busy.
 
    Parameters:
     setup - Pointer to the structure containing the transfer setup.
@@ -497,9 +499,48 @@ void I2C4_CallbackRegister(I2C_CALLBACK callback, uintptr_t contextHandle);
     If configured to zero PLib takes the peripheral clock frequency from MHC.
 */
 
-bool I2C4_TransferSetup(I2C_TRANSFER_SETUP* setup, uint32_t srcClkFreq );
 
+bool I2C4_TransferSetup(I2C_TRANSFER_SETUP* setup, uint32_t srcClkFreq );
 void I2C4_TransferAbort( void );
+
+
+
+// *****************************************************************************
+/* Function:
+    bool I2C4_BusScan(uint16_t start_addr, uint16_t end_addr, void* pDevicesList, uint8_t* nDevicesFound)
+
+   Summary:
+    Scan the target devices on the I2C bus.
+
+   Precondition:
+    I2C4_Initialize must have been called for the associated I2C instance.
+    The transfer status should not be busy.
+
+   Parameters:
+    start_addr - Starting address of the target device.
+    end_addr - Ending address of the target device.
+    pDevicesList - Pointer to the application buffer where the address of the devices found on the bus will be returned.
+    nDevicesFound - Indicates number of devices found on the bus
+
+   Returns:
+    true - The call to this API executed successfully.
+    false - There was an error during the execution of this API.
+
+   Example:
+    <code>
+
+    uint8_t nDevicesFoundList[10] = {0};
+    uint8_t nDevFound = 0;
+
+    I2C4_BusScan(0x08, 0x77, nDevicesFoundList, &nDevFound);
+
+    </code>
+
+   Remarks:
+    If there is a mix of devices with 8 and 10 bit addresses on the bus, then this API must be called separately for
+    devices with 8-bit addresses and then for devices with 10-bit addresses.
+*/
+bool I2C4_BusScan(uint16_t start_addr, uint16_t end_addr, void* pDevicesList, uint8_t* nDevicesFound);
 
 
 // DOM-IGNORE-BEGIN

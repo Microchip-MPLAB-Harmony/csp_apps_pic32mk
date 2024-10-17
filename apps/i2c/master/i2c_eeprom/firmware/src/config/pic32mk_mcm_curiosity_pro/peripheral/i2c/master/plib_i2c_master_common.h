@@ -189,18 +189,22 @@ typedef void (*I2C_CALLBACK) (uintptr_t contextHandle);
 typedef struct
 {
     uint16_t                address;
-    uint8_t*                writeBuffer;
-    uint8_t*                readBuffer;
+    volatile uint8_t*       writeBuffer;
+    volatile uint8_t*       readBuffer;
     size_t                  writeSize;
     size_t                  readSize;
     size_t                  writeCount;
     size_t                  readCount;
     bool                    forcedWrite;
+    bool                    smbusReadBlk;
+    bool                    smbusReadPEC;
+    uint8_t                 pec;
     I2C_TRANSFER_TYPE       transferType;
     I2C_STATE               state;
     I2C_ERROR               error;
     I2C_CALLBACK            callback;
     uintptr_t               context;
+    bool                    busScanInProgress;
 
 } I2C_OBJ;
 
