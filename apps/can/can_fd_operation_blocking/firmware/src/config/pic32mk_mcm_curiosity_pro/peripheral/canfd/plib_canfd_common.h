@@ -314,7 +314,7 @@ typedef struct
     /* Nominal Syncronization Jump Width */
     uint8_t nominalSJW;
 
-} CAN_NOMINAL_BIT_TIMING;
+} CANFD_NOMINAL_BIT_TIMING;
 
 // *****************************************************************************
 /* CAN Data Bit Timing Parameters
@@ -342,7 +342,7 @@ typedef struct
     /* Data Syncronization Jump Width */
     uint8_t dataSJW;
 
-} CAN_DATA_BIT_TIMING;
+} CANFD_DATA_BIT_TIMING;
 
 // *****************************************************************************
 /* CAN Bit Timing Parameters
@@ -362,14 +362,14 @@ typedef struct
     bool nominalBitTimingSet;
 
     /* Nominal bit timing parameters */
-    CAN_NOMINAL_BIT_TIMING nominalBitTiming;
+    CANFD_NOMINAL_BIT_TIMING nominalBitTiming;
 
     /* Data bit timing set flag */
     bool dataBitTimingSet;
 
     /* Data bit timing parameters */
-    CAN_DATA_BIT_TIMING dataBitTiming;
-} CAN_BIT_TIMING;
+    CANFD_DATA_BIT_TIMING dataBitTiming;
+} CANFD_BIT_TIMING;
 
 // *****************************************************************************
 /* CAN Bit Timing Setup
@@ -409,7 +409,7 @@ typedef struct
     /* Data Baud Rate Prescaler */
     uint8_t dataPrescaler;
 
-} CAN_BIT_TIMING_SETUP;
+} CANFD_BIT_TIMING_SETUP;
 
 // *****************************************************************************
 /* CANFD Callback Object
