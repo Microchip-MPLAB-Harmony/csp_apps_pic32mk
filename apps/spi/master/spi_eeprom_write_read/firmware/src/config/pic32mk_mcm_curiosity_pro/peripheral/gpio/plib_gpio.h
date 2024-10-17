@@ -69,6 +69,7 @@
 #define EEPROM_HOLD_OutputEnable()      (TRISGCLR = (1U<<6))
 #define EEPROM_HOLD_InputEnable()       (TRISGSET = (1U<<6))
 #define EEPROM_HOLD_Get()               ((PORTG >> 6) & 0x1U)
+#define EEPROM_HOLD_GetLatch()          ((LATG >> 6) & 0x1U)
 #define EEPROM_HOLD_PIN                  GPIO_PIN_RG6
 
 /*** Macros for EEPROM_WP pin ***/
@@ -78,6 +79,7 @@
 #define EEPROM_WP_OutputEnable()      (TRISACLR = (1U<<11))
 #define EEPROM_WP_InputEnable()       (TRISASET = (1U<<11))
 #define EEPROM_WP_Get()               ((PORTA >> 11) & 0x1U)
+#define EEPROM_WP_GetLatch()          ((LATA >> 11) & 0x1U)
 #define EEPROM_WP_PIN                  GPIO_PIN_RA11
 
 /*** Macros for EEPROM_CS pin ***/
@@ -87,6 +89,7 @@
 #define EEPROM_CS_OutputEnable()      (TRISCCLR = (1U<<0))
 #define EEPROM_CS_InputEnable()       (TRISCSET = (1U<<0))
 #define EEPROM_CS_Get()               ((PORTC >> 0) & 0x1U)
+#define EEPROM_CS_GetLatch()          ((LATC >> 0) & 0x1U)
 #define EEPROM_CS_PIN                  GPIO_PIN_RC0
 
 /*** Macros for LED pin ***/
@@ -96,6 +99,7 @@
 #define LED_OutputEnable()      (TRISGCLR = (1U<<12))
 #define LED_InputEnable()       (TRISGSET = (1U<<12))
 #define LED_Get()               ((PORTG >> 12) & 0x1U)
+#define LED_GetLatch()          ((LATG >> 12) & 0x1U)
 #define LED_PIN                  GPIO_PIN_RG12
 
 
@@ -270,7 +274,7 @@ void GPIO_PortOutputEnable(GPIO_PORT port, uint32_t mask);
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-	 uint32_t xvalue = (uint32_t)value;
+     uint32_t xvalue = (uint32_t)value;
     GPIO_PortWrite((pin>>4U), (uint32_t)(0x1U) << (pin & 0xFU), (xvalue) << (pin & 0xFU));
 }
 
