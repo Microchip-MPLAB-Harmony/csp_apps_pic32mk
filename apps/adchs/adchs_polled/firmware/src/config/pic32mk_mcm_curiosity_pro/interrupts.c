@@ -48,9 +48,9 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include "interrupts.h"
 #include "definitions.h"
+
 
 
 // *****************************************************************************
@@ -74,7 +74,7 @@ void TIMER_3_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_TIMER_3_VECTOR, ipl1SRS) TIMER_3_Handler (void)
+void __attribute__((used)) __ISR(_TIMER_3_VECTOR, ipl1SRS) TIMER_3_Handler (void)
 {
     TIMER_3_InterruptHandler();
 }
