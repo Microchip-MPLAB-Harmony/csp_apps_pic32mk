@@ -69,6 +69,7 @@
 #define LED1_OutputEnable()      (TRISACLR = (1U<<10))
 #define LED1_InputEnable()       (TRISASET = (1U<<10))
 #define LED1_Get()               ((PORTA >> 10) & 0x1U)
+#define LED1_GetLatch()          ((LATA >> 10) & 0x1U)
 #define LED1_PIN                  GPIO_PIN_RA10
 
 
@@ -199,7 +200,7 @@ void GPIO_PortOutputEnable(GPIO_PORT port, uint32_t mask);
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-	 uint32_t xvalue = (uint32_t)value;
+     uint32_t xvalue = (uint32_t)value;
     GPIO_PortWrite((pin>>4U), (uint32_t)(0x1U) << (pin & 0xFU), (xvalue) << (pin & 0xFU));
 }
 
