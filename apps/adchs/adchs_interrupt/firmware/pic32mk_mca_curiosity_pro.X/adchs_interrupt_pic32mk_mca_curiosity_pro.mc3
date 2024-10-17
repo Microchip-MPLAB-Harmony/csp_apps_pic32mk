@@ -1,4 +1,4 @@
-<config configName="pic32mk_mca_curiosity_pro" projectName="adchs_interrupt_pic32mk_mca_curiosity_pro" configVersion="1.1" device="PIC32MK0128MCA048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.0">
+<config configName="pic32mk_mca_curiosity_pro" projectName="adchs_interrupt_pic32mk_mca_curiosity_pro" configVersion="1.1" device="PIC32MK0128MCA048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2016,7 +2016,7 @@
    <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\definitions.h</file>
-         <hash>76b79ee125fd7cbad2fd51e711edfa86b142863f04b618c3b0fc2a71009aa966</hash>
+         <hash>8a39ce851918a09ef9cec62997732adf7d58896272236e5ca5ac50a2ff741e74</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\device.h</file>
@@ -2028,11 +2028,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\initialization.c</file>
-         <hash>73c088d1a394c44711f48984534bb0c0ea5613939ee1843c9e1642dc6b88449c</hash>
+         <hash>770e61e35a2833abeadcbb24b985b5fd145feee41fc9db3da1ab884e6262496c</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\interrupts.c</file>
-         <hash>bb0a9970edf3527ff9c080f80a4fefa01bfe8a96a98f4e977667a669c7029950</hash>
+         <hash>f8dcab5c778bc7da0636f32136036405052f5b7a721b4af6f261f437636abe30</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\interrupts.h</file>
@@ -2056,7 +2056,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.c</file>
-         <hash>5f4f65bda0b7078f05601929cfe7a869686e8133d536e5da7ab8c5323c5a2494</hash>
+         <hash>b8dcabe9623e9bb1e0bdcf1300825b107406c0fa1468abb5ef3d9936f24930c0</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.h</file>
@@ -2084,7 +2084,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
-         <hash>6d3335fb86f3eeabebc087ef0767952befb8e0cc9b99918f6ae04e33a630a8d7</hash>
+         <hash>5720ba5e5af828f4776f6eb2d9ad39814a9c120e2af504299ec27a5dd9cd4831</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\tmr\plib_tmr3.c</file>
