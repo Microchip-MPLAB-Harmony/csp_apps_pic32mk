@@ -48,9 +48,9 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include "interrupts.h"
 #include "definitions.h"
+
 
 
 // *****************************************************************************
@@ -74,7 +74,7 @@ void CHANGE_NOTICE_F_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_CHANGE_NOTICE_F_VECTOR, ipl1SOFT) CHANGE_NOTICE_F_Handler (void)
+void __attribute__((used)) __ISR(_CHANGE_NOTICE_F_VECTOR, ipl1SOFT) CHANGE_NOTICE_F_Handler (void)
 {
     CHANGE_NOTICE_F_InterruptHandler();
 }

@@ -69,6 +69,7 @@
 #define SWITCH_OutputEnable()      (TRISFCLR = (1U<<13))
 #define SWITCH_InputEnable()       (TRISFSET = (1U<<13))
 #define SWITCH_Get()               ((PORTF >> 13) & 0x1U)
+#define SWITCH_GetLatch()          ((LATF >> 13) & 0x1U)
 #define SWITCH_PIN                  GPIO_PIN_RF13
 #define SWITCH_InterruptEnable()   (CNENFSET = (1U<<13))
 #define SWITCH_InterruptDisable()  (CNENFCLR = (1U<<13))
@@ -80,6 +81,7 @@
 #define LED_OutputEnable()      (TRISGCLR = (1U<<13))
 #define LED_InputEnable()       (TRISGSET = (1U<<13))
 #define LED_Get()               ((PORTG >> 13) & 0x1U)
+#define LED_GetLatch()          ((LATG >> 13) & 0x1U)
 #define LED_PIN                  GPIO_PIN_RG13
 
 
@@ -277,7 +279,7 @@ typedef struct {
 
 static inline void GPIO_PinWrite(GPIO_PIN pin, bool value)
 {
-	 uint32_t xvalue = (uint32_t)value;
+     uint32_t xvalue = (uint32_t)value;
     GPIO_PortWrite((pin>>4U), (uint32_t)(0x1U) << (pin & 0xFU), (xvalue) << (pin & 0xFU));
 }
 
