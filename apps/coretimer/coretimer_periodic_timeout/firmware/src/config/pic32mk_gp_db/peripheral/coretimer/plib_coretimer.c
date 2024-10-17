@@ -85,6 +85,33 @@ uint32_t CORETIMER_FrequencyGet ( void )
 {
     return (CORE_TIMER_FREQUENCY);
 }
+    
+uint32_t CORETIMER_GetTickCounter(void)
+{
+    return coreTmr.tickCounter;
+}
+    
+void CORETIMER_StartTimeOut (CORETIMER_TIMEOUT* timeout, uint32_t delay_ms)
+{
+    timeout->start = CORETIMER_GetTickCounter();
+    timeout->count = (delay_ms*1000U)/CORE_TIMER_INTERRUPT_PERIOD_IN_US;
+}
+    
+void CORETIMER_ResetTimeOut (CORETIMER_TIMEOUT* timeout)
+{
+    timeout->start = CORETIMER_GetTickCounter();
+}
+    
+bool CORETIMER_IsTimeoutReached (CORETIMER_TIMEOUT* timeout)
+{
+    bool valTimeout  = true;
+    if ((coreTmr.tickCounter - timeout->start) < timeout->count)
+    {
+        valTimeout = false;
+    }
+    return valTimeout;
+}
+    
 void __attribute__((used)) CORE_TIMER_InterruptHandler (void)
 {
     uint32_t count, newCompare;
