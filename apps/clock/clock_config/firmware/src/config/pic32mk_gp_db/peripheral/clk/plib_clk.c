@@ -88,6 +88,20 @@ void CLK_Initialize( void )
     SYSKEY = 0x00000000U;
     SYSKEY = 0xAA996655U;
     SYSKEY = 0x556699AAU;
+    
+    /* Peripheral Module Disable Configuration */
+
+    CFGCONbits.PMDLOCK = 0;
+
+    PMD1 = 0x100371U;
+    PMD2 = 0x17001fU;
+    PMD3 = 0xffffffffU;
+    PMD4 = 0x1ffU;
+    PMD5 = 0xf30f3f3fU;
+    PMD6 = 0xfffff0ffU;
+    PMD7 = 0xffffffefU;
+
+    CFGCONbits.PMDLOCK = 1;
 
  
         /* Set up Reference Clock 4 */
@@ -105,20 +119,6 @@ void CLK_Initialize( void )
     REFO4CONSET = 0x00001000 | 0x00008000;
 
   
-
-    /* Peripheral Module Disable Configuration */
-
-    CFGCONbits.PMDLOCK = 0;
-
-    PMD1 = 0x100371U;
-    PMD2 = 0x17001fU;
-    PMD3 = 0xffffffffU;
-    PMD4 = 0x1ffU;
-    PMD5 = 0xf30f3f3fU;
-    PMD6 = 0xfffff0ffU;
-    PMD7 = 0xffffffefU;
-
-    CFGCONbits.PMDLOCK = 1;
 
     /* Lock system since done with clock configuration */
     SYSKEY = 0x33333333U;
