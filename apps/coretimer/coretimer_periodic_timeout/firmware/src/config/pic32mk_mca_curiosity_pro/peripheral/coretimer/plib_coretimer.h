@@ -49,6 +49,12 @@
 
 #define CORE_TIMER_FREQUENCY    (60000000U)
 
+typedef struct
+{
+    uint32_t start;
+    uint32_t count;
+}CORETIMER_TIMEOUT;
+
 #define CORE_TIMER_INTERRUPT_PERIOD_VALUE    0x1c9c380
 #define CORE_TIMER_INTERRUPT_PERIOD_IN_US     500000
 
@@ -68,6 +74,10 @@ uint32_t CORETIMER_FrequencyGet (void);
 void CORETIMER_PeriodSet (uint32_t period);
 void CORETIMER_Start(void);
 void CORETIMER_Stop(void);
+uint32_t CORETIMER_GetTickCounter(void);
+void CORETIMER_StartTimeOut (CORETIMER_TIMEOUT* timeout, uint32_t delay_ms);
+void CORETIMER_ResetTimeOut (CORETIMER_TIMEOUT* timeout);
+bool CORETIMER_IsTimeoutReached (CORETIMER_TIMEOUT* timeout);
 
 
 
