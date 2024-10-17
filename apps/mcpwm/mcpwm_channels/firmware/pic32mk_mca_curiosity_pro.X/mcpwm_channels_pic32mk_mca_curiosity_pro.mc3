@@ -1,4 +1,4 @@
-<config configName="pic32mk_mca_curiosity_pro" projectName="mcpwm_channels_pic32mk_mca_curiosity_pro" configVersion="1.1" device="PIC32MK0128MCA048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
+<config configName="pic32mk_mca_curiosity_pro" projectName="mcpwm_channels_pic32mk_mca_curiosity_pro" configVersion="1.1" device="PIC32MK0128MCA048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -15,7 +15,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1028,82 +1028,82 @@
 </value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\exceptions.c</file>
-         <hash>51869a2069933bd13284df52f5f993f4e8b83ae6097dda36c4b1fc6e818df86d</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\evic\plib_evic.c</file>
-         <hash>649a4520492fec5b88ea64287111efa15361126825a8d575826dba4da77b6579</hash>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\definitions.h</file>
+         <hash>c51090133e8a9a639346fc3fe3e1df11f571df4bf7b5dfb4568bec18dba5fdc6</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\device.h</file>
          <hash>10ec93c43a7b158a129ae05bd8f4a59ff5bcf3d0f3f062fdd64c374bc2d42099</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\exceptions.c</file>
+         <hash>265c985839caadb2fa9e8fc76e7bc3c160e31e9b2c96dc4006add33e5d7ee212</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\initialization.c</file>
-         <hash>542fde010da64b434959576cd12569ea01253686afb0ea9e92337f2dae499e2b</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\evic\plib_evic.h</file>
-         <hash>5d5752964e52f826051deba5913da1db14fdc9884ede6dfbd872699279e8e56f</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\mcpwm\plib_mcpwm_common.h</file>
-         <hash>e9183ed90738f5ecb6765ba770f339cd431513adf211cf962a1957b676b3325a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\toolchain_specifics.h</file>
-         <hash>38b3e0e3652463c4c84dc445fd0af062ddf1e36ce2aefeae250f3f0c4fef5685</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\definitions.h</file>
-         <hash>4522c1fa8c5a80dbd871e176e777c771f32e309668d6effc2c303b32c9b64a35</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.c</file>
-         <hash>ffc3faf05fb511b0ce974ebf6f2c5736ef6ae355d7f9b0a982036b2a293fbdd6</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\p32MK0128MCA048.ld</file>
-         <hash>3493525766d5d8e0ed78940ae9b93d1e2adb8fd2fd54d749da2d5767905ceadf</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.h</file>
-         <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\gpio\plib_gpio.c</file>
-         <hash>f9853f8bc614e25a969dfbfb965990a7f8917d74b22997a5100ef943f0b6e04a</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\stdio\xc32_monitor.c</file>
-         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
+         <hash>6e7de18e4c401f740b3797def9939a04df59246d790c2765a5cee7cd2bb4b1f7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\interrupts.c</file>
-         <hash>0b18fa8b710660b4fe1a7654d0e6aa4ce7febeff8d29963eefdf41d447aeecb8</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
-         <hash>6d3335fb86f3eeabebc087ef0767952befb8e0cc9b99918f6ae04e33a630a8d7</hash>
-      </entry>
-      <entry>
-         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\mcpwm\plib_mcpwm.c</file>
-         <hash>51929591a4c7084025c298f6f4aef3c0b0aeec51523b119d9e46916f80b0d940</hash>
-      </entry>
-      <entry>
-         <file>..\src\main.c</file>
-         <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
+         <hash>ed58cf9458b8feff124dac0b96f34285c05c4788474b9b35718ab8b87dcadf22</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\interrupts.h</file>
          <hash>78f944fd1469d948d60b63023e859ec418afdcd825c7fe3d28264b8ba140bb0c</hash>
       </entry>
       <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\p32MK0128MCA048.ld</file>
+         <hash>3493525766d5d8e0ed78940ae9b93d1e2adb8fd2fd54d749da2d5767905ceadf</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.c</file>
+         <hash>713c19e89e71bb339afa27517b1b636f6865c26cc5d3f84e91119052a97e14b9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\clk\plib_clk.h</file>
+         <hash>35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\evic\plib_evic.c</file>
+         <hash>49f5c9e168e6dedda79afdff4768da75616c3cca25c515b5729e792c1a15902e</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\evic\plib_evic.h</file>
+         <hash>55b8007e85248cc54d4f7c47fb5c11d73e218eedf2d7fd964855f218f5ebd778</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\gpio\plib_gpio.c</file>
+         <hash>5f309d6f2b25c111ddd8e878ccd9565f58fda23fda87c2e2ad08b73ee932fed8</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\gpio\plib_gpio.h</file>
+         <hash>5720ba5e5af828f4776f6eb2d9ad39814a9c120e2af504299ec27a5dd9cd4831</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\mcpwm\plib_mcpwm.c</file>
+         <hash>51929591a4c7084025c298f6f4aef3c0b0aeec51523b119d9e46916f80b0d940</hash>
+      </entry>
+      <entry>
          <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\mcpwm\plib_mcpwm.h</file>
          <hash>0119fb851908ec33ee05f6e26fd77926627382cc069f7efcc28cd57ed3cbc86c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\peripheral\mcpwm\plib_mcpwm_common.h</file>
+         <hash>e9183ed90738f5ecb6765ba770f339cd431513adf211cf962a1957b676b3325a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\stdio\xc32_monitor.c</file>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\pic32mk_mca_curiosity_pro\toolchain_specifics.h</file>
+         <hash>b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac</hash>
+      </entry>
+      <entry>
+         <file>..\src\main.c</file>
+         <hash>d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

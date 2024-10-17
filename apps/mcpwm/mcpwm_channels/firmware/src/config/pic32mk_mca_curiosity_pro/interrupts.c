@@ -48,9 +48,9 @@
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
 #include "interrupts.h"
 #include "definitions.h"
+
 
 
 // *****************************************************************************
@@ -74,7 +74,7 @@ void PWM1_Handler (void);
 // Section: System Interrupt Vector definitions
 // *****************************************************************************
 // *****************************************************************************
-void __ISR(_PWM1_VECTOR, ipl1SRS) PWM1_Handler (void)
+void __attribute__((used)) __ISR(_PWM1_VECTOR, ipl1SRS) PWM1_Handler (void)
 {
     PWM1_InterruptHandler();
 }
