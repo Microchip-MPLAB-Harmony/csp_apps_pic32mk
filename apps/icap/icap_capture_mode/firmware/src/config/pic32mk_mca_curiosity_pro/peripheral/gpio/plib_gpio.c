@@ -43,7 +43,6 @@
 
 #include "plib_gpio.h"
 #include "interrupts.h"
-#include "interrupts.h"
 
 
 
@@ -66,7 +65,6 @@ void GPIO_Initialize ( void )
     /* PORTB Initialization */
     ANSELBCLR = 0x1U; /* Digital Mode Enable */
     /* PORTC Initialization */
-    ANSELCCLR = 0x400U; /* Digital Mode Enable */
     /* PORTD Initialization */
 
     /* Unlock system for PPS configuration */
@@ -81,7 +79,7 @@ void GPIO_Initialize ( void )
     IC1R = 2;
 
     /* PPS Output Remapping */
-    RPC10R = 2;
+    RPD8R = 2;
     RPB0R = 5;
 
         /* Lock back the system after PPS configuration */
