@@ -56,7 +56,6 @@
 #include <stddef.h>
 
 void I2C2_MasterBUS_InterruptHandler(void);
-void I2C2_MASTER_InterruptHandler(void);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus // Provide C++ Compatibility

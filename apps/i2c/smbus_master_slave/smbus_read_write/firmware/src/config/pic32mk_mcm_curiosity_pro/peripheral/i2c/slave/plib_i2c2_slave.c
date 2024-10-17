@@ -49,6 +49,7 @@
 // *****************************************************************************
 #include "device.h"
 #include "plib_i2c2_slave.h"
+#include "interrupts.h"
 #include "peripheral/i2c/plib_i2c_smbus_common.h"
 
 #include "peripheral/i2c/slave/plib_i2c2_slave_local.h"

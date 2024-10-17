@@ -50,6 +50,7 @@
 
 #include "device.h"
 #include "plib_i2c2_master.h"
+#include "interrupts.h"
 #include <string.h>
 #include "peripheral/i2c/plib_i2c_smbus_common.h"
 
