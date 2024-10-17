@@ -43,7 +43,6 @@
 
 #include "plib_gpio.h"
 #include "interrupts.h"
-#include "interrupts.h"
 
 
 
@@ -68,22 +67,12 @@ void GPIO_Initialize ( void )
     /* PORTC Initialization */
     /* PORTD Initialization */
 
-    /* Unlock system for PPS configuration */
-    SYSKEY = 0x00000000U;
-    SYSKEY = 0xAA996655U;
-    SYSKEY = 0x556699AAU;
-
-    CFGCONbits.IOLOCK = 0U;
 
     /* PPS Input Remapping */
 
     /* PPS Output Remapping */
-    RPC8R = 18;
+    RPC6R = 7;
 
-        /* Lock back the system after PPS configuration */
-    CFGCONbits.IOLOCK = 1U;
-
-    SYSKEY = 0x00000000U;
 
 }
 
