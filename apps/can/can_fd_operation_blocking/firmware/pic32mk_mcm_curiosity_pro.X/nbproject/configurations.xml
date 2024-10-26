@@ -31,16 +31,6 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
-      <logicalFolder displayName="pic32mk_mcm_curiosity_pro.mhc" name="f1" projectFiles="true">
-        <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.mhc/can1.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.mhc/stdio.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mcm_curiosity_pro/pic32mk_mcm_curiosity_pro.mhc/uart6.yml</itemPath>
-      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony-manifest-success.yml</itemPath>
       <itemPath>can_fd_operation_blocking_pic32mk_mcm_curiosity_pro.mc3</itemPath>

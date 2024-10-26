@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
-                   projectFiles="true">
+    <logicalFolder name="HeaderFiles" displayName="Header Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="pic32mk_mca_curiosity_pro"
-                       projectFiles="true">
+        <logicalFolder name="f1" displayName="pic32mk_mca_curiosity_pro" projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_mca_curiosity_pro/peripheral/clk/plib_clk.h</itemPath>
@@ -42,45 +38,21 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="true">
-      <logicalFolder name="f1"
-                     displayName="pic32mk_mca_curiosity_pro.mhc"
-                     projectFiles="true">
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/icap1.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/ocmp3.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/stdio.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/tmr2.yml</itemPath>
-        <itemPath>../src/config/pic32mk_mca_curiosity_pro/pic32mk_mca_curiosity_pro.mhc/uart2.yml</itemPath>
-      </logicalFolder>
+    <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mca_curiosity_pro/harmony-manifest-success.yml</itemPath>
       <itemPath>icap_capture_mode_pic32mk_mca_curiosity_pro.mc3</itemPath>
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
+    <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="pic32mk_mca_curiosity_pro"
-                       projectFiles="true">
+        <logicalFolder name="f1" displayName="pic32mk_mca_curiosity_pro" projectFiles="true">
           <itemPath>../src/config/pic32mk_mca_curiosity_pro/p32MK0128MCA048.ld</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
+    <logicalFolder name="SourceFiles" displayName="Source Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
-        <logicalFolder name="f1"
-                       displayName="pic32mk_mca_curiosity_pro"
-                       projectFiles="true">
+        <logicalFolder name="f1" displayName="pic32mk_mca_curiosity_pro" projectFiles="true">
           <logicalFolder name="f1" displayName="peripheral" projectFiles="true">
             <logicalFolder name="f1" displayName="clk" projectFiles="true">
               <itemPath>../src/config/pic32mk_mca_curiosity_pro/peripheral/clk/plib_clk.c</itemPath>
@@ -124,8 +96,8 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC32MK0128MCA048</targetDevice>
-        <targetHeader></targetHeader>
-        <targetPluginBoard></targetPluginBoard>
+        <targetHeader/>
+        <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.45</languageToolchainVersion>
@@ -146,7 +118,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile></alternateLoadableFile>
+          <alternateLoadableFile/>
         </loading>
         <subordinates>
         </subordinates>
@@ -154,9 +126,9 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPreStep/>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStep/>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -170,8 +142,7 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mca_curiosity_pro"/>
+        <property key="extra-include-directories" value="../src;../src/config/pic32mk_mca_curiosity_pro"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -270,8 +241,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="extra-include-directories"
-                  value="../src;../src/config/pic32mk_mca_curiosity_pro"/>
+        <property key="extra-include-directories" value="../src;../src/config/pic32mk_mca_curiosity_pro"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -333,8 +303,7 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
@@ -408,13 +377,10 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
         <property key="communication.interface" value=""/>
@@ -435,8 +401,7 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.end" value="0x1d003fff"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d01ffff"/>
@@ -448,8 +413,7 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -463,10 +427,8 @@
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
         <property key="programoptions.uselvpprogramming" value="false"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.25"/>
       </Tool>
       <pkob4hybrid>
@@ -505,12 +467,9 @@
         <property key="TIMER3" value="true"/>
         <property key="TIMER4" value="true"/>
         <property key="TIMER5" value="true"/>
-        <property key="ToolFirmwareFilePath"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UpdateOptions"
-                  value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareToolPack"
-                  value="Press to select which tool pack to use"/>
+        <property key="ToolFirmwareFilePath" value="Press to browse for a specific firmware version"/>
+        <property key="ToolFirmwareOption.UpdateOptions" value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareToolPack" value="Press to select which tool pack to use"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
         <property key="communication.interface" value=""/>
@@ -530,8 +489,7 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="1d000000-1d01ffff"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
@@ -539,8 +497,7 @@
         <property key="programoptions.pgmentry.voltage" value="low"/>
         <property key="programoptions.pgmspeed" value="Med"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
@@ -550,10 +507,8 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
       </pkob4hybrid>
     </conf>
   </confs>

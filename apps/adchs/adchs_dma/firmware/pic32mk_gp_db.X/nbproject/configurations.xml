@@ -35,17 +35,6 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
-      <logicalFolder displayName="pic32mk_gp_db.mhc" name="f1" projectFiles="true">
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/adchs.yml</itemPath>
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/stdio.yml</itemPath>
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/tmr3.yml</itemPath>
-        <itemPath>../src/config/pic32mk_gp_db/pic32mk_gp_db.mhc/uart6.yml</itemPath>
-      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_gp_db/harmony-manifest-success.yml</itemPath>
       <itemPath>adchs_dma_pic32mk_gp_db.mc3</itemPath>

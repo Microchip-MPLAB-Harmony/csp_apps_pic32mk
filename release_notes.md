@@ -1,12 +1,35 @@
----
-title: Release notes
-nav_order: 99
----
-
-![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
-![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
+[![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)](https://www.microchip.com)
+[![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)](https://www.microchip.com/en-us/tools-resources/configure/mplab-harmony)
 
 # Microchip MPLAB® Harmony 3 Release Notes
+
+## Harmony 3 peripheral library application examples for PIC32MK family v3.5.0
+
+### Development kit and demo application support
+
+Following table provides number of peripheral library examples available for different development kits.
+
+| Development Kits  | MPLAB X applications |
+|:-----------------:|:-------------------:|
+| [PIC32MK GP DEVELOPMENT KIT](https://www.microchip.com/developmenttools/ProductDetails/dm320106) | 27 |
+| [PIC32MK MCA Curiosity Pro Development Board](https://www.microchip.com/en-us/development-tool/EV15D86A) | 19 |
+| [PIC32MK MCJ CURIOSITY PRO DEVELOPMENT BOARD](https://www.microchip.com/en-us/development-tool/DT100113) | 26 |
+| [PIC32MK MCM CURIOSITY PRO DEVELOPMENT BOARD](https://www.microchip.com/en-us/development-tool/EV31E34A) | 25 |
+
+### New Features
+
+- None
+
+### Known Issues
+
+- None
+
+### Development Tools
+
+- [MPLAB® X IDE 6.20](https://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® X IDE plug-ins:
+  - MPLAB® Code Configurator (MCC) 5.5.1
+- [MPLAB® XC32 C/C++ Compiler 4.45](https://www.microchip.com/mplab/compilers)
 
 ## Harmony 3 peripheral library application examples for PIC32MK family  v3.4.0
 

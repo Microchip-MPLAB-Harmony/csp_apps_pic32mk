@@ -4,7 +4,7 @@
 
 
 project: dmac_memory_transfer
-creation_date: 2024-10-21T16:05:55.952+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-10-27T00:55:52.238+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -14,7 +14,7 @@ harmony_version: v1.5.3
 compiler: XC32 4.45
 
 modules:
-    - {name: "csp", version: "v3.20.0-rc.1-11-g1660d1c"}
+    - {name: "csp", version: "v3.20.0"}
 
 packs:
     - {name: "PIC32MK-MC_DFP", version: "1.11.151"}
