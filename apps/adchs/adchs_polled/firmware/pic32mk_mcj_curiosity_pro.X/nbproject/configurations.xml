@@ -38,9 +38,20 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
+      <logicalFolder name="adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro" displayName="adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro" projectFiles="true">
+        <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/components/adchs.yml</itemPath>
+          <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/components/core.yml</itemPath>
+          <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/components/core_timer.yml</itemPath>
+          <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/components/dfp.yml</itemPath>
+          <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/components/stdio.yml</itemPath>
+          <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/components/tmr3.yml</itemPath>
+          <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/components/uart1.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mcj_curiosity_pro/harmony-manifest-success.yml</itemPath>
-      <itemPath>adchs_polled_pic32mk_mcj_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
       <logicalFolder displayName="config" name="f1" projectFiles="true">
@@ -99,7 +110,7 @@
         <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>

@@ -1,0 +1,567 @@
+configVersion: 1.0.0
+componentName: adchs
+coreVersion: 5.8.2
+device: PIC32MK0512MCJ064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: adchs
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: adchs
+          x: '340'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    ADCHS_3_ENABLE:
+      attributes:
+        id: ADCHS_3_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    ADCHS_ADCCSS1:
+      attributes:
+        id: ADCHS_ADCCSS1
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCGIRQEN1:
+      attributes:
+        id: ADCHS_ADCGIRQEN1
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCIMCON1:
+      attributes:
+        id: ADCHS_ADCIMCON1
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCTIME0:
+      attributes:
+        id: ADCHS_ADCTIME0
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '50397185'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCTIME1:
+      attributes:
+        id: ADCHS_ADCTIME1
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '50397185'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCTIME2:
+      attributes:
+        id: ADCHS_ADCTIME2
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '50397185'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCTIME3:
+      attributes:
+        id: ADCHS_ADCTIME3
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '50397185'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCTIME4:
+      attributes:
+        id: ADCHS_ADCTIME4
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '50397185'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCTIME5:
+      attributes:
+        id: ADCHS_ADCTIME5
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '50397185'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCTRG1:
+      attributes:
+        id: ADCHS_ADCTRG1
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '100663296'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_ADCTRGMODE:
+      attributes:
+        id: ADCHS_ADCTRGMODE
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_CONV_RATE0:
+      attributes:
+        id: ADCHS_CONV_RATE0
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '1875.0001'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_CONV_RATE1:
+      attributes:
+        id: ADCHS_CONV_RATE1
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '1875.0001'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_CONV_RATE2:
+      attributes:
+        id: ADCHS_CONV_RATE2
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '1875.0001'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_CONV_RATE3:
+      attributes:
+        id: ADCHS_CONV_RATE3
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '1875.0001'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_CONV_RATE4:
+      attributes:
+        id: ADCHS_CONV_RATE4
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '1875.0001'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_CONV_RATE5:
+      attributes:
+        id: ADCHS_CONV_RATE5
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '1875.0001'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_CONV_RATE7:
+      attributes:
+        id: ADCHS_CONV_RATE7
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '1764.7059'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_IEC0:
+      attributes:
+        id: ADCHS_IEC0
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    ADCHS_INTERRUPT:
+      attributes:
+        id: ADCHS_INTERRUPT
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    ADCHS_TADC0:
+      attributes:
+        id: ADCHS_TADC0
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '33.333332'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_TADC1:
+      attributes:
+        id: ADCHS_TADC1
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '33.333332'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_TADC2:
+      attributes:
+        id: ADCHS_TADC2
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '33.333332'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_TADC3:
+      attributes:
+        id: ADCHS_TADC3
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '33.333332'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_TADC4:
+      attributes:
+        id: ADCHS_TADC4
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '33.333332'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_TADC5:
+      attributes:
+        id: ADCHS_TADC5
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: adchs
+            value: '33.333332'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_TADC7:
+      attributes:
+        id: ADCHS_TADC7
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '33.333332'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_TCLK:
+      attributes:
+        id: ADCHS_TCLK
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '8.333333'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCHS_TQ:
+      attributes:
+        id: ADCHS_TQ
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: '16.666666'
+          type: Dynamic
+        type: Values
+      type: Float
+    ADCTRG1__TRGSRC3:
+      attributes:
+        id: ADCTRG1__TRGSRC3
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '6'
+          type: User
+        type: Values
+      type: KeyValueSet
+    ADC_CALLBACK_API:
+      attributes:
+        id: ADC_CALLBACK_API
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: ADCHS_CallbackRegister
+          type: Dynamic
+        type: Values
+      type: String
+    ADC_CH_PHASE_U:
+      attributes:
+        id: ADC_CH_PHASE_U
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: ADCHS_CH0
+          type: Dynamic
+        type: Values
+      type: String
+    ADC_CH_PHASE_V:
+      attributes:
+        id: ADC_CH_PHASE_V
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: ADCHS_CH4
+          type: Dynamic
+        type: Values
+      type: String
+    ADC_CH_POT:
+      attributes:
+        id: ADC_CH_POT
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: ADCHS_CH15
+          type: Dynamic
+        type: Values
+      type: String
+    ADC_CH_VDC_BUS:
+      attributes:
+        id: ADC_CH_VDC_BUS
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: ADCHS_CH10
+          type: Dynamic
+        type: Values
+      type: String
+    ADC_GET_RESULT_API:
+      attributes:
+        id: ADC_GET_RESULT_API
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: ADCHS_ChannelResultGet
+          type: Dynamic
+        type: Values
+      type: String
+    ADC_IS_RESULT_READY_API:
+      attributes:
+        id: ADC_IS_RESULT_READY_API
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: ADCHS_ChannelResultIsReady
+          type: Dynamic
+        type: Values
+      type: String
+    ADC_START_CONV_API:
+      attributes:
+        id: ADC_START_CONV_API
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: ADCHS_ChannelConversionStart
+          type: Dynamic
+        type: Values
+      type: String
+    AN3:
+      attributes:
+        id: AN3
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    INTERRUPT_ADC_RESULT:
+      attributes:
+        id: INTERRUPT_ADC_RESULT
+      children:
+      - children:
+        - attributes:
+            id: adchs
+            value: INT_SOURCE_ADC_DATA0
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}
