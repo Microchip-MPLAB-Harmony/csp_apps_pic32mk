@@ -1,0 +1,41 @@
+configVersion: 1.0.0
+componentName: ocmp2
+coreVersion: 5.8.2
+device: PIC32MK0128MCA048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: ocmp2
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: ocmp2
+          x: '500'
+          y: '19'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    OCMP_OCxR:
+      attributes:
+        id: OCMP_OCxR
+      children:
+      - children:
+        - attributes:
+            value: '15000'
+          type: User
+        type: Values
+      type: Long
+  userData: {}

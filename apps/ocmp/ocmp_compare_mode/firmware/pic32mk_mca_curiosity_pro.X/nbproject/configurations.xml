@@ -33,9 +33,19 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro" displayName="ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro" projectFiles="true">
+        <itemPath>ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/core.yml</itemPath>
+          <itemPath>ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/dfp.yml</itemPath>
+          <itemPath>ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/ocmp1.yml</itemPath>
+          <itemPath>ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/ocmp2.yml</itemPath>
+          <itemPath>ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/ocmp3.yml</itemPath>
+          <itemPath>ocmp_compare_mode_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/tmr2.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mca_curiosity_pro/harmony-manifest-success.yml</itemPath>
-      <itemPath>ocmp_compare_mode_pic32mk_mca_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
@@ -90,7 +100,7 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
