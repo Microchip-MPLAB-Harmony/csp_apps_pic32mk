@@ -1,0 +1,92 @@
+configVersion: 1.0.0
+componentName: core_timer
+coreVersion: 5.8.2
+device: PIC32MK1024MCM100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core_timer
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core_timer
+          x: '340'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CORE_TIMER_FREQUENCY:
+      attributes:
+        id: CORE_TIMER_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CORE_TIMER_INTERRUPT_MODE:
+      attributes:
+        id: CORE_TIMER_INTERRUPT_MODE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    CORE_TIMER_PERIODIC_INTERRUPT:
+      attributes:
+        id: CORE_TIMER_PERIODIC_INTERRUPT
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    CORE_TIMER_PERIOD_US:
+      attributes:
+        id: CORE_TIMER_PERIOD_US
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: '1000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CORE_TIMER_PERIOD_VALUE:
+      attributes:
+        id: CORE_TIMER_PERIOD_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core_timer
+            value: '0xea60'
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}
