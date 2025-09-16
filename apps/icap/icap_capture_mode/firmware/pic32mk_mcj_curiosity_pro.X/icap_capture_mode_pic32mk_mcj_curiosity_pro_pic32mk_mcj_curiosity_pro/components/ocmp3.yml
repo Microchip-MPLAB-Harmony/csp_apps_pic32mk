@@ -1,0 +1,52 @@
+configVersion: 1.0.0
+componentName: ocmp3
+coreVersion: 5.8.2
+device: PIC32MK0512MCJ064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: ocmp3
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: ocmp3
+          x: '342'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    OCMP_OCxCON_OCM:
+      attributes:
+        id: OCMP_OCxCON_OCM
+      children:
+      - children:
+        - attributes:
+            value: '5'
+          type: User
+        type: Values
+      type: KeyValueSet
+    OCxCON_VALUE:
+      attributes:
+        id: OCxCON_VALUE
+      children:
+      - children:
+        - attributes:
+            id: ocmp3
+            value: '5'
+          type: Dynamic
+        type: Values
+      type: Hex
+  userData: {}
