@@ -1,0 +1,279 @@
+configVersion: 1.0.0
+componentName: can1
+coreVersion: 5.8.2
+device: PIC32MK1024MCM100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: can1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: can1
+          x: '30'
+          y: '60'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CALCULATED_DATA_BITRATE:
+      attributes:
+        id: CALCULATED_DATA_BITRATE
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '2006'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CALCULATED_DATA_ERRORRATE:
+      attributes:
+        id: CALCULATED_DATA_ERRORRATE
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0.312'
+          type: Dynamic
+        type: Values
+      type: String
+    CALCULATED_NOMINAL_BITRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_BITRATE
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '501'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CALCULATED_NOMINAL_ERRORRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_ERRORRATE
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0.312'
+          type: Dynamic
+        type: Values
+      type: String
+    CAN_CORE_CLOCK_FREQ:
+      attributes:
+        id: CAN_CORE_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '80250000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CAN_INTERRUPT_MODE:
+      attributes:
+        id: CAN_INTERRUPT_MODE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    CAN_TIMESTAMP_ENABLE:
+      attributes:
+        id: CAN_TIMESTAMP_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    DATA_BITRATE:
+      attributes:
+        id: DATA_BITRATE
+      children:
+      - children:
+        - attributes:
+            value: '2000'
+          type: User
+        type: Values
+      type: Integer
+    DATA_TIME_QUANTA_PERIOD:
+      attributes:
+        id: DATA_TIME_QUANTA_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '24.922'
+          type: Dynamic
+        type: Values
+      type: String
+    DBT_BRP:
+      attributes:
+        id: DBT_BRP
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: Integer
+    DBT_SJW:
+      attributes:
+        id: DBT_SJW
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '5'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBT_TOTAL_TIME_QUANTA:
+      attributes:
+        id: DBT_TOTAL_TIME_QUANTA
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '20'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBT_TSEG1:
+      attributes:
+        id: DBT_TSEG1
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '14'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DBT_TSEG2:
+      attributes:
+        id: DBT_TSEG2
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '5'
+          type: Dynamic
+        type: Values
+      type: Integer
+    FIFO_OFFSET:
+      attributes:
+        id: FIFO_OFFSET
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0xc'
+          type: Dynamic
+        type: Values
+      type: String
+    FILTER_OBJ_MASK_OFFSET:
+      attributes:
+        id: FILTER_OBJ_MASK_OFFSET
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0x8'
+          type: Dynamic
+        type: Values
+      type: String
+    FILTER_OFFSET:
+      attributes:
+        id: FILTER_OFFSET
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0x4'
+          type: Dynamic
+        type: Values
+      type: String
+    NBT_BRP:
+      attributes:
+        id: NBT_BRP
+      children:
+      - children:
+        - attributes:
+            value: '7'
+          type: User
+        type: Values
+      type: Integer
+    NBT_SJW:
+      attributes:
+        id: NBT_SJW
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '5'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBT_TOTAL_TIME_QUANTA:
+      attributes:
+        id: NBT_TOTAL_TIME_QUANTA
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '20'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBT_TSEG1:
+      attributes:
+        id: NBT_TSEG1
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '14'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NBT_TSEG2:
+      attributes:
+        id: NBT_TSEG2
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '5'
+          type: Dynamic
+        type: Values
+      type: Integer
+    NOMINAL_TIME_QUANTA_PERIOD:
+      attributes:
+        id: NOMINAL_TIME_QUANTA_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '99.689'
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}

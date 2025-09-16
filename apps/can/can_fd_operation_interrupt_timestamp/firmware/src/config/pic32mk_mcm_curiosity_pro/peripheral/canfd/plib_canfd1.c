@@ -90,11 +90,11 @@
 #define CANFD_MSG_FLT_EXT_SID_MASK    (0x1FFC0000UL)
 #define CANFD_MSG_FLT_EXT_EID_MASK    (0x0003FFFFU)
 
-volatile static CANFD_OBJ can1Obj;
-volatile static CANFD_RX_MSG can1RxMsg[CANFD_NUM_OF_FIFO][CANFD_FIFO_MESSAGE_BUFFER_MAX];
-volatile static CANFD_CALLBACK_OBJ can1CallbackObj[CANFD_NUM_OF_FIFO + 1];
-volatile static CANFD_CALLBACK_OBJ can1ErrorCallbackObj;
-volatile static uint32_t can1MsgIndex[CANFD_NUM_OF_FIFO];
+static volatile CANFD_OBJ can1Obj;
+static volatile CANFD_RX_MSG can1RxMsg[CANFD_NUM_OF_FIFO][CANFD_FIFO_MESSAGE_BUFFER_MAX];
+static volatile CANFD_CALLBACK_OBJ can1CallbackObj[CANFD_NUM_OF_FIFO + 1];
+static volatile CANFD_CALLBACK_OBJ can1ErrorCallbackObj;
+static volatile uint32_t can1MsgIndex[CANFD_NUM_OF_FIFO];
 static uint8_t __attribute__((coherent, aligned(16))) can_message_buffer[CANFD_MESSAGE_RAM_CONFIG_SIZE];
 static const uint8_t dlcToLength[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 20, 24, 32, 48, 64};
 
