@@ -1,0 +1,42 @@
+configVersion: 1.0.0
+coreVersion: 5.8.2
+device: PIC32MK0512MCJ064
+deviceLibrary:
+  className: com.microchip.mcc.harmony.Harmony3Library
+groupModules: []
+modules:
+- core
+- dfp
+generatedFileHashHistoryMap:
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\definitions.h
+  hash: f6a315310cdaa49766f96dfdee7aa624e6175b311dc51c9855b4440e4acbdf79
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\device.h
+  hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\exceptions.c
+  hash: 265c985839caadb2fa9e8fc76e7bc3c160e31e9b2c96dc4006add33e5d7ee212
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\initialization.c
+  hash: 040ce69a115c1897d9b51a0a3a14bcff496478b1a374df612a94a6d597e6be91
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\interrupts.c
+  hash: 797936386be1072a51a41ed55d38dc4a8ed2bbf29a0a6e89fba8ee6651ac3610
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\interrupts.h
+  hash: 2b6f3a9da8b2f61b5ea3f584838ad851b151646b5fda0fb709cc05e65576fd37
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\p32MK0512MCJ064.ld
+  hash: 0961d0b43002f9984ec2fe9b53735091e86a199b1a135f26fb90623ac95d91da
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\peripheral\clk\plib_clk.c
+  hash: 6efccfc8ac39c7e5540ef2fab96cbbf13ba5a200f5d59bd12baac8329d9145ed
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\peripheral\clk\plib_clk.h
+  hash: 35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\peripheral\evic\plib_evic.c
+  hash: 60b925c74bd2c846e289fd57ad959806593544003ab2cab1e13ea9982985d1e7
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\peripheral\evic\plib_evic.h
+  hash: 0ec1cfe8426a1003fc0f5622755015e48b269a18b573a5d3a1d6248c3c2e4afb
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\peripheral\gpio\plib_gpio.c
+  hash: 4216defd3948661c3e65e8cf5798705b3d5c19842f6ff3522fcfbd19ba1c4c82
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\peripheral\gpio\plib_gpio.h
+  hash: 42f58426e4d39951bd6d2c65b078aee5d98ba2c1c4ef618bb9ce0742d5e29205
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\stdio\xc32_monitor.c
+  hash: 858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a
+- file: ..\src\config\pic32mk_mcj_curiosity_pro\toolchain_specifics.h
+  hash: b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac
+- file: ..\src\main_pic32mk_mcj_curiosity_pro.c
+  hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5
