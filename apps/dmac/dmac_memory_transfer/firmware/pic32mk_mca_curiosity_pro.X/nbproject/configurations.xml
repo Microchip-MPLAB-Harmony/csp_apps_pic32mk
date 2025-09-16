@@ -30,9 +30,17 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="dmac_memory_transfer_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro" displayName="dmac_memory_transfer_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro" projectFiles="true">
+        <itemPath>dmac_memory_transfer_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>dmac_memory_transfer_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/core.yml</itemPath>
+          <itemPath>dmac_memory_transfer_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/dfp.yml</itemPath>
+          <itemPath>dmac_memory_transfer_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/stdio.yml</itemPath>
+          <itemPath>dmac_memory_transfer_pic32mk_mca_curiosity_pro_pic32mk_mca_curiosity_pro/components/uart2.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mca_curiosity_pro/harmony-manifest-success.yml</itemPath>
-      <itemPath>dmac_memory_transfer_pic32mk_mca_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
       <logicalFolder name="f1" displayName="config" projectFiles="true">
@@ -85,7 +93,7 @@
         <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
