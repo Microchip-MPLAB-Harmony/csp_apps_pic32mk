@@ -1,0 +1,144 @@
+configVersion: 1.0.0
+componentName: uart6
+coreVersion: 5.8.2
+device: PIC32MK1024GPE100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: uart6
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: uart6
+          x: '29'
+          y: '79'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BRG_VALUE:
+      attributes:
+        id: BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: uart6
+            value: '129'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UART_BRGH:
+      attributes:
+        id: UART_BRGH
+      children:
+      - children:
+        - attributes:
+            id: uart6
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    UART_CLOCK_FREQ:
+      attributes:
+        id: UART_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: uart6
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UART_INTERRUPT_MODE_ENABLE:
+      attributes:
+        id: UART_INTERRUPT_MODE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart6
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    UART_OPERATING_MODE:
+      attributes:
+        id: UART_OPERATING_MODE
+      children:
+      - children:
+        - attributes:
+            id: uart6
+            value: '2'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    UART_RING_BUFFER_ENABLE:
+      attributes:
+        id: UART_RING_BUFFER_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: label
+          children:
+          - type: Value
+            value: '---'
+          type: String
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    UART_RING_BUFFER_MODE_ENABLE:
+      attributes:
+        id: UART_RING_BUFFER_MODE_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: uart6
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    UART_RX_RING_BUFFER_SIZE:
+      attributes:
+        id: UART_RX_RING_BUFFER_SIZE
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '20'
+          type: User
+        type: Values
+      type: Integer
+    UMODE_VALUE:
+      attributes:
+        id: UMODE_VALUE
+      children:
+      - children:
+        - attributes:
+            id: uart6
+            value: '8'
+          type: Dynamic
+        type: Values
+      type: Hex
+  userData: {}

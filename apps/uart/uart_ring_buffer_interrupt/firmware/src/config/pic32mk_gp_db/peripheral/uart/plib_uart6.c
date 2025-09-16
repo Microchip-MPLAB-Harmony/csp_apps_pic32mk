@@ -48,25 +48,25 @@
 // *****************************************************************************
 // *****************************************************************************
 
-volatile static UART_RING_BUFFER_OBJECT uart6Obj;
+static volatile UART_RING_BUFFER_OBJECT uart6Obj;
 
 #define UART6_READ_BUFFER_SIZE      (20U)
 #define UART6_READ_BUFFER_SIZE_9BIT (20U >> 1)
 #define UART6_RX_INT_DISABLE()      IEC5CLR = _IEC5_U6RXIE_MASK;
 #define UART6_RX_INT_ENABLE()       IEC5SET = _IEC5_U6RXIE_MASK;
 
-volatile static uint8_t UART6_ReadBuffer[UART6_READ_BUFFER_SIZE];
+static volatile uint8_t UART6_ReadBuffer[UART6_READ_BUFFER_SIZE];
 
 #define UART6_WRITE_BUFFER_SIZE      (128U)
 #define UART6_WRITE_BUFFER_SIZE_9BIT (128U >> 1)
 #define UART6_TX_INT_DISABLE()       IEC5CLR = _IEC5_U6TXIE_MASK;
 #define UART6_TX_INT_ENABLE()        IEC5SET = _IEC5_U6TXIE_MASK;
 
-volatile static uint8_t UART6_WriteBuffer[UART6_WRITE_BUFFER_SIZE];
+static volatile uint8_t UART6_WriteBuffer[UART6_WRITE_BUFFER_SIZE];
 
 #define UART6_IS_9BIT_MODE_ENABLED()    ( (U6MODE) & (_U6MODE_PDSEL0_MASK | _U6MODE_PDSEL1_MASK)) == (_U6MODE_PDSEL0_MASK | _U6MODE_PDSEL1_MASK) ? true:false
 
-void static UART6_ErrorClear( void )
+static void UART6_ErrorClear( void )
 {
     UART_ERROR errors = UART_ERROR_NONE;
     uint8_t dummyData = 0u;
