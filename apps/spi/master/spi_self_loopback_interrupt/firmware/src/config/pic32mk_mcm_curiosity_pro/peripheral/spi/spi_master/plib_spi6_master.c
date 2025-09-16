@@ -49,7 +49,7 @@
 // *****************************************************************************
 
 /* Global object to save SPI Exchange related data */
-volatile static SPI_OBJECT spi6Obj;
+static volatile SPI_OBJECT spi6Obj;
 
 #define SPI6_CON_MSTEN                      (1UL << _SPI6CON_MSTEN_POSITION)
 #define SPI6_CON_CKP                        (0UL << _SPI6CON_CKP_POSITION)
