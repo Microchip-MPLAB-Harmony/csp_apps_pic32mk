@@ -47,7 +47,7 @@
 // Section: MCPWM Implementation
 // *****************************************************************************
 // *****************************************************************************
-volatile static MCPWM_CH_OBJECT mcpwmObj[9];
+static volatile MCPWM_CH_OBJECT mcpwmObj[9];
 
 void MCPWM_Initialize (void)
 {
