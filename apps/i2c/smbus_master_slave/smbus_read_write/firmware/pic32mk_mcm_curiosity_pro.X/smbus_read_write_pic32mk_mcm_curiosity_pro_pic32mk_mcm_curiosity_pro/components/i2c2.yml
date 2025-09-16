@@ -1,0 +1,102 @@
+configVersion: 1.0.0
+componentName: i2c2
+coreVersion: 5.8.2
+device: PIC32MK1024MCM100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: i2c2
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: i2c2
+          x: '240'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BRG_VALUE:
+      attributes:
+        id: BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: '595'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2CS_RISE_TIME_CORE_TIMER_CNTS:
+      attributes:
+        id: I2CS_RISE_TIME_CORE_TIMER_CNTS
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: '18'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2CS_SETUP_TIME_CORE_TIMER_CNTS:
+      attributes:
+        id: I2CS_SETUP_TIME_CORE_TIMER_CNTS
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: '6'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2C_OPERATING_MODE:
+      attributes:
+        id: I2C_OPERATING_MODE
+      children:
+      - children:
+        - attributes:
+            value: Master and Slave
+          type: User
+        type: Values
+      type: Combo
+    I2C_SLAVE_ADDDRESS:
+      attributes:
+        id: I2C_SLAVE_ADDDRESS
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '86'
+          type: User
+        type: Values
+      type: Hex
+    I2C_SMEN:
+      attributes:
+        id: I2C_SMEN
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+  userData: {}

@@ -1,0 +1,1043 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.2
+device: PIC32MK1024MCM100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '30'
+          y: '60'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BSP_PIN_100_MODE:
+      attributes:
+        id: BSP_PIN_100_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_13_MODE:
+      attributes:
+        id: BSP_PIN_13_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_3_MODE:
+      attributes:
+        id: BSP_PIN_3_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_41_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_41_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: SDA4
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_41_MODE:
+      attributes:
+        id: BSP_PIN_41_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_42_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_42_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: SCL4
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_42_MODE:
+      attributes:
+        id: BSP_PIN_42_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_49_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_49_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: SDA2
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_49_MODE:
+      attributes:
+        id: BSP_PIN_49_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_4_MODE:
+      attributes:
+        id: BSP_PIN_4_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_50_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_50_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: SCL2
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_50_MODE:
+      attributes:
+        id: BSP_PIN_50_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_54_MODE:
+      attributes:
+        id: BSP_PIN_54_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_5_MODE:
+      attributes:
+        id: BSP_PIN_5_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_68_MODE:
+      attributes:
+        id: BSP_PIN_68_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_69_MODE:
+      attributes:
+        id: BSP_PIN_69_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_6_MODE:
+      attributes:
+        id: BSP_PIN_6_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_70_MODE:
+      attributes:
+        id: BSP_PIN_70_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_77_MODE:
+      attributes:
+        id: BSP_PIN_77_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_78_MODE:
+      attributes:
+        id: BSP_PIN_78_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_79_MODE:
+      attributes:
+        id: BSP_PIN_79_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_7_MODE:
+      attributes:
+        id: BSP_PIN_7_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_80_MODE:
+      attributes:
+        id: BSP_PIN_80_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_81_MODE:
+      attributes:
+        id: BSP_PIN_81_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_82_MODE:
+      attributes:
+        id: BSP_PIN_82_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_83_MODE:
+      attributes:
+        id: BSP_PIN_83_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_84_MODE:
+      attributes:
+        id: BSP_PIN_84_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_87_MODE:
+      attributes:
+        id: BSP_PIN_87_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_88_MODE:
+      attributes:
+        id: BSP_PIN_88_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_89_MODE:
+      attributes:
+        id: BSP_PIN_89_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_8_MODE:
+      attributes:
+        id: BSP_PIN_8_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_90_MODE:
+      attributes:
+        id: BSP_PIN_90_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_91_MODE:
+      attributes:
+        id: BSP_PIN_91_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_92_MODE:
+      attributes:
+        id: BSP_PIN_92_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_93_MODE:
+      attributes:
+        id: BSP_PIN_93_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_94_MODE:
+      attributes:
+        id: BSP_PIN_94_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_95_MODE:
+      attributes:
+        id: BSP_PIN_95_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_96_DIR:
+      attributes:
+        id: BSP_PIN_96_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_96_FUNCTION_NAME:
+      attributes:
+        id: BSP_PIN_96_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: LED1
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_96_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_96_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_96_MODE:
+      attributes:
+        id: BSP_PIN_96_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_97_MODE:
+      attributes:
+        id: BSP_PIN_97_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_98_MODE:
+      attributes:
+        id: BSP_PIN_98_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_99_MODE:
+      attributes:
+        id: BSP_PIN_99_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_9_MODE:
+      attributes:
+        id: BSP_PIN_9_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    EVIC_194_ENABLE:
+      attributes:
+        id: EVIC_194_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_194_HANDLER_LOCK:
+      attributes:
+        id: EVIC_194_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_194_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_194_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: I2C4_BUS_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    EVIC_195_ENABLE:
+      attributes:
+        id: EVIC_195_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_195_HANDLER_LOCK:
+      attributes:
+        id: EVIC_195_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_195_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_195_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: I2C4_SLAVE_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    EVIC_196_ENABLE:
+      attributes:
+        id: EVIC_196_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_196_HANDLER_LOCK:
+      attributes:
+        id: EVIC_196_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_196_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_196_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: I2C4_MASTER_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    EVIC_59_ENABLE:
+      attributes:
+        id: EVIC_59_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_59_HANDLER_LOCK:
+      attributes:
+        id: EVIC_59_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_59_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_59_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: I2C2_BUS_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    EVIC_60_ENABLE:
+      attributes:
+        id: EVIC_60_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_60_HANDLER_LOCK:
+      attributes:
+        id: EVIC_60_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_60_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_60_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: I2C2_SLAVE_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    EVIC_61_ENABLE:
+      attributes:
+        id: EVIC_61_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_61_HANDLER_LOCK:
+      attributes:
+        id: EVIC_61_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_61_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_61_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: I2C2_MASTER_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    I2C2_BUS_INTERRUPT_ENABLE:
+      attributes:
+        id: I2C2_BUS_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_BUS_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: I2C2_BUS_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_BUS_INTERRUPT_HANDLER:
+      attributes:
+        id: I2C2_BUS_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: I2C2_BUS_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    I2C2_BUS_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: I2C2_BUS_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_CLOCK_ENABLE:
+      attributes:
+        id: I2C2_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_CLOCK_FREQUENCY:
+      attributes:
+        id: I2C2_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2C2_MASTER_INTERRUPT_ENABLE:
+      attributes:
+        id: I2C2_MASTER_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_MASTER_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: I2C2_MASTER_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_MASTER_INTERRUPT_HANDLER:
+      attributes:
+        id: I2C2_MASTER_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: I2C2_MASTER_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    I2C2_MASTER_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: I2C2_MASTER_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_SLAVE_INTERRUPT_ENABLE:
+      attributes:
+        id: I2C2_SLAVE_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_SLAVE_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: I2C2_SLAVE_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C2_SLAVE_INTERRUPT_HANDLER:
+      attributes:
+        id: I2C2_SLAVE_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: I2C2_SLAVE_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    I2C2_SLAVE_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: I2C2_SLAVE_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_BUS_INTERRUPT_ENABLE:
+      attributes:
+        id: I2C4_BUS_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_BUS_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: I2C4_BUS_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_BUS_INTERRUPT_HANDLER:
+      attributes:
+        id: I2C4_BUS_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: I2C4_BUS_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    I2C4_BUS_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: I2C4_BUS_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_CLOCK_ENABLE:
+      attributes:
+        id: I2C4_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_CLOCK_FREQUENCY:
+      attributes:
+        id: I2C4_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2C4_MASTER_INTERRUPT_ENABLE:
+      attributes:
+        id: I2C4_MASTER_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_MASTER_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: I2C4_MASTER_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_MASTER_INTERRUPT_HANDLER:
+      attributes:
+        id: I2C4_MASTER_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: I2C4_MASTER_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    I2C4_MASTER_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: I2C4_MASTER_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_SLAVE_INTERRUPT_ENABLE:
+      attributes:
+        id: I2C4_SLAVE_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_SLAVE_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: I2C4_SLAVE_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C4_SLAVE_INTERRUPT_HANDLER:
+      attributes:
+        id: I2C4_SLAVE_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: I2C4_SLAVE_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    I2C4_SLAVE_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: I2C4_SLAVE_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: i2c4
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PMD5_REG_VALUE:
+      attributes:
+        id: PMD5_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '4077207359'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_A_ANSEL:
+      attributes:
+        id: SYS_PORT_A_ANSEL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '256'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_E_ANSEL:
+      attributes:
+        id: SYS_PORT_E_ANSEL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '12288'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SYS_PORT_G_TRIS:
+      attributes:
+        id: SYS_PORT_G_TRIS
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '4096'
+          type: Dynamic
+        type: Values
+      type: Hex
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '130'
+        canvasWidth: '537'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData

@@ -62,7 +62,7 @@
 #define I2C2_SLAVE_DATA_SETUP_TIME_CORE_TIMER_CNTS          6
 #define I2C2_SLAVE_RISE_TIME_CORE_TIMER_CNTS                18
 
-volatile static I2C_SLAVE_OBJ i2c2SlaveObj;
+static volatile I2C_SLAVE_OBJ i2c2SlaveObj;
 
 void I2C2_SlaveInitialize(void)
 {
