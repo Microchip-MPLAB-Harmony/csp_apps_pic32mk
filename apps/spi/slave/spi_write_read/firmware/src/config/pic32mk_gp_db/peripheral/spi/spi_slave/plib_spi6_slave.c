@@ -54,12 +54,12 @@
 #define SPI6_READ_BUFFER_SIZE            256
 #define SPI6_WRITE_BUFFER_SIZE           256
 
-volatile static uint8_t SPI6_ReadBuffer[SPI6_READ_BUFFER_SIZE];
-volatile static uint8_t SPI6_WriteBuffer[SPI6_WRITE_BUFFER_SIZE];
+static volatile uint8_t SPI6_ReadBuffer[SPI6_READ_BUFFER_SIZE];
+static volatile uint8_t SPI6_WriteBuffer[SPI6_WRITE_BUFFER_SIZE];
 
 
 /* Global object to save SPI Exchange related data */
-volatile static SPI_SLAVE_OBJECT spi6Obj;
+static volatile SPI_SLAVE_OBJECT spi6Obj;
 
 #define SPI6_CON_CKP                        (0UL << _SPI6CON_CKP_POSITION)
 #define SPI6_CON_CKE                        (1UL << _SPI6CON_CKE_POSITION)

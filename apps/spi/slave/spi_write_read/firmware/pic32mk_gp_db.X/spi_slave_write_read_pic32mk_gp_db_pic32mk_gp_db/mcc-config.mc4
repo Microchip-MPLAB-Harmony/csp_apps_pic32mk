@@ -1,0 +1,49 @@
+configVersion: 1.0.0
+coreVersion: 5.8.2
+device: PIC32MK1024GPE100
+deviceLibrary:
+  className: com.microchip.mcc.harmony.Harmony3Library
+groupModules: []
+modules:
+- core
+- dfp
+- spi6
+generatedFileHashHistoryMap:
+- file: ..\src\config\pic32mk_gp_db\definitions.h
+  hash: baa7835eeaa5e9b4f9d967a0c98899f8b5eb9cce559e6c9b2c62b2d9a58cf052
+- file: ..\src\config\pic32mk_gp_db\device.h
+  hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
+- file: ..\src\config\pic32mk_gp_db\exceptions.c
+  hash: 265c985839caadb2fa9e8fc76e7bc3c160e31e9b2c96dc4006add33e5d7ee212
+- file: ..\src\config\pic32mk_gp_db\initialization.c
+  hash: df68dc0413070258acff2b075d11a495dc7f7ce5282c0b4be1771f16ffab3199
+- file: ..\src\config\pic32mk_gp_db\interrupts.c
+  hash: 717dd739e6556777d9e5273691420ad3674414c6247c9e0eb1ed67e839b22c61
+- file: ..\src\config\pic32mk_gp_db\interrupts.h
+  hash: 93cbbdda23fedab8e7fc5f6e2c6dd33f0ebabb42c250386329dd59762b19f5df
+- file: ..\src\config\pic32mk_gp_db\p32MK1024GPE100.ld
+  hash: 1d0f13f4a7245d81a47147dd5e88e5c224a58fd7d2352f436b002dad4aba8a3a
+- file: ..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.c
+  hash: d63e4363e7fd602e0f321c34cc6f4bdcc9f78048d098dad8848feac5df8d0a5e
+- file: ..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.h
+  hash: 35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255
+- file: ..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c
+  hash: 806c863be8f596bf46209da7b6f2182be94385f4412b910e12f4f9c9ceb666b7
+- file: ..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.h
+  hash: 448da35a1944883bf7c38207d29b529b217079ed60240fbf90dd20a1010ee1f4
+- file: ..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c
+  hash: e6ccc757bd9a6055bd414e2261826bfb6f44bd5a36bc1174f261dc20f256ff51
+- file: ..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.h
+  hash: 84b82e3dd01ae3d2d3c0c98b6cf6a7778e06371c202cce39401ec082bedcbf93
+- file: ..\src\config\pic32mk_gp_db\peripheral\spi\spi_slave\plib_spi6_slave.c
+  hash: e9f1fa290532e3b17b92623eddc23129d3fde2d6e0405dfa15f38ec8beff890d
+- file: ..\src\config\pic32mk_gp_db\peripheral\spi\spi_slave\plib_spi6_slave.h
+  hash: 0c5ee4bdd9890e79f82f223d41c93cc9cffa890b7e8bcfe7d677d1367321aa31
+- file: ..\src\config\pic32mk_gp_db\peripheral\spi\spi_slave\plib_spi_slave_common.h
+  hash: 02e76badf4bc9ad22b7a4be4e50f62104f256211aa328e9a7aac3270f0b13317
+- file: ..\src\config\pic32mk_gp_db\stdio\xc32_monitor.c
+  hash: 858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a
+- file: ..\src\config\pic32mk_gp_db\toolchain_specifics.h
+  hash: b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac
+- file: ..\src\main.c
+  hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5
