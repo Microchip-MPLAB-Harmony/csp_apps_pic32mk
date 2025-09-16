@@ -48,25 +48,25 @@
 // *****************************************************************************
 // *****************************************************************************
 
-volatile static UART_RING_BUFFER_OBJECT uart1Obj;
+static volatile UART_RING_BUFFER_OBJECT uart1Obj;
 
 #define UART1_READ_BUFFER_SIZE      (20U)
 #define UART1_READ_BUFFER_SIZE_9BIT (20U >> 1)
 #define UART1_RX_INT_DISABLE()      IEC1CLR = _IEC1_U1RXIE_MASK;
 #define UART1_RX_INT_ENABLE()       IEC1SET = _IEC1_U1RXIE_MASK;
 
-volatile static uint8_t UART1_ReadBuffer[UART1_READ_BUFFER_SIZE];
+static volatile uint8_t UART1_ReadBuffer[UART1_READ_BUFFER_SIZE];
 
 #define UART1_WRITE_BUFFER_SIZE      (128U)
 #define UART1_WRITE_BUFFER_SIZE_9BIT (128U >> 1)
 #define UART1_TX_INT_DISABLE()       IEC1CLR = _IEC1_U1TXIE_MASK;
 #define UART1_TX_INT_ENABLE()        IEC1SET = _IEC1_U1TXIE_MASK;
 
-volatile static uint8_t UART1_WriteBuffer[UART1_WRITE_BUFFER_SIZE];
+static volatile uint8_t UART1_WriteBuffer[UART1_WRITE_BUFFER_SIZE];
 
 #define UART1_IS_9BIT_MODE_ENABLED()    ( (U1MODE) & (_U1MODE_PDSEL0_MASK | _U1MODE_PDSEL1_MASK)) == (_U1MODE_PDSEL0_MASK | _U1MODE_PDSEL1_MASK) ? true:false
 
-void static UART1_ErrorClear( void )
+static void UART1_ErrorClear( void )
 {
     UART_ERROR errors = UART_ERROR_NONE;
     uint8_t dummyData = 0u;
