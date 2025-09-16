@@ -53,7 +53,7 @@
 
 
 /* Object to hold callback function and context for ADC DMA interrupt*/
-volatile static ADCHS_DMA_CALLBACK_OBJECT ADCHS_DMACallbackObj;
+static volatile ADCHS_DMA_CALLBACK_OBJECT ADCHS_DMACallbackObj;
 
 
 void ADCHS_Initialize(void)
