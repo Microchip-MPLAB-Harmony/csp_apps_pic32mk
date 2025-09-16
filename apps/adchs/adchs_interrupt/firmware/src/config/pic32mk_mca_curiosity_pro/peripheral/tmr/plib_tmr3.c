@@ -53,7 +53,7 @@
 #include "plib_tmr3.h"
 #include "interrupts.h"
 
-volatile static TMR_TIMER_OBJECT tmr3Obj;
+static volatile TMR_TIMER_OBJECT tmr3Obj;
 
 
 void TMR3_Initialize(void)
