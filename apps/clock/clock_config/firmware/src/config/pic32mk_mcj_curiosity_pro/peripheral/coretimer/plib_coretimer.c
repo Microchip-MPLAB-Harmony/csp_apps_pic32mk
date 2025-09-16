@@ -42,7 +42,7 @@
 #include "peripheral/coretimer/plib_coretimer.h"
 #include "interrupts.h"
 
-volatile static CORETIMER_OBJECT coreTmr;
+static volatile CORETIMER_OBJECT coreTmr;
 void CORETIMER_Initialize(void)
 {
     // Disable Timer by setting Disable Count (DC) bit
@@ -85,23 +85,23 @@ uint32_t CORETIMER_FrequencyGet ( void )
 {
     return (CORE_TIMER_FREQUENCY);
 }
-    
+
 uint32_t CORETIMER_GetTickCounter(void)
 {
     return coreTmr.tickCounter;
 }
-    
+
 void CORETIMER_StartTimeOut (CORETIMER_TIMEOUT* timeout, uint32_t delay_ms)
 {
     timeout->start = CORETIMER_GetTickCounter();
     timeout->count = (delay_ms*1000U)/CORE_TIMER_INTERRUPT_PERIOD_IN_US;
 }
-    
+
 void CORETIMER_ResetTimeOut (CORETIMER_TIMEOUT* timeout)
 {
     timeout->start = CORETIMER_GetTickCounter();
 }
-    
+
 bool CORETIMER_IsTimeoutReached (CORETIMER_TIMEOUT* timeout)
 {
     bool valTimeout  = true;
@@ -111,7 +111,7 @@ bool CORETIMER_IsTimeoutReached (CORETIMER_TIMEOUT* timeout)
     }
     return valTimeout;
 }
-    
+
 void __attribute__((used)) CORE_TIMER_InterruptHandler (void)
 {
     uint32_t count, newCompare;
