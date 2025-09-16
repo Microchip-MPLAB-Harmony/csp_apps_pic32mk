@@ -1,0 +1,63 @@
+configVersion: 1.0.0
+componentName: tmr1
+coreVersion: 5.8.2
+device: PIC32MK0512MCJ064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: tmr1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: tmr1
+          x: '89'
+          y: '124'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    TIMER1_CLOCK_FREQ:
+      attributes:
+        id: TIMER1_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TIMER1_PERIOD:
+      attributes:
+        id: TIMER1_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '598'
+          type: Dynamic
+        type: Values
+      type: Long
+    TIMER1_TIME_PERIOD_MS:
+      attributes:
+        id: TIMER1_TIME_PERIOD_MS
+      children:
+      - children:
+        - attributes:
+            value: '0.01'
+          type: User
+        type: Values
+      type: Float
+  userData: {}
