@@ -1,0 +1,241 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.2
+device: PIC32MK0128MCA048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '240'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CDAC1_CLOCK_ENABLE:
+      attributes:
+        id: CDAC1_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: cdac1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CDAC1_CLOCK_FREQUENCY:
+      attributes:
+        id: CDAC1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    COMPILER_CHOICE:
+      attributes:
+        id: COMPILER_CHOICE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    EVIC_4_ENABLE:
+      attributes:
+        id: EVIC_4_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_4_HANDLER_LOCK:
+      attributes:
+        id: EVIC_4_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_4_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_4_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: TIMER_1_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    KEIL_STACK_HEAP_SIZE:
+      attributes:
+        id: KEIL_STACK_HEAP_SIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x1200'
+          type: Dynamic
+        type: Values
+      type: String
+    PMD1_REG_VALUE:
+      attributes:
+        id: PMD1_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '257'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMD4_REG_VALUE:
+      attributes:
+        id: PMD4_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '983070'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMD6_REG_VALUE:
+      attributes:
+        id: PMD6_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '50331648'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMD7_REG_VALUE:
+      attributes:
+        id: PMD7_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    TIMER_1_INTERRUPT_ENABLE:
+      attributes:
+        id: TIMER_1_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    TIMER_1_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: TIMER_1_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    TIMER_1_INTERRUPT_HANDLER:
+      attributes:
+        id: TIMER_1_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: TIMER_1_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    TIMER_1_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: TIMER_1_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    TMR1_CLOCK_ENABLE:
+      attributes:
+        id: TMR1_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    TMR1_CLOCK_FREQUENCY:
+      attributes:
+        id: TMR1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    clkSvcMode:
+      attributes:
+        id: clkSvcMode
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '90'
+        canvasWidth: '637'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData
