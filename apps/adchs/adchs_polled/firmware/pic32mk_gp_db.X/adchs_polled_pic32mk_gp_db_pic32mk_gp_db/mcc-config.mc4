@@ -1,0 +1,64 @@
+configVersion: 1.0.0
+coreVersion: 5.8.2
+device: PIC32MK1024GPE100
+deviceLibrary:
+  className: com.microchip.mcc.harmony.Harmony3Library
+groupModules: []
+modules:
+- adchs
+- core
+- dfp
+- stdio
+- tmr3
+- uart6
+generatedFileHashHistoryMap:
+- file: ..\src\config\pic32mk_gp_db\definitions.h
+  hash: dbaf6b522e6ff4ebf810fb29774395fd5a0050e02c792c7748ceb320ca68739a
+- file: ..\src\config\pic32mk_gp_db\device.h
+  hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
+- file: ..\src\config\pic32mk_gp_db\exceptions.c
+  hash: 265c985839caadb2fa9e8fc76e7bc3c160e31e9b2c96dc4006add33e5d7ee212
+- file: ..\src\config\pic32mk_gp_db\initialization.c
+  hash: 9b49f1190cec6e843a734872af0f78f57a81226e022f9915bb76f41f3bbe8af4
+- file: ..\src\config\pic32mk_gp_db\interrupts.c
+  hash: 797936386be1072a51a41ed55d38dc4a8ed2bbf29a0a6e89fba8ee6651ac3610
+- file: ..\src\config\pic32mk_gp_db\interrupts.h
+  hash: 2b6f3a9da8b2f61b5ea3f584838ad851b151646b5fda0fb709cc05e65576fd37
+- file: ..\src\config\pic32mk_gp_db\p32MK1024GPE100.ld
+  hash: 1d0f13f4a7245d81a47147dd5e88e5c224a58fd7d2352f436b002dad4aba8a3a
+- file: ..\src\config\pic32mk_gp_db\peripheral\adchs\plib_adchs.c
+  hash: dae109715a2fabed191d1143a534e98aa40eb94d17455374062e511142bf4da8
+- file: ..\src\config\pic32mk_gp_db\peripheral\adchs\plib_adchs.h
+  hash: 92e6af4a81b6f5ec626422a05fb890e0c5d536acd35a0b67ec71723a05832baa
+- file: ..\src\config\pic32mk_gp_db\peripheral\adchs\plib_adchs_common.h
+  hash: 472a5190117d3af9beb506d1c467e97366884b76e4d9b492aba43174a48e5998
+- file: ..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.c
+  hash: 763bcde1541fe447946ee122decdd36d666a71f2df877fac08d582598e477620
+- file: ..\src\config\pic32mk_gp_db\peripheral\clk\plib_clk.h
+  hash: 35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255
+- file: ..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.c
+  hash: 7469a4bbacca8b32babf88bd8a6fabd05cf3198b4de7782d043f65af39c38d38
+- file: ..\src\config\pic32mk_gp_db\peripheral\evic\plib_evic.h
+  hash: 448da35a1944883bf7c38207d29b529b217079ed60240fbf90dd20a1010ee1f4
+- file: ..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.c
+  hash: 994e89cc28f85e55afbc9a9e077431e263fb65a5b98ca510bde43e6f41850683
+- file: ..\src\config\pic32mk_gp_db\peripheral\gpio\plib_gpio.h
+  hash: 9c4ad44081624111015aea7568034d07e1c67a471083d7ac5284d0bc9ea927af
+- file: ..\src\config\pic32mk_gp_db\peripheral\tmr\plib_tmr3.c
+  hash: 0cfb832ce800943e882e5bbb4592a1a3ade1d43cbf652bf258710b1f144c1d26
+- file: ..\src\config\pic32mk_gp_db\peripheral\tmr\plib_tmr3.h
+  hash: 9bc63f63ed391b8e0a49c01bfcf6f33f9f50e20467b1178cbfe9dde159ebcdc4
+- file: ..\src\config\pic32mk_gp_db\peripheral\tmr\plib_tmr_common.h
+  hash: fe0f7e886eba99992a90f718b6aa9f2b438b8204094495f72a0d1e83418d3187
+- file: ..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart6.c
+  hash: 8eed8334af4223a27ca50ebb332f4712ad31ebeebf0dcddd1d13430497e91e40
+- file: ..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart6.h
+  hash: 7af71fa32c496dcdfe8e536121fd6d383e32ae17b865f46b077adf490983d19e
+- file: ..\src\config\pic32mk_gp_db\peripheral\uart\plib_uart_common.h
+  hash: 70213cd740b3ff9a591d93ad6aac9493335851db084dd862275effacdebf710d
+- file: ..\src\config\pic32mk_gp_db\stdio\xc32_monitor.c
+  hash: 9b94a2c69e3e47de57f2b184c6225491b16521d57a80d89ee84745d94030b597
+- file: ..\src\config\pic32mk_gp_db\toolchain_specifics.h
+  hash: b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac
+- file: ..\src\main.c
+  hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5
