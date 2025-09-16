@@ -39,9 +39,20 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
+      <logicalFolder name="icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db" displayName="icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db" projectFiles="true">
+        <itemPath>icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db/components/core.yml</itemPath>
+          <itemPath>icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db/components/dfp.yml</itemPath>
+          <itemPath>icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db/components/icap1.yml</itemPath>
+          <itemPath>icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db/components/ocmp3.yml</itemPath>
+          <itemPath>icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db/components/stdio.yml</itemPath>
+          <itemPath>icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db/components/tmr2.yml</itemPath>
+          <itemPath>icap_capture_mode_pic32mk_gp_db_pic32mk_gp_db/components/uart6.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_gp_db/harmony-manifest-success.yml</itemPath>
-      <itemPath>icap_capture_mode_pic32mk_gp_db.mc3</itemPath>
     </logicalFolder>
     <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
       <logicalFolder displayName="config" name="f1" projectFiles="true">
@@ -100,7 +111,7 @@
         <targetPluginBoard/>
         <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
