@@ -1,0 +1,130 @@
+configVersion: 1.0.0
+componentName: can1
+coreVersion: 5.8.2
+device: PIC32MK1024GPE100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: can1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: can1
+          x: '340'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CALCULATED_ERRORRATE:
+      attributes:
+        id: CALCULATED_ERRORRATE
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '0.000'
+          type: Dynamic
+        type: Values
+      type: String
+    CALCULATED_NOMINAL_BITRATE:
+      attributes:
+        id: CALCULATED_NOMINAL_BITRATE
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '500'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CAN_CORE_CLOCK_FREQ:
+      attributes:
+        id: CAN_CORE_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PHASE1:
+      attributes:
+        id: PHASE1
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '7'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PHASE2:
+      attributes:
+        id: PHASE2
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PROPAG:
+      attributes:
+        id: PROPAG
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SJW:
+      attributes:
+        id: SJW
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '3'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TIME_QUANTA_PERIOD:
+      attributes:
+        id: TIME_QUANTA_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '166.667'
+          type: Dynamic
+        type: Values
+      type: String
+    TOTAL_TIME_QUANTA:
+      attributes:
+        id: TOTAL_TIME_QUANTA
+      children:
+      - children:
+        - attributes:
+            id: can1
+            value: '12'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
