@@ -52,7 +52,7 @@
 #include "plib_tmr1.h"
 #include "interrupts.h"
 
-volatile static TMR1_TIMER_OBJECT tmr1Obj;
+static volatile TMR1_TIMER_OBJECT tmr1Obj;
 
 void TMR1_Initialize(void)
 {
