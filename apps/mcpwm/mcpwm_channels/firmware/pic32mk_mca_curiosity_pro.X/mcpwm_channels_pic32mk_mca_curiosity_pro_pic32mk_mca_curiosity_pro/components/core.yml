@@ -1,0 +1,482 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.2
+device: PIC32MK0128MCA048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '240'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BSP_PIN_1_MODE:
+      attributes:
+        id: BSP_PIN_1_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_24_MODE:
+      attributes:
+        id: BSP_PIN_24_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_28_MODE:
+      attributes:
+        id: BSP_PIN_28_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_2_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_2_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: PWM1H
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_2_MODE:
+      attributes:
+        id: BSP_PIN_2_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_30_MODE:
+      attributes:
+        id: BSP_PIN_30_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_31_MODE:
+      attributes:
+        id: BSP_PIN_31_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_32_MODE:
+      attributes:
+        id: BSP_PIN_32_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_38_MODE:
+      attributes:
+        id: BSP_PIN_38_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_39_MODE:
+      attributes:
+        id: BSP_PIN_39_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_3_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_3_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: PWM1L
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_3_MODE:
+      attributes:
+        id: BSP_PIN_3_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_40_MODE:
+      attributes:
+        id: BSP_PIN_40_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_41_MODE:
+      attributes:
+        id: BSP_PIN_41_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_44_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_44_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: PWM3H
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_44_MODE:
+      attributes:
+        id: BSP_PIN_44_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_45_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_45_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: PWM3L
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_45_MODE:
+      attributes:
+        id: BSP_PIN_45_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_46_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_46_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: PWM2H
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_46_MODE:
+      attributes:
+        id: BSP_PIN_46_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_47_FUNCTION_TYPE:
+      attributes:
+        id: BSP_PIN_47_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: PWM2L
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_47_MODE:
+      attributes:
+        id: BSP_PIN_47_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    BSP_PIN_48_MODE:
+      attributes:
+        id: BSP_PIN_48_MODE
+      children:
+      - children:
+        - attributes:
+            value: DIGITAL
+          type: User
+        type: Values
+      type: String
+    COMPILER_CHOICE:
+      attributes:
+        id: COMPILER_CHOICE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    EVIC_173_ENABLE:
+      attributes:
+        id: EVIC_173_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_173_HANDLER_LOCK:
+      attributes:
+        id: EVIC_173_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVIC_173_INTERRUPT_HANDLER:
+      attributes:
+        id: EVIC_173_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: PWM1_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    KEIL_STACK_HEAP_SIZE:
+      attributes:
+        id: KEIL_STACK_HEAP_SIZE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x1200'
+          type: Dynamic
+        type: Values
+      type: String
+    MCPWM1_CLOCK_ENABLE:
+      attributes:
+        id: MCPWM1_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    MCPWM1_CLOCK_FREQUENCY:
+      attributes:
+        id: MCPWM1_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '120000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCPWM2_CLOCK_ENABLE:
+      attributes:
+        id: MCPWM2_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    MCPWM2_CLOCK_FREQUENCY:
+      attributes:
+        id: MCPWM2_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '120000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCPWM3_CLOCK_ENABLE:
+      attributes:
+        id: MCPWM3_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    MCPWM3_CLOCK_FREQUENCY:
+      attributes:
+        id: MCPWM3_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '120000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PMD4_REG_VALUE:
+      attributes:
+        id: PMD4_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '524319'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMD6_REG_VALUE:
+      attributes:
+        id: PMD6_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '50331648'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PMD7_REG_VALUE:
+      attributes:
+        id: PMD7_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PWM1_INTERRUPT_ENABLE:
+      attributes:
+        id: PWM1_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PWM1_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: PWM1_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PWM1_INTERRUPT_HANDLER:
+      attributes:
+        id: PWM1_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: PWM1_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
+    PWM1_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: PWM1_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    clkSvcMode:
+      attributes:
+        id: clkSvcMode
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '90'
+        canvasWidth: '477'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData

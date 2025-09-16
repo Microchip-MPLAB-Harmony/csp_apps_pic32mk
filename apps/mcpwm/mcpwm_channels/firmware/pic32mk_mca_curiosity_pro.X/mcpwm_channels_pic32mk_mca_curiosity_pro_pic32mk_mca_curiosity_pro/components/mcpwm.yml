@@ -1,0 +1,386 @@
+configVersion: 1.0.0
+componentName: mcpwm
+coreVersion: 5.8.2
+device: PIC32MK0128MCA048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: mcpwm
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: mcpwm
+          x: '340'
+          y: '19'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    INTR_PWM_FAULT:
+      attributes:
+        id: INTR_PWM_FAULT
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: INT_SOURCE_PWM1
+          type: Dynamic
+        type: Values
+      type: String
+    MCPWM_CHANNEL1:
+      attributes:
+        id: MCPWM_CHANNEL1
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    MCPWM_CHANNEL2:
+      attributes:
+        id: MCPWM_CHANNEL2
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    MCPWM_CHANNEL3:
+      attributes:
+        id: MCPWM_CHANNEL3
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    MCPWM_EVIC1:
+      attributes:
+        id: MCPWM_EVIC1
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCPWM_IOCON1:
+      attributes:
+        id: MCPWM_IOCON1
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '49152'
+          type: Dynamic
+        type: Values
+      type: Hex
+    MCPWM_IOCON2:
+      attributes:
+        id: MCPWM_IOCON2
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '49152'
+          type: Dynamic
+        type: Values
+      type: Hex
+    MCPWM_IOCON3:
+      attributes:
+        id: MCPWM_IOCON3
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '49152'
+          type: Dynamic
+        type: Values
+      type: Hex
+    MCPWM_IOCON4:
+      attributes:
+        id: MCPWM_IOCON4
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '49152'
+          type: Dynamic
+        type: Values
+      type: Hex
+    MCPWM_PERIOD_CH1:
+      attributes:
+        id: MCPWM_PERIOD_CH1
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '3000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCPWM_PERIOD_CH2:
+      attributes:
+        id: MCPWM_PERIOD_CH2
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '3000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCPWM_PERIOD_CH3:
+      attributes:
+        id: MCPWM_PERIOD_CH3
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '3000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCPWM_PERIOD_CH4:
+      attributes:
+        id: MCPWM_PERIOD_CH4
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '3000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCPWM_PRI_FREQ:
+      attributes:
+        id: MCPWM_PRI_FREQ
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '40000.0'
+          type: Dynamic
+        type: Values
+      type: Float
+    MCPWM_PWMCON1:
+      attributes:
+        id: MCPWM_PWMCON1
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '525312'
+          type: Dynamic
+        type: Values
+      type: Hex
+    MCPWM_PWMCON2:
+      attributes:
+        id: MCPWM_PWMCON2
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '1024'
+          type: Dynamic
+        type: Values
+      type: Hex
+    MCPWM_PWMCON3:
+      attributes:
+        id: MCPWM_PWMCON3
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '1024'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PTPER__PTPER:
+      attributes:
+        id: PTPER__PTPER
+      children:
+      - children:
+        - attributes:
+            value: '3000'
+          type: User
+        type: Values
+      type: Integer
+    PWMCON1__ECAM:
+      attributes:
+        id: PWMCON1__ECAM
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    PWMCON1__PWMHIEN:
+      attributes:
+        id: PWMCON1__PWMHIEN
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PWMCON2__ECAM:
+      attributes:
+        id: PWMCON2__ECAM
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    PWMCON3__ECAM:
+      attributes:
+        id: PWMCON3__ECAM
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    PWM_CALLBACK_API:
+      attributes:
+        id: PWM_CALLBACK_API
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_CallbackRegister
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_GET_PERIOD_API:
+      attributes:
+        id: PWM_GET_PERIOD_API
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_PrimaryPeriodGet
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_OUTPUT_DISABLE_API:
+      attributes:
+        id: PWM_OUTPUT_DISABLE_API
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_ChannelPinsOwnershipDisable
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_OUTPUT_ENABLE_API:
+      attributes:
+        id: PWM_OUTPUT_ENABLE_API
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_ChannelPinsOwnershipEnable
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_PH_MASK:
+      attributes:
+        id: PWM_PH_MASK
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: '7'
+          type: Dynamic
+        type: Values
+      type: Hex
+    PWM_PH_U:
+      attributes:
+        id: PWM_PH_U
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_CH_1
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_PH_V:
+      attributes:
+        id: PWM_PH_V
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_CH_2
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_PH_W:
+      attributes:
+        id: PWM_PH_W
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_CH_3
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_SET_DUTY_API:
+      attributes:
+        id: PWM_SET_DUTY_API
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_ChannelPrimaryDutySet
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_START_API:
+      attributes:
+        id: PWM_START_API
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_Start
+          type: Dynamic
+        type: Values
+      type: String
+    PWM_STOP_API:
+      attributes:
+        id: PWM_STOP_API
+      children:
+      - children:
+        - attributes:
+            id: mcpwm
+            value: MCPWM_Stop
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}
