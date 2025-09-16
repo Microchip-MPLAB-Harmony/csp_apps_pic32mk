@@ -1,0 +1,54 @@
+configVersion: 1.0.0
+coreVersion: 5.8.2
+device: PIC32MK1024MCM100
+deviceLibrary:
+  className: com.microchip.mcc.harmony.Harmony3Library
+groupModules: []
+modules:
+- core
+- dfp
+- stdio
+- uart6
+generatedFileHashHistoryMap:
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\definitions.h
+  hash: 11fc3047ec8407209bb1d343ab219f566363c070b69e0c8b4234610fbc6ae496
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\device.h
+  hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\exceptions.c
+  hash: 265c985839caadb2fa9e8fc76e7bc3c160e31e9b2c96dc4006add33e5d7ee212
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\initialization.c
+  hash: a1069020152384099e84d2b363b1fe6675ac72dea428e9667366f2dc066c04f1
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\interrupts.c
+  hash: b3f19dc8b4ef18594651000a8e1802535027517239e1d79759933e2d9bf680d8
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\interrupts.h
+  hash: 90930450959de14a204ee454c8a8d8359b3db03d142f41db3457ac2988b731db
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\p32MK1024MCM100.ld
+  hash: fd47bd624612f16402f25f713f60a80f1f31f37401494c32b9599f942f732385
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\clk\plib_clk.c
+  hash: 5430598fc6825cfcb1d87426f8f5c5b2048ec5a5b0a3f455598206dfb07a8a0c
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\clk\plib_clk.h
+  hash: 35384f2e13e59b7190bf77f6996baf3ea2377ec42df94979a6f793326def5255
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\dmac\plib_dmac.c
+  hash: 62ad5c9eda49dea0ffc3ed173b82e2adb9ecd0fffe25385301021d3dcc513bc8
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\dmac\plib_dmac.h
+  hash: 78b9533671371600d12031eb6280ef51c292677cc636c809bb1b16ab772a4f8d
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\evic\plib_evic.c
+  hash: a0f03027fa34ae594f5ef4f2f1438d54272026b15c2d94b38951899d849c82b4
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\evic\plib_evic.h
+  hash: 88ad360df6fb08f000378549ca6fc25d23cfefd57e42a99488774533263acfe8
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\gpio\plib_gpio.c
+  hash: 300440156a2409785325d064f9759c8c565392861efad38c25c5be237d6c158b
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\gpio\plib_gpio.h
+  hash: e28db2cb4c298f186c43026d943c9028552b2afb4f4cae386c6134085c699170
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\uart\plib_uart6.c
+  hash: 8eed8334af4223a27ca50ebb332f4712ad31ebeebf0dcddd1d13430497e91e40
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\uart\plib_uart6.h
+  hash: 7af71fa32c496dcdfe8e536121fd6d383e32ae17b865f46b077adf490983d19e
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\peripheral\uart\plib_uart_common.h
+  hash: 70213cd740b3ff9a591d93ad6aac9493335851db084dd862275effacdebf710d
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\stdio\xc32_monitor.c
+  hash: 9b94a2c69e3e47de57f2b184c6225491b16521d57a80d89ee84745d94030b597
+- file: ..\src\config\pic32mk_mcm_curiosity_pro\toolchain_specifics.h
+  hash: b4de6e02e3e48c62f7ba233405ffdf6ef31bb971d1a7b49efa1676f45cabc1ac
+- file: ..\src\main_pic32mz_ef_sk.c
+  hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5
