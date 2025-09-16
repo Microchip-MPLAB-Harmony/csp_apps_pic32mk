@@ -23,9 +23,15 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
+      <logicalFolder name="gpio_led_on_off_interrupt_pic32mk_mcm_curiosity_pro_pic32mk_mcm_curiosity_pro" displayName="gpio_led_on_off_interrupt_pic32mk_mcm_curiosity_pro_pic32mk_mcm_curiosity_pro" projectFiles="true">
+        <itemPath>gpio_led_on_off_interrupt_pic32mk_mcm_curiosity_pro_pic32mk_mcm_curiosity_pro/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>gpio_led_on_off_interrupt_pic32mk_mcm_curiosity_pro_pic32mk_mcm_curiosity_pro/components/core.yml</itemPath>
+          <itemPath>gpio_led_on_off_interrupt_pic32mk_mcm_curiosity_pro_pic32mk_mcm_curiosity_pro/components/dfp.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony-manifest-success.yml</itemPath>
-      <itemPath>gpio_led_on_off_interrupt_pic32mk_mcm_curiosity_pro.mc3</itemPath>
     </logicalFolder>
     <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
       <logicalFolder displayName="config" name="f1" projectFiles="true">
@@ -72,7 +78,7 @@
         <targetPluginBoard/>
         <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
