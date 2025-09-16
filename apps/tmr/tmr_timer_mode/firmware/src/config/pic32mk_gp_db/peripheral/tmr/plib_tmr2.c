@@ -53,7 +53,7 @@
 #include "plib_tmr2.h"
 #include "interrupts.h"
 
-volatile static TMR_TIMER_OBJECT tmr2Obj;
+static volatile TMR_TIMER_OBJECT tmr2Obj;
 
 
 void TMR2_Initialize(void)
