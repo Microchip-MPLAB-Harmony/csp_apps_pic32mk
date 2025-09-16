@@ -80,11 +80,11 @@
 #define CAN_MSG_RTR_MASK            (0x200U)
 #define CAN_MSG_SRR_MASK            (0x20000000U)
 
-volatile static CAN_OBJ can1Obj;
-volatile static CAN_RX_MSG can1RxMsg[CAN_NUM_OF_FIFO][CAN_FIFO_MESSAGE_BUFFER_MAX];
-volatile static CAN_CALLBACK_OBJ can1CallbackObj[CAN_NUM_OF_FIFO];
-volatile static CAN_CALLBACK_OBJ can1ErrorCallbackObj;
-volatile static uint32_t can1MsgIndex[CAN_NUM_OF_FIFO];
+static volatile CAN_OBJ can1Obj;
+static volatile CAN_RX_MSG can1RxMsg[CAN_NUM_OF_FIFO][CAN_FIFO_MESSAGE_BUFFER_MAX];
+static volatile CAN_CALLBACK_OBJ can1CallbackObj[CAN_NUM_OF_FIFO];
+static volatile CAN_CALLBACK_OBJ can1ErrorCallbackObj;
+static volatile uint32_t can1MsgIndex[CAN_NUM_OF_FIFO];
 static CAN_TX_RX_MSG_BUFFER __attribute__((coherent, aligned(32))) can_message_buffer[CAN_MESSAGE_RAM_CONFIG_SIZE];
 
 /******************************************************************************
