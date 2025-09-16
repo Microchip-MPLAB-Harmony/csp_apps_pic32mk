@@ -48,9 +48,9 @@
 // *****************************************************************************
 // *****************************************************************************
 
-volatile static UART_OBJECT uart1Obj;
+static volatile UART_OBJECT uart1Obj;
 
-void static UART1_ErrorClear( void )
+static void UART1_ErrorClear( void )
 {
     UART_ERROR errors = UART_ERROR_NONE;
     uint8_t dummyData = 0u;

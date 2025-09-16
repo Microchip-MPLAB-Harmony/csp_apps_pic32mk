@@ -1,0 +1,75 @@
+configVersion: 1.0.0
+componentName: uart1
+coreVersion: 5.8.2
+device: PIC32MK0512MCJ064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: uart1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: uart1
+          x: '340'
+          y: '20'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BRG_VALUE:
+      attributes:
+        id: BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: uart1
+            value: '129'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UART_BRGH:
+      attributes:
+        id: UART_BRGH
+      children:
+      - children:
+        - attributes:
+            id: uart1
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    UART_CLOCK_FREQ:
+      attributes:
+        id: UART_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: uart1
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    UMODE_VALUE:
+      attributes:
+        id: UMODE_VALUE
+      children:
+      - children:
+        - attributes:
+            id: uart1
+            value: '8'
+          type: Dynamic
+        type: Values
+      type: Hex
+  userData: {}
