@@ -1,0 +1,103 @@
+configVersion: 1.0.0
+componentName: tmr1
+coreVersion: 5.8.2
+device: PIC32MK0512MCJ064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: tmr1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: tmr1
+          x: '30'
+          y: '60'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    TCON_REG_VALUE:
+      attributes:
+        id: TCON_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '304'
+          type: Dynamic
+        type: Values
+      type: Hex
+    TIMER1_CLOCK_FREQ:
+      attributes:
+        id: TIMER1_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '234375'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TIMER1_PERIOD:
+      attributes:
+        id: TIMER1_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '23436'
+          type: Dynamic
+        type: Values
+      type: Long
+    TIMER1_PRE_SCALER:
+      attributes:
+        id: TIMER1_PRE_SCALER
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    TIMER1_TIME_PERIOD_MS:
+      attributes:
+        id: TIMER1_TIME_PERIOD_MS
+      children:
+      - children:
+        - attributes:
+            id: max
+          children:
+          - type: Value
+            value: '279.62454'
+          type: Float
+        type: Attributes
+      - children:
+        - attributes:
+            value: '100.0'
+          type: User
+        type: Values
+      type: Float
+    TMR1_PRESCALER_VALUE:
+      attributes:
+        id: TMR1_PRESCALER_VALUE
+      children:
+      - children:
+        - attributes:
+            id: tmr1
+            value: '256'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
