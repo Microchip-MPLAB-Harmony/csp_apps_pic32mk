@@ -1,0 +1,75 @@
+configVersion: 1.0.0
+componentName: i2c2
+coreVersion: 5.8.2
+device: PIC32MK0512MCJ064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: i2c2
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: i2c2
+          x: '42'
+          y: '183'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BRG_VALUE:
+      attributes:
+        id: BRG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: '595'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2CS_RISE_TIME_CORE_TIMER_CNTS:
+      attributes:
+        id: I2CS_RISE_TIME_CORE_TIMER_CNTS
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: '18'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2CS_SETUP_TIME_CORE_TIMER_CNTS:
+      attributes:
+        id: I2CS_SETUP_TIME_CORE_TIMER_CNTS
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: '6'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2C_CLOCK_FREQ:
+      attributes:
+        id: I2C_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: i2c2
+            value: '60000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}
