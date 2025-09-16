@@ -1,0 +1,106 @@
+configVersion: 1.0.0
+componentName: tmr3
+coreVersion: 5.8.2
+device: PIC32MK1024GPE100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: tmr3
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: tmr3
+          x: '40'
+          y: '67'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    TCON_REG_VALUE:
+      attributes:
+        id: TCON_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: tmr3
+            value: '112'
+          type: Dynamic
+        type: Values
+      type: Hex
+    TIMER_CLOCK_FREQ:
+      attributes:
+        id: TIMER_CLOCK_FREQ
+      children:
+      - children:
+        - attributes:
+            id: tmr3
+            value: '234375'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TIMER_PERIOD:
+      attributes:
+        id: TIMER_PERIOD
+      children:
+      - children:
+        - attributes:
+            id: tmr3
+            value: '69'
+          type: Dynamic
+        type: Values
+      type: Long
+    TIMER_PRE_SCALER:
+      attributes:
+        id: TIMER_PRE_SCALER
+      children:
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: KeyValueSet
+    TIMER_WIDTH:
+      attributes:
+        id: TIMER_WIDTH
+      children:
+      - children:
+        - attributes:
+            id: tmr3
+            value: '16'
+          type: Dynamic
+        type: Values
+      type: Integer
+    TMR_INTERRUPT_MODE:
+      attributes:
+        id: TMR_INTERRUPT_MODE
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    TMR_PRESCALER_VALUE:
+      attributes:
+        id: TMR_PRESCALER_VALUE
+      children:
+      - children:
+        - attributes:
+            id: tmr3
+            value: '256'
+          type: Dynamic
+        type: Values
+      type: Integer
+  userData: {}

@@ -35,9 +35,19 @@
       </logicalFolder>
     </logicalFolder>
     <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="true">
+      <logicalFolder name="adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db" displayName="adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db" projectFiles="true">
+        <itemPath>adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db/components/adchs.yml</itemPath>
+          <itemPath>adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db/components/core.yml</itemPath>
+          <itemPath>adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db/components/dfp.yml</itemPath>
+          <itemPath>adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db/components/stdio.yml</itemPath>
+          <itemPath>adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db/components/tmr3.yml</itemPath>
+          <itemPath>adchs_interrupt_pic32mk_gp_db_pic32mk_gp_db/components/uart6.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32mk_gp_db/harmony-manifest-success.yml</itemPath>
-      <itemPath>adchs_interrupt_pic32mk_gp_db.mc3</itemPath>
     </logicalFolder>
     <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
       <logicalFolder displayName="config" name="f1" projectFiles="true">
@@ -93,7 +103,7 @@
         <targetPluginBoard/>
         <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
