@@ -50,7 +50,6 @@
         <itemPath>can_fd_operation_blocking_pic32mk_mcm_curiosity_pro_pic32mk_mcm_curiosity_pro/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mk_mcm_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

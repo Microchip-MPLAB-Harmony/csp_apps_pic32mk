@@ -1,0 +1,117 @@
+generatedFiles:
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/coretimer/plib_coretimer.h
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/coretimer
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/coretimer/plib_coretimer.c
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/coretimer
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/uart/plib_uart_common.h
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/uart
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/uart/plib_uart2.h
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/uart
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/uart/plib_uart2.c
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/uart
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/toolchain_specifics.h
+  projectFolder: config/pic32mk_mca_curiosity_pro
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/main_pic32mk_mca.c
+  projectFolder: ''
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/definitions.h
+  projectFolder: config/pic32mk_mca_curiosity_pro
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/initialization.c
+  projectFolder: config/pic32mk_mca_curiosity_pro
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/interrupts.c
+  projectFolder: config/pic32mk_mca_curiosity_pro
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/interrupts.h
+  projectFolder: config/pic32mk_mca_curiosity_pro
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/exceptions.c
+  projectFolder: config/pic32mk_mca_curiosity_pro
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/p32MK0128MCA048.ld
+  projectFolder: config/pic32mk_mca_curiosity_pro
+  type: Linker Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/stdio/xc32_monitor.c
+  projectFolder: config/pic32mk_mca_curiosity_pro/stdio
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/clk/plib_clk.h
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/clk
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/clk/plib_clk.c
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/clk
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/gpio/plib_gpio.h
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/gpio
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/gpio/plib_gpio.c
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/gpio
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/evic/plib_evic.c
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/evic
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/evic/plib_evic.h
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/evic
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/wdt/plib_wdt.h
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/wdt
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/peripheral/wdt/plib_wdt.c
+  projectFolder: config/pic32mk_mca_curiosity_pro/peripheral/wdt
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/wdt/wdt_timeout/firmware/src/config/pic32mk_mca_curiosity_pro/device.h
+  projectFolder: config/pic32mk_mca_curiosity_pro
+  type: Header Files
+generatedSettings:
+- category: C32-LD
+  key: preprocessor-macros
+  value: ''
+- category: C32
+  key: generate-micro-compressed-code
+  value: 'false'
+- category: C32CPP
+  key: generate-micro-compressed-code
+  value: 'false'
+- category: C32-LD
+  key: heap-size
+  value: '512'
+- category: C32
+  key: extra-include-directories
+  value: ../src;../src/config/pic32mk_mca_curiosity_pro;
+- category: C32CPP
+  key: extra-include-directories
+  value: ../src;../src/config/pic32mk_mca_curiosity_pro;
+- category: C32-LD
+  key: no-device-startup-code
+  value: 'true'
+removedFiles: [
+  ]

@@ -888,8 +888,8 @@ data:
   userData:
     children:
     - attributes:
-        canvasHeight: '0'
-        canvasWidth: '0'
+        canvasHeight: '132'
+        canvasWidth: '616'
       type: GraphSettings
     - children:
       - attributes:

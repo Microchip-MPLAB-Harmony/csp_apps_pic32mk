@@ -217,9 +217,9 @@ void SYS_Initialize ( void* data )
 
     ICAP1_Initialize();
 
-    OCMP3_Initialize();
-
 	UART6_Initialize();
+
+    OCMP3_Initialize();
 
 
     EVIC_Initialize();

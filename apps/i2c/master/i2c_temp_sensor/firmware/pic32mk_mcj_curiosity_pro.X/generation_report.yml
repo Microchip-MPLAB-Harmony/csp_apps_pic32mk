@@ -1,0 +1,121 @@
+generatedFiles:
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master/plib_i2c2_master.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master/plib_i2c_master_common.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master/plib_i2c2_master.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/plib_i2c_smbus_common.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/i2c
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/plib_i2c_smbus_common.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/i2c
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart_common.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/uart
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart1.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/uart
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart1.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/uart
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/toolchain_specifics.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/main.c
+  projectFolder: ''
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/definitions.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/initialization.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/interrupts.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/interrupts.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/exceptions.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/p32MK0512MCJ064.ld
+  projectFolder: config/pic32mk_mcj_curiosity_pro
+  type: Linker Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/stdio/xc32_monitor.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro/stdio
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/clk/plib_clk.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/clk
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/clk/plib_clk.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/clk
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/gpio/plib_gpio.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/gpio
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/gpio/plib_gpio.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/gpio
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/evic/plib_evic.c
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/evic
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/peripheral/evic/plib_evic.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro/peripheral/evic
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/i2c/master/i2c_temp_sensor/firmware/src/config/pic32mk_mcj_curiosity_pro/device.h
+  projectFolder: config/pic32mk_mcj_curiosity_pro
+  type: Header Files
+generatedSettings:
+- category: C32-LD
+  key: preprocessor-macros
+  value: ''
+- category: C32
+  key: generate-micro-compressed-code
+  value: 'false'
+- category: C32CPP
+  key: generate-micro-compressed-code
+  value: 'false'
+- category: C32-LD
+  key: heap-size
+  value: '512'
+- category: C32
+  key: extra-include-directories
+  value: ../src;../src/config/pic32mk_mcj_curiosity_pro;
+- category: C32CPP
+  key: extra-include-directories
+  value: ../src;../src/config/pic32mk_mcj_curiosity_pro;
+- category: C32-LD
+  key: no-device-startup-code
+  value: 'true'
+removedFiles: [
+  ]

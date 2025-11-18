@@ -23,6 +23,7 @@
                 <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master/plib_i2c2_master.h</itemPath>
                 <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master/plib_i2c_master_common.h</itemPath>
               </logicalFolder>
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/plib_i2c_smbus_common.h</itemPath>
             </logicalFolder>
             <logicalFolder name="f5" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart_common.h</itemPath>
@@ -52,7 +53,6 @@
         <itemPath>i2c_temp_sensor_pic32mk_mcj_curiosity_pro_pic32mk_mcj_curiosity_pro/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32mk_mcj_curiosity_pro/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -86,6 +86,7 @@
               <logicalFolder name="f1" displayName="master" projectFiles="true">
                 <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/master/plib_i2c2_master.c</itemPath>
               </logicalFolder>
+              <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/i2c/plib_i2c_smbus_common.c</itemPath>
             </logicalFolder>
             <logicalFolder name="f5" displayName="uart" projectFiles="true">
               <itemPath>../src/config/pic32mk_mcj_curiosity_pro/peripheral/uart/plib_uart1.c</itemPath>

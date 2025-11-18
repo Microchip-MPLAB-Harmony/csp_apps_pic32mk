@@ -14,13 +14,13 @@ modules:
 - uart6
 generatedFileHashHistoryMap:
 - file: ..\src\config\pic32mk_mcm_curiosity_pro\definitions.h
-  hash: 9137b64fa137517dd63a49347096861c572dde7a8f52b16c8014e975fadc5848
+  hash: e84aeb8fda969e1e8ef376493c8477b91a5d15f13955aad22ec38620f777b3be
 - file: ..\src\config\pic32mk_mcm_curiosity_pro\device.h
   hash: 4d4341a6f9628cea0bf73f980b639f7cb81089e55a60ad7e434be2a71e477442
 - file: ..\src\config\pic32mk_mcm_curiosity_pro\exceptions.c
   hash: 265c985839caadb2fa9e8fc76e7bc3c160e31e9b2c96dc4006add33e5d7ee212
 - file: ..\src\config\pic32mk_mcm_curiosity_pro\initialization.c
-  hash: 6bd73e9a860532f4413e8feca0e10ae970a7cc05088e3cfa320197a0108fd7c8
+  hash: 5da91fa8e7c2630d67b62959b079d454bb2100ab718eae8c13d98e955c2c625c
 - file: ..\src\config\pic32mk_mcm_curiosity_pro\interrupts.c
   hash: 797936386be1072a51a41ed55d38dc4a8ed2bbf29a0a6e89fba8ee6651ac3610
 - file: ..\src\config\pic32mk_mcm_curiosity_pro\interrupts.h

@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: tmr1_timer_mode_pic32mk_mcm_curiosity_pro
-creation_date: 2025-09-16T17:40:21.724+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-18T11:33:21.666+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32MK1024MCM100

@@ -1,0 +1,113 @@
+generatedFiles:
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/can/plib_can_common.h
+  projectFolder: config/pic32mk_gp_db/peripheral/can
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/can/plib_can1.c
+  projectFolder: config/pic32mk_gp_db/peripheral/can
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/can/plib_can1.h
+  projectFolder: config/pic32mk_gp_db/peripheral/can
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/toolchain_specifics.h
+  projectFolder: config/pic32mk_gp_db
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/main_pic32mk.c
+  projectFolder: ''
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/definitions.h
+  projectFolder: config/pic32mk_gp_db
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/initialization.c
+  projectFolder: config/pic32mk_gp_db
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/interrupts.c
+  projectFolder: config/pic32mk_gp_db
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/interrupts.h
+  projectFolder: config/pic32mk_gp_db
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/exceptions.c
+  projectFolder: config/pic32mk_gp_db
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/p32MK1024GPE100.ld
+  projectFolder: config/pic32mk_gp_db
+  type: Linker Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/stdio/xc32_monitor.c
+  projectFolder: config/pic32mk_gp_db/stdio
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/clk/plib_clk.h
+  projectFolder: config/pic32mk_gp_db/peripheral/clk
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/clk/plib_clk.c
+  projectFolder: config/pic32mk_gp_db/peripheral/clk
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/gpio/plib_gpio.h
+  projectFolder: config/pic32mk_gp_db/peripheral/gpio
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/gpio/plib_gpio.c
+  projectFolder: config/pic32mk_gp_db/peripheral/gpio
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/evic/plib_evic.c
+  projectFolder: config/pic32mk_gp_db/peripheral/evic
+  type: Source Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/evic/plib_evic.h
+  projectFolder: config/pic32mk_gp_db/peripheral/evic
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/device.h
+  projectFolder: config/pic32mk_gp_db
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/uart/plib_uart_common.h
+  projectFolder: config/pic32mk_gp_db/peripheral/uart
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/uart/plib_uart6.h
+  projectFolder: config/pic32mk_gp_db/peripheral/uart
+  type: Header Files
+- excludeFromProject: false
+  path: /home/svcjenkins/workspace/apps-team/Users/skn/fix-double-type-symbol-issue/csp_apps_pic32mk/apps/can/can_normal_operation_blocking/firmware/src/config/pic32mk_gp_db/peripheral/uart/plib_uart6.c
+  projectFolder: config/pic32mk_gp_db/peripheral/uart
+  type: Source Files
+generatedSettings:
+- category: C32-LD
+  key: preprocessor-macros
+  value: ''
+- category: C32
+  key: generate-micro-compressed-code
+  value: 'false'
+- category: C32CPP
+  key: generate-micro-compressed-code
+  value: 'false'
+- category: C32-LD
+  key: heap-size
+  value: '512'
+- category: C32
+  key: extra-include-directories
+  value: ../src;../src/config/pic32mk_gp_db;
+- category: C32CPP
+  key: extra-include-directories
+  value: ../src;../src/config/pic32mk_gp_db;
+- category: C32-LD
+  key: no-device-startup-code
+  value: 'true'
+removedFiles: [
+  ]
